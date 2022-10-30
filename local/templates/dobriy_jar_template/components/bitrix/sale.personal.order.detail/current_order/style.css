@@ -1,0 +1,101 @@
+.history__order {
+	padding: 10px;
+}
+
+.history__order-date {
+	color: #ff7300;
+}
+
+.history__order-name {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+.history__order-status {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #007700;
+}
+
+.history__products {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: left;
+	align-items: start;
+	gap: 1.5em;
+}
+
+.history__product {
+	border: 1px solid #cccccc;
+	padding: 1em;
+}
+
+.history__product-image {
+	display: flex;
+	justify-content: center;
+}
+
+.history__product-type {
+	color: #ff7300;
+}
+
+.history__product-name {
+	font-size: 1.3em;
+}
+
+.history__product-article {
+	color: #999999;
+	font-size: .9em;
+}
+
+.history__product-price {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: end;
+	margin-top: .8em;
+}
+
+.history__payment-unpaid {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: red;
+}
+
+.history__price-bought {
+	font-size: 1.2em;
+}
+
+.history__total {
+	border: 1px solid #ff7300;
+	margin: 1em 0;
+	padding: 1em;
+	max-width: 40em;
+}
+
+.history__product-sum,
+.history__product-delivery,
+.history__total-sum
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	border-bottom: 1px dotted #cccccc;
+	margin-bottom: .2em;
+}
+
+.history__total-title,
+.history__total-value {
+	margin: -.1em;
+	background-color: #f3f3f3;
+}
+
+.history__total-sum {
+	margin-top: 1em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.history__payment-details, .history__delivery-details {
+	margin: .8em 0;
+}

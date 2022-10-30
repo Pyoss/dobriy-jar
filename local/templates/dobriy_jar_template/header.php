@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-57RC53R');</script>
+<!-- End Google Tag Manager -->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=<?= LANG_CHARSET;?>">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="mailru-verification" content="5eb8d0fb152d515e" />
+    <title><?=$APPLICATION->ShowTitle()?></title>
+    <?php
+use Bitrix\Main\Page\Asset;
+// Загрузка ВСЕХ стилей для шаблона из папки template/css
+$cssDir = SITE_TEMPLATE_PATH . "/css/";
+$arDirCss = scandir( $_SERVER['DOCUMENT_ROOT'] . $cssDir , 1);
+foreach ($arDirCss as $сssFile){
+    if (pathinfo($сssFile)['extension'] == "css"){
+        $APPLICATION -> SetAdditionalCSS($cssDir . $сssFile);
+    };
+}
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/mobile.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/default.js");
+Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/skusetter.js");
+$GLOBALS['phone'] = '8(800) 600-45-96';
+$APPLICATION -> ShowHead();
+    global $USER;
+    ;?>
+<div id="panel"><?php
+    if ($_GET['panel'] !== 'hidden' && $USER->GetID() != 12) {
+        $APPLICATION->ShowPanel();
+        Asset::getInstance()->addJs('/local/admin/custom.js');
+    }?></div>
+    <script src="//code.jivo.ru/widget/mfRfI5Oga4" async></script>
+
+<link rel="icon" href="https://dobriy-jar.ru/favicon.ico" type="image/x-icon">
+<link rel="icon" href="https://dobriy-jar.ru/favicon.svg" type="image/svg+xml">
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57RC53R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header>
+    <div class="header-top">
+        <div class="header-left">
+            <?php $APPLICATION->IncludeComponent(
+	'bitrix:menu',
+	'.default',
+	[
+		'COMPONENT_TEMPLATE' => '.default',
+		'ROOT_MENU_TYPE' => 'top',
+		'MENU_CACHE_TYPE' => 'N',
+		'MENU_CACHE_TIME' => '3600',
+		'MENU_CACHE_USE_GROUPS' => 'Y',
+		'MENU_CACHE_GET_VARS' => [
+        ],
+		'MAX_LEVEL' => '1',
+		'CHILD_MENU_TYPE' => 'left',
+		'USE_EXT' => 'N',
+		'DELAY' => 'N',
+		'ALLOW_MULTI_SELECT' => 'N'
+    ],
+	false
+);?>
+        </div>
+        <div class="header-right">
+            <a class="call-back callback_button">ЗАКАЗАТЬ ЗВОНОК</a>
+            <a id='call' class="phone-main" href="tel:<?=$GLOBALS['phone']?>">
+                <div class="mobile">Телефон интернет-магазина</div>
+                <i class="inline-icon phone-icon"></i>
+                8(800) 600-45-96</a>
+        </div>
+    </div>
+    <div class="header-center dj-background">
+        <div class="header-center--container">
+            <div class="header-center--mobile-menu" id="mobile-catalog-open" data-popup-name="header-menu"></div>
+            <a href="/" class="header-logo">
+            </a>
+            <div class="desktop">
+                       <?$APPLICATION->IncludeComponent(
+                "dj_components:dj.geolocation",
+                ".default",
+                array(
+                    "COMPONENT_TEMPLATE" => ".default",
+                    "IBLOCK_TYPE" => "regions",
+                    "IBLOCK_ID" => "4",
+                    "DOMAIN_PROP_ID" => "41"
+                ),
+                false
+            );?>
+            </div>
+            <div class="header-search" id="header-search--container">
+                <?php $APPLICATION->IncludeComponent(
+	"bitrix:search.title", 
+	"search.DJ", 
+	array(
+		"CATEGORY_0" => array(
+			0 => "iblock_catalog",
+		),
+		"CATEGORY_0_TITLE" => "",
+		"CATEGORY_0_iblock_catalog" => array(
+			0 => "2",
+		),
+		"CHECK_DATES" => "N",
+		"CONTAINER_ID" => "title-search",
+		"INPUT_ID" => "title-search-input",
+		"NUM_CATEGORIES" => "1",
+		"ORDER" => "rank",
+		"PAGE" => "#SITE_DIR#catalog/search.php",
+		"SHOW_INPUT" => "Y",
+		"SHOW_OTHERS" => "N",
+		"TOP_COUNT" => "5",
+		"USE_LANGUAGE_GUESS" => "Y",
+		"SHOW_PREVIEW" => "Y",
+		"COMPONENT_TEMPLATE" => "search.DJ",
+		"PRICE_CODE" => array(
+			0 => "RETAIL_PRICE",
+		),
+		"CONVERT_CURRENCY" => "N"
+	),
+	false
+); ?>
+            </div>
+            <ul class="user-buttons">
+                <li class="user-buttons--element call">
+                    <span id='call-mobile' class="inline-icon call-icon mobile-button" data-popup-name="call"></span>
+                </li>
+                <?php $APPLICATION->IncludeComponent(
+                    "bitrix:sale.basket.basket",
+                    "basket.DJ.ajax",
+                    array(
+                        "HEADER_INFO"=>'Y'
+                    ),
+                    false
+                );?>
+                <li style='     display: flex;flex-flow: column nowrap;justify-content: center;align-items: center;'  class="user-buttons--element personal">
+                    <a href="/personal/" class="inline-icon personal-icon"></a>
+                    <a href="/personal/" class="user-button--text desktop"><?=$USER -> GetID() ? $USER -> GetFirstName() : 'Войти';?></a>
+                </li>
+                <li class="user-buttons--element search">
+                    <span class="inline-icon search-icon mobile-button" data-popup-name="search"></span>
+                </li>
+           </ul>
+        </div>
+    </div>
+    <?php $APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	"category", 
+	array(
+		"COMPONENT_TEMPLATE" => "category",
+		"ROOT_MENU_TYPE" => "catalog",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "left",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "N"
+	),
+	false
+);?>
+
+</header>
+<main>

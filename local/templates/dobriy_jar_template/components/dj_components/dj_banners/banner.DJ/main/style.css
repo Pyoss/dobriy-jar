@@ -1,0 +1,12 @@
+/*.slider.main {
+    display: inline-block;
+    width: 100%;
+}
+
+.slider.main .slide-wrapper {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width:90%;
+}
+*/

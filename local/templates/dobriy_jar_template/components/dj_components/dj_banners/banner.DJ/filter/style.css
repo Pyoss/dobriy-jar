@@ -1,0 +1,20 @@
+
+.slider.filter .slide-wrapper {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.slider.filter {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.catalog-filter .slider.filter {
+    padding-top: 57px;
+}
+
+@media (max-width: 1200px){
+    .slider.filter {
+        display: none;
+    }
+}

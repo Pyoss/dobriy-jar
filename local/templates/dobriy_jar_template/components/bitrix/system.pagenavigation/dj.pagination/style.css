@@ -1,0 +1,46 @@
+.bx-pagination-container li {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 3px;
+}
+.bx-pag-page,
+.bx-pag-prev,
+.bx-pag-next {
+    border-radius: 16px;
+    background-color: #ffffff;
+}
+
+.bx-pag-prev,
+.bx-pag-next {
+    border: 1px solid #dddddd;
+}
+
+.bx-pagination-container li > * {
+    display: block;
+    height: 32px;
+    min-width: 32px;
+    padding: 0 12px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.bx-pagination-container li.active {
+    cursor: pointer;
+}
+
+.bx-pag-page.active {
+    background-color: #eeeeee;
+}
+
+.bx-pag-page.current {
+    background-color: #ff6100;
+    color: white;
+}
+
+
+.bx-pagination-container li.bx-pag-prev.current > span,
+.bx-pagination-container li.bx-pag-next.current > span {
+    color: #dddddd;
+}
+
+

@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Оплата", 
+		"/payment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Доставка", 
+		"/delivery/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Рассрочка", 
+		"/installment/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Возврат/Обмен", 
+		"/vozvrat/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Политика конфиденциальности", 
+		"/contacts/politika_konfidencialnosti.php", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

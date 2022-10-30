@@ -1,0 +1,78 @@
+header .geo {
+    margin: 8px 0 8px 20px;
+    padding: 5px 0;
+    border-radius: 8px;
+    background: white;
+    min-width: 122px;
+    position: relative;
+}
+
+header .geo>*>span {
+    font-weight: bold;
+}
+
+header .geo span{
+    margin-left: 6px;
+    margin-right: 14px;
+}
+
+header .geo i{
+    margin-left: 10px;
+}
+
+.geo--buttons{
+    margin-top: 10px;
+}
+
+#geo, .geo--button{
+    cursor: pointer;
+}
+
+.geo--button.confirm {
+    background-color: #ff6100;
+    color: white;
+    border-color: #ff6100!important;
+}
+
+.geo--button:not(.confirm) {
+    color: #ff6100;
+    border-color:#ff6100!important;
+}
+
+.geo--popup-conf{
+    white-space: nowrap;
+    text-align: center;
+    top: 100%;
+}
+
+.geo--popup{
+    padding: 20px
+;display: grid;grid-template-columns: 1fr 1fr 1fr;overflow-y: scroll;}
+
+.geo--popup-title {
+    font-weight: bold;
+    grid-column-end: 4;grid-column-start: 1;}
+
+.geo--popup-city {
+    cursor: pointer;
+    padding: 20px;
+}
+
+.geo--popup-city:hover {
+    text-decoration: underline;
+    color: #ff6100;
+}
+
+.geo--popup-conf .geo--button{
+    border: 1px solid black;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.geo--popup-overlay{
+    position: fixed;
+    background: #FFFFFF;
+    top: 20px;
+    width: 500px;
+    z-index: 20;
+}

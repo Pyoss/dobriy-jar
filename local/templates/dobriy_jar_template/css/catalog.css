@@ -1,0 +1,12 @@
+#catalog-slider {
+    margin: 10px auto 50px auto;
+}
+
+#catalog-slider .control {
+    bottom: -15px;
+    right: 25px;
+}
+
+#catalog-slider .control.prev {
+    right: 70px;
+}

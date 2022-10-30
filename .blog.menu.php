@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Самогоноварение", 
+		"https://blog.dobriy-jar.ru/samogonovarenie/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Пивоварение", 
+		"https://blog.dobriy-jar.ru/pivovarenie/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Виноделие", 
+		"https://blog.dobriy-jar.ru/vinodelie/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Кулинария", 
+		"https://blog.dobriy-jar.ru/kulinariya/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

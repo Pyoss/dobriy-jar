@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30mm" height="30mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 3000 3000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#5B5B5B}
+    .fil0 {fill:#F39314}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2357249349632">
+   <path class="fil0" d="M1556 1523c0,179 -145,324 -324,324 -179,0 -324,-145 -324,-324 0,-179 145,-324 324,-324 179,0 324,145 324,324z"/>
+   <path class="fil1" d="M1890 1192l0 -99c0,-47 -39,-85 -85,-85l-434 0 -1 1c-7,0 -13,2 -19,7l-224 190c-6,5 -9,12 -10,20l0 0 0 681c0,47 38,85 85,85l603 0c46,0 85,-38 85,-85l0 -38c-11,1 -22,2 -33,2 -9,0 -18,-1 -27,-2l0 38c0,14 -11,26 -25,26l-603 0c-14,0 -26,-12 -26,-26l0 -664 186 -159 0 174 -93 0 0 60 153 0 0 -251 383 0c14,0 25,12 25,26l0 99 60 0z"/>
+   <path class="fil1" d="M1301 1453c-16,0 -30,14 -30,30 0,16 14,30 30,30l280 0c5,-21 13,-41 23,-60l-303 0z"/>
+   <path class="fil1" d="M1301 1588c-16,0 -30,13 -30,30 0,16 14,29 30,29l278 0c-5,-19 -7,-39 -7,-59l-271 0z"/>
+   <path class="fil1" d="M1607 1722l-306 0c-16,0 -30,14 -30,30 0,16 14,30 30,30l350 0c-17,-18 -32,-38 -44,-60z"/>
+   <polygon class="fil1" points="1931,1302 1788,1302 1788,1242 1931,1242 "/>
+   <path class="fil1" d="M1857 1760c-96,0 -174,-79 -174,-175 0,-96 78,-175 174,-175 97,0 175,79 175,175 0,96 -78,175 -175,175zm170 -336l28 -33c11,-12 10,-31 -2,-41 -13,-11 -31,-10 -42,2l-30 34c-36,-22 -78,-35 -124,-35 -129,0 -234,105 -234,234 0,129 105,234 234,234 130,0 235,-105 235,-234 0,-63 -25,-119 -65,-161z"/>
+   <path class="fil1" d="M1882 1553l-21 -92 -7 0 -21 93c-10,7 -16,18 -16,31 0,22 18,40 40,40 23,0 40,-18 40,-40 0,-13 -6,-24 -15,-32z"/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,32 @@
+
+.slider.blog .slide-wrapper {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.slider.blog .wrapper{
+    position: relative;
+    width: 98vw;
+    right: calc((98vw - 100%) / 2);
+}
+
+.slider.blog .wrapper .slide-wrapper{
+    padding:5px;
+}
+.slider.blog .wrapper .slide-wrapper>*{
+    width:100%;
+    height:100%;
+    background-size: cover;
+}
+
+@media (min-width: 1000px){
+    .slider.blog .slides{
+        padding-left: calc((98vw - 1000px) / 2);
+    }
+}
+
+@media (max-width: 980px) {
+    .slider.blog{
+        overflow: hidden;
+    }
+}

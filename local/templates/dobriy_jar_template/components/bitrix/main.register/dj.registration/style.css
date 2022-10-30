@@ -1,0 +1,38 @@
+.bx-auth-reg {
+    width: 100%;
+}
+
+
+.bx-auth-form > * {
+    width: 100%;
+}
+
+.regform {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.regform__title {
+    font-size: 1.2em;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.regform__field {
+    font-size: 1.1em;
+    padding: .3em;
+}
+
+.regform__submit {
+    margin-top: 1em;
+}
+
+.regform__field-content input[type='text'],
+.regform__field-content input[type='password'] {
+    border-radius: .7em;
+    border: 1px solid #aaaaaa;
+    margin: .3em;
+    padding: 2px 10px;}

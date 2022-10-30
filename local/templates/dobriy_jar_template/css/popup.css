@@ -1,0 +1,43 @@
+.popup {
+    position: absolute;
+    visibility: hidden;
+    background-color: white;
+    z-index: 850;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 grey;
+    transition: opacity .3s;
+}
+
+.popup .inline-icon {
+    float: none;
+    display: inline-block;
+}
+
+.popup-toggle {
+    visibility: visible;
+}
+
+.popup-fixed {
+    position: relative!important;
+    top: 60px!important;
+
+    z-index: 910!important;
+    display: block;
+width: fit-content;
+margin: auto}
+
+.popup-overlay {
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    height: 200%;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    transition: opacity .3s;
+    text-align: center;}
+
+.animation-fade {
+    opacity: 0;
+}

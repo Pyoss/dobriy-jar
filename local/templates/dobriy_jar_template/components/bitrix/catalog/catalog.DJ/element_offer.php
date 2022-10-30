@@ -1,0 +1,2 @@
+<?php
+$component->IncludeComponentTemplate('element');

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X7 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="40mm" height="40mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 4000 4000"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#5B5B5B}
+    .fil0 {fill:#F39314}
+   ]]>
+  </style>
+ </defs>
+ <g id="Слой_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_1911569164752">
+   <path class="fil0" d="M2040 1819c0,179 -145,324 -324,324 -179,0 -324,-145 -324,-324 0,-178 145,-323 324,-323 179,0 324,145 324,323z"/>
+   <g>
+    <polygon class="fil1" points="1700,2202 1759,2202 1759,2143 1700,2143 "/>
+    <polygon class="fil1" points="1700,2066 1759,2066 1759,2006 1700,2006 "/>
+    <polygon class="fil1" points="1700,1929 1759,1929 1759,1870 1700,1870 "/>
+    <polygon class="fil1" points="1700,2338 1759,2338 1759,2279 1700,2279 "/>
+    <path class="fil1" d="M1826 2143l0 59 224 0c-8,-19 -14,-39 -18,-59l-206 0z"/>
+    <path class="fil1" d="M1826 2006l0 60 199 0c1,-21 3,-40 7,-60l-206 0z"/>
+    <path class="fil1" d="M1826 1870l0 59 234 0c11,-21 24,-41 40,-59l-274 0z"/>
+    <path class="fil1" d="M2097 2279l-271 0 0 59 335 0c-23,-17 -45,-37 -64,-59z"/>
+    <path class="fil1" d="M2082 1678l-278 0 0 -70 55 0c16,0 29,-13 29,-29 1,-29 25,-53 55,-53 29,0 54,24 54,53 1,16 14,29 30,29l55 0 0 70zm30 -129l-60 0c-14,-47 -58,-82 -109,-82 -52,0 -96,35 -110,82l-59 0c-16,0 -30,14 -30,30l0 158 397 0 0 -158c0,-17 -13,-30 -29,-30z"/>
+    <path class="fil1" d="M2344 1872c-112,0 -203,91 -203,204 0,112 91,204 203,204 113,0 204,-92 204,-204 0,-113 -91,-204 -204,-204zm0 467c-145,0 -263,-118 -263,-263 0,-145 118,-263 263,-263 146,0 264,118 264,263 0,145 -118,263 -264,263z"/>
+    <polygon class="fil1" points="2338,2186 2219,2090 2256,2044 2328,2102 2431,1969 2478,2005 "/>
+    <path class="fil1" d="M1608 2476l673 0 0 -95 57 0 0 152 -787 0 0 -917 159 0 0 57 -102 0 0 803zm576 -860l154 0 0 57 -57 0 -81 0 -16 0 0 -57z"/>
+    <polygon class="fil1" points="2281,1766 2281,1651 2338,1651 2338,1766 "/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,12 @@
+
+.slider.brands .slide-wrapper {
+    background-size: 50%;
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+.slider.brands .wrapper{
+    position: relative;
+}
+

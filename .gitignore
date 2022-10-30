@@ -1,0 +1,10 @@
+/bitrix/
+/images/
+/local/classes/integration_1C/log
+/local/classes/integration_1C/log.txt
+/local/classes/integration_1C/log_packet.txt
+/local/classes/integration_1C/.conf.txt
+/local/classes/integration_1C/test.php
+/upload/
+/local/templates/landing_template/
+/.idea/

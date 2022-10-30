@@ -1,0 +1,36 @@
+.catalog .found-sections {
+	width: 28%;
+	padding-right: 8%;
+	min-height: 100px;
+	margin: 0 auto;
+	float:left;
+}
+
+.found-section--title {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ff6100;
+}
+
+.found-section {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 5px;
+	cursor: pointer;
+}
+
+.found-section--title {
+	padding-bottom: 15px;
+}
+
+.found-section.active .found-section--name {
+	text-decoration: underline;
+	color: #ff6100;
+}
+
+@media (max-width: 980px){
+	.catalog .found-sections {
+		width: 90%;
+		margin: 0 5%;;
+	}
+}

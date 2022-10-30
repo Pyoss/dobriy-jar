@@ -1,0 +1,33 @@
+.catalog--top-sections {
+    display: flex;
+    justify-content: left;
+    margin-right: auto;
+    margin-bottom: 40px;
+    padding: 0 4%;
+}
+
+.catalog--top-sections > * {
+    width: 25%;
+    margin: 5px;
+    height: 60px;
+    border: 1px solid #d3d3d3;
+    padding: 4px;
+}
+
+.catalog--top-sections > *:hover  {
+    box-shadow: 0 0 10px -5px black;
+}
+
+.top-section > * {
+    float: left;
+}
+
+.top-section img {
+    height: 50px;
+    width: auto;
+}
+
+.top-section .top-section--name {
+    padding-top: 15px;
+    padding-left: 30px;
+}

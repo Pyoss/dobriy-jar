@@ -1,0 +1,25 @@
+div.sales-detail .sales-header {
+	padding: 20px 0 20px 40px;
+}
+
+div.sales-detail .sales-title
+{
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ff6100;
+	margin-top: 0;
+}
+div.sales-detail img.detail_picture
+{
+	width: 100%;
+	height: auto;
+}
+.sales-date-time
+{
+	display: block;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+}

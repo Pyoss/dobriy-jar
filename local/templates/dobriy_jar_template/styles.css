@@ -1,0 +1,242 @@
+/* контейнер для товаров */
+.catalog-products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    width: 100%;
+}
+/* переключение sku */
+
+.main-sliders {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sku-prop {
+    border: 1px solid #AAAAAA;
+    padding: 2px 10px;
+    margin: 3px;
+    border-radius: 4px;
+    white-space:nowrap;
+    display: inline-block;
+    min-width: 32px;
+    text-align: center;
+    cursor: default;
+    z-index: 4;
+}
+
+.sku-prop:not(.inactive){
+    cursor: pointer;
+}
+
+.sku-prop.current{
+    background-color: #ff6100;
+    color: white;
+    border-color: #ff6100;
+}
+
+.sku-row-name {
+    margin: 7px 10px;
+    color: #666666;
+}
+
+.sku-prop.inactive{
+    color: grey
+}
+
+/* Описание */
+
+.desc-block.video {
+    max-width: 900px;
+    margin: auto;
+}
+
+.desc-block .video-title {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444453;
+    display: block;
+}
+
+.desc-block .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin: auto;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 98%;
+}
+
+.desc-block {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 3% 0;
+    width: 100%;
+}
+
+
+.desc-block .desc-block--title {
+    font-size: 30px;
+    margin: 0 0 15px 0;
+    color: #ff6100;
+    display: block;
+}
+
+.desc-block .desc-block--text {
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.desc-block .desc-block--section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #444453;
+    width: 100%;
+    display: block;
+}
+
+.desc-block.pic-right, .desc-block.pic-left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;}
+
+.desc-block.pic-left {
+    flex-direction: row-reverse;
+}
+
+.desc-block.pic-right .desc-block--image-wrapper, .desc-block.pic-left .desc-block--image-wrapper{
+    max-width: 30%;
+    /* min-width: 300px; */}
+
+.desc-block.pic-right img,
+.desc-block.pic-left img{
+    max-height: 600px;
+    max-width: 100%;
+}
+
+.desc-block.pic-right.small img,
+.desc-block.pic-left.small img{
+    max-height: 400px;
+    max-width: 100%;
+}
+
+.desc-block.pic-right .desc-block--text-container,
+.desc-block.pic-left .desc-block--text-container{
+    max-width: 60%;
+    /* min-width:  300px; */}
+
+.image-gallery .desc-block--image-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+
+}
+
+.image-gallery .desc-block--image-wrapper img {
+    max-height: 300px;
+    max-width: 50%;}
+
+.featured-list--container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-size: 20px;
+    line-height: 35px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.featured-list--container> * {
+    width: 35%;
+    min-width: 300px;/* max-width: 100%; */}
+
+.featured-list--container img {
+    max-width: 100%;
+}
+
+/* Кнопки и другие универсальные элементы*/
+
+.dj-button {
+    font-size: 18px;
+    color: white;
+    background-color: #ff6100;
+    border: 0;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dj-color {
+    color: #ff6100;
+}
+
+.hidden {
+    display: none!important;
+}
+/* Описание под мобилки*/
+
+
+.company-history, .company-history tr, .company-history td {
+    border: 5px solid #ffffff;
+}
+
+/* 404 */
+
+
+.container-404 {/* padding-top: 20rem; */text-align: center;color: grey;}
+
+.container-404__code {
+    font-size: 10rem;
+}
+
+.container-404__text {
+    font-size: 1rem;
+    padding: 0 0 10px 0;
+}
+
+.container-404__quote {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 40px 0 60px 0;
+}
+
+
+@media (max-width: 980px) {
+
+    .desc-block .desc-block--title {
+        font-size: 20px;
+    }
+
+    .desc-block .desc-block--text {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .desc-block .desc-block--section-title {
+        font-size: 21px;
+    }
+
+    .desc-block .featured-list--container {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .desc-block > * {
+        max-width: unset!important;
+    }
+    .featured-list--container> * {
+        width: 90%;
+        list-style-type: decimal;
+    }
+}

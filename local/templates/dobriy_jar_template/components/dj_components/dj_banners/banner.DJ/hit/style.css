@@ -1,0 +1,62 @@
+
+.slider.hit:before {
+    content: " ";
+    width: 100%;
+    background-color: #ff6100;
+    height: 80px;
+    position: absolute;
+    bottom: -10px;
+}
+
+.slider.hit{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.slider.hit .slide {
+    background: #F4F4F4;
+    height: 100%;
+}
+
+.slider.hit .slide-wrapper {
+    padding: 10px;
+}
+
+.slide-hit--bg {
+    width: 100%;
+    height: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    float: left;
+}
+
+.slide-hit--name {
+    font-size: .9em;
+    width: 65%;
+    display: inline-block;
+    float: left;
+    padding-left: .6em;
+    padding-bottom: .6em;
+}
+
+.slide-hit--name > b {
+    text-transform:uppercase;
+}
+
+.slide-hit--price {
+    font-size: 0.8em;
+    width: 35%;
+    display: inline-block;
+    float: left;
+    text-align: right;
+    padding-right: .6em;
+
+}
+
+.slide-hit--price > span {
+    color: #ff6100;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-wrap: none;
+}

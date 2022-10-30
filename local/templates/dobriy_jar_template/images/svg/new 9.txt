@@ -1,0 +1,11 @@
+              & .cover-block--item:nth-child(2), & .cover-block--item:nth-child(3),
+              & .cover-block--item:nth-child(4), & .cover-block--item:nth-child(5), & .cover-block--item:nth-child(6){
+                margin-top: 0rem;
+              }
+			  
+			  
+			  function mobsection() {
+    if (window.innerWidth < 600 && window.location.pathname != "/dobriy_jar/lists_page2.php") {
+        window.location.href = "/dobriy_jar/lists_page2.php";
+    }
+}
