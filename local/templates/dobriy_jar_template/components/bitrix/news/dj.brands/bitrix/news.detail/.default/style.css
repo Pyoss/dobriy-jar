@@ -10,30 +10,20 @@ div.brands-detail .brands-title
 	text-transform: uppercase;
 	color: #ff6100;
 	margin-top: 0;
-    margin-bottom: 0;
 }
 
 div.brands-detail img.detail_picture
 {
 	width: 40%;
 	float: right;
-	padding: 0 110px;
+	padding: 120px 110px;
 	height: auto;
 }
 
 .brands-detail {
 	border-bottom: 1px solid #CCCCCC;
-	padding-bottom: 70px;
-	margin-bottom: 70px;
-}
-.brands-detail.center-contentw li::marker {
-    color: firebrick;
-    font-size: 21px;
-}
-.brands-detail.center-contentw li {
-   margin-bottom: 0.3em;
-   line-height: 1.5;
-   font-size: 1.1em;
+	padding-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 
@@ -86,17 +76,6 @@ div.brands-detail img.detail_picture
 
 .sku-prop.inactive{
 	color: grey
-}
-.brands-detail.center-contentw a {
-    color: #ff6100;
-    text-decoration: underline;
-}
-.brands-detail.center-contentw a:hover {
-    text-decoration: none;
-}
-.center-contentw p {
-    line-height: 1.5;
-    font-size: 1.1em;
 }
 
 

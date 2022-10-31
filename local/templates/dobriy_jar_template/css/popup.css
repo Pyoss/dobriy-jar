@@ -20,8 +20,8 @@
 
 .popup-fixed {
     position: relative!important;
-    top: 60px!important;
-
+    top: 50%!important;
+    transform: translateY(-100%);
     z-index: 910!important;
     display: block;
 width: fit-content;

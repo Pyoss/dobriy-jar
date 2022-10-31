@@ -53,7 +53,7 @@ function setMenuListeners(){
 
     for (i = 0; i < menu_sections.length; ++i) {
         if (menu_sections[i].classList.contains('parent')){
-            menu_sections[i].querySelector('div').addEventListener('click',
+            menu_sections[i].querySelector('.mobile-section__name').addEventListener('click',
                 mobile_catalog.navForward.bind(mobile_catalog),
                 {passive: false})
         } else {
@@ -62,6 +62,14 @@ function setMenuListeners(){
             });
         }
     }
+
+    let catalog_link = document.querySelector('.open-catalog')
+
+    catalog_link.addEventListener('click',
+        function (){
+            mobile_catalog.show()
+            mobile_catalog.navForward(false, '#msection-0')
+        })
 
     let menu_sections_back = document.querySelectorAll('.mobile-nav-back'), j;
     for (j = 0; j < menu_sections_back.length; ++j) {
@@ -165,12 +173,13 @@ class MobileCatalogController{
 
     }
 
-    navForward(event){
+    navForward(event, target){
+        target = target ? target : '#' + event.currentTarget.id.replace('name-','')
         this.blockedInteraction = true;
         this.currentTranslate += 100;
         this.catalogDom.style.transform = 'translateX(-' + this.currentTranslate + '%)';
         this.prevDoms.push(this.currentDom);
-        this.currentDom = this.currentDom.querySelector('#' + event.currentTarget.id.replace('name-',''));
+        this.currentDom = this.currentDom.querySelector(target);
         this.currentDom.classList.add('expanded');
         this.wrapper.scrollTop = 0;
     }

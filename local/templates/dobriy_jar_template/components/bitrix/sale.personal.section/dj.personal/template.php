@@ -1,6 +1,5 @@
 <? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
-
 use Bitrix\Main\Localization\Loc;
 
 
@@ -104,7 +103,7 @@ if ($customPagesList) {
         <span id="bonus-tip" class="personal-account__aquire-tip">
             С каждой покупки в интернет-магазин Добрый Жар вам начисляется 3% от суммы заказа в виде баллов.
             <br>
-            Вы можете оплатить баллами до 30% от суммы заказа (без учета доставки)</span>
+            Вы можете оплатить баллами до 10% от суммы заказа (без учета доставки)</span>
 
     </div>
 </div>

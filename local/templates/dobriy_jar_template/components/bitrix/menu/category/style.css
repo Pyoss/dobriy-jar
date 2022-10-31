@@ -1,8 +1,8 @@
 
 .section-menu {
     max-width: 1350px;
-    margin: 0 auto; /* ÐžÐ±Ð½ÑƒÐ»ÑÐµÐ¼ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¾Ñ‚ÑÑ‚ÑƒÐ¿Ð¾Ð² */
-    padding: 10px 50px; /* Ð—Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ð»ÐµÐ¹ */
+    margin: 0 auto;
+    padding: 10px 50px;
     display: flex;
     position: relative;
 }
@@ -31,7 +31,7 @@
 
 .section-menu .section-menu--section {
     border-right: 1px solid #ff6100;
-    padding: 7px 0 10px 0; /* ÐŸÐ¾Ð»Ñ Ð²Ð¾ÐºÑ€ÑƒÐ³ Ñ‚ÐµÐºÑÑ‚Ð° */
+    padding: 7px 0 10px 0; /* ÃÅ¸ÃÂ¾ÃÂ»Ã‘Â ÃÂ²ÃÂ¾ÃÂºÃ‘â‚¬Ã‘Æ’ÃÂ³ Ã‘â€šÃÂµÃÂºÃ‘ÂÃ‘â€šÃÂ° */
     width: 100%;
 }
 
@@ -217,17 +217,21 @@
 
 .mobile-section {
     cursor: pointer;
+    display: flex;
+
+    border-bottom: 1px solid #dddddd;
+    align-items: center;
 }
 
-.mobile-section>div, .mobile-nav-back{
+.mobile-section__name, .mobile-nav-back{
     position: relative;
     font-size: 18px;
     padding: 18px 30px;
-    border-bottom: 1px solid #dddddd;
 }
 
-.mobile-section>div{
+.mobile-section__name{
     font-weight: 600;
+    width: 100%;
 }
 
 .mobile-nav-title {
@@ -271,6 +275,15 @@
 
 .back-message {
     padding-left: 40px;
+}
+
+.mobile-section__icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 

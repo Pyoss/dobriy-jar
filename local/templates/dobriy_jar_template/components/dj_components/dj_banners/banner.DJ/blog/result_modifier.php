@@ -1,11 +1,12 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) {
     die();
 }
+
 // Getting blog articles
 $rsBanners = \Bitrix\Iblock\ElementTable::getList([
         'filter' => array(
             'IBLOCK_ID' => 7,
-            'ID' => array_map('intval', $arParams['ARTICLE_ID'])
+            'ID' => array(6240, 6217,6225, 6123)
         ),
         'select' => array(
             'ID', 'NAME', 'DETAIL_PICTURE',

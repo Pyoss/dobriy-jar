@@ -15,7 +15,7 @@ $detect = new MobileDetect;
 ?>
 <section class="mfeedback-wrapper" id="mfeedback" <?
 if(!$detect->isMobile()):
-?>style="background-image: url(<?=$arParams['BACKGROUND_FILE']?>)"<?php
+    ?>style="background-image: url(<?=$arParams['BACKGROUND_FILE']?>)"<?php
 endif;?>>
     <div class="mfeedback-text top">Все ещё </br>раздумываете?</div>
     <div class="mfeedback-text bottom">Закажите обратный звонок, и наши специалисты проконсультируют вас и подберут лучший вариант</div>

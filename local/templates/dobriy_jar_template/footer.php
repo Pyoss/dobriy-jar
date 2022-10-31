@@ -1,3 +1,5 @@
+
+
 <?php
 $APPLICATION->IncludeComponent(
 	"dj_components:main.feedback", 
@@ -5,6 +7,7 @@ $APPLICATION->IncludeComponent(
 	array(
 		"EMAIL_TO" => "nazliev@dobriy-jar.ru",
 		"EVENT_MESSAGE_ID" => array(
+			0 => "7",
 		),
 		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
 		"REQUIRED_FIELDS" => array(
@@ -18,7 +21,8 @@ $APPLICATION->IncludeComponent(
 		"BACKGROUND_FILE" => "/upload/medialibrary/988/6lftgi0idkcxwrhmhg7cpjhz2zj11kdw.png"
 	),
 	false
-); ?></main>
+); ?>
+</main>
 <footer class="footer">
     <div class="footer-wrapper">
         <div class="footer-social-block">
@@ -35,7 +39,6 @@ $APPLICATION->IncludeComponent(
                     <li><a href="https://vk.com/distillyatory" class="inline-icon vk-icon"></a></li>
                     <li><a href="https://www.youtube.com/c/%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%D0%96%D0%B0%D1%80%D0%B4%D0%BE%D0%B1%D1%80%D1%8B%D0%B9_%D0%B6%D0%B0%D1%80" class="inline-icon youtube-icon"></a></li>
                     <li><a href="https://ok.ru/dobriyjar" class="inline-icon ok-icon"></a></li>
-                    <li><a href=" https://zen.yandex.ru/dobriy_jar" class="inline-icon zen-icon"></a></li>
                 </ul>
             </div>
         </div>
@@ -133,11 +136,39 @@ $APPLICATION->IncludeComponent(
             ?>
         </div>
     </div>
+    <div class="footer-mobile mobile">
+        <div class="footer-mobile__button">
+            <a href="/">
+                <img class="footer-mobile__img" src="/upload/images/svg/mobile/home.svg">
+                <span class="footer-mobile__text">Главная</span>
+            </a>
+        </div>
+        <div class="footer-mobile__button open-catalog">
+                <img class="footer-mobile__img" src="/upload/images/svg/mobile/catalog.svg">
+                <span class="footer-mobile__text">Каталог</span>
+        </div>
+        <div class="footer-mobile__button">
+            <a href="/personal/order/make/">
+                <img class="footer-mobile__img" src="/upload/images/svg/mobile/basket.svg">
+                <span class="footer-mobile__text">Корзина</span>
+            </a>
+        </div>
+        <div class="footer-mobile__button">
+            <a href="/contacts/">
+                <img class="footer-mobile__img" src="/upload/images/svg/mobile/location.svg">
+                <span class="footer-mobile__text">Магазины</span>
+            </a>
+        </div>
+        <div class="footer-mobile__button">
+            <a href="/personal/">
+                <img class="footer-mobile__img" src="/upload/images/svg/mobile/profile.svg">
+                <span class="footer-mobile__text">Профиль</span>
+            </a>
+        </div>
     </div>
+
 </footer>
 <?php if ($GLOBALS['show_canonical']){
     ?><link rel="canonical"
             href="https://<?=strtok($_SERVER['SERVER_NAME'] . $_SERVER["REQUEST_URI"], '?');?>"/><?php
-}
-include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . "/analytics.php";
-?>
+}?>

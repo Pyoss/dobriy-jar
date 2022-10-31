@@ -1,26 +1,23 @@
+
 .brands-list {
 	display: flex;
 	flex-wrap: wrap;
-    align-items: end;
-    justify-content: center;
 }
 
 .brands-item {
 	display: flex;
 	justify-content: end;
-	align-items: center;
+	align-items: end;
 	flex-wrap: wrap;
-	width: 25%;
-	padding-bottom: 10px;
-    flex-direction: column;
-    align-content: center;
-    border: solid 1px #cecece;
+	width: 26%;
+	margin-bottom: 40px;
 }
 
 .brands-item .preview-picture--wrapper
 {
 	width: 70%;
 	height: auto;
+	align-self: start;
 }
 
 .brands-item .preview-picture
@@ -29,8 +26,9 @@
 }
 
 .brands-item .brands-item--content {
-	width: 75%;
-    text-align: center;
+	width: 30%;
+	padding-left: 40px;
+	padding-bottom: 50px;
 }
 
 .brands-item .brands-item--content b{
@@ -47,21 +45,14 @@ div.brands-item:after {
 
 	.brands-item .preview-picture--wrapper
 	{
-		width: 60%;
+		width: 100%;
 		height: auto;
 	}
 
-    .brands-item {
-        width: 100%;
-        justify-content: center;
-        flex-direction: inherit;
-    
-}
-}
-
 	.brands-item .brands-item--content {
 		width: 100%;
-		padding-left: 0;
+		padding-left: 40px;
 		padding-bottom: 15px;
-		padding-top: 0;
+		padding-top: 15px;
 	}
+}

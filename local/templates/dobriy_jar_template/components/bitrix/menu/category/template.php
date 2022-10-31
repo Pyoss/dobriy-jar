@@ -66,16 +66,20 @@
     <div class="mobile-catalog--overlay"></div>
     <div class="mobile-catalog--wrapper">
         <ul class="mobile-menu">
-            <li class="mobile-section"
-                href="tel:<?=$GLOBALS['phone']?>">
-                <div id="name-msection-0">
+            <li class="mobile-section">
+                <a style="display: inherit;align-items: inherit" href="tel:<?=$GLOBALS['phone']?>">
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/phone.svg')"></div>
+                <div class="mobile-section__name" id="name-msection-0">
                     <?=$GLOBALS['phone']?>
                 </div>
+                </a>
             </li>
             <li class="mobile-section parent"
                 id="msection-0"
                 data-href="/catalog/">
-                <div id="name-msection-0">
+
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/catalog.svg')"></div>
+                <div class="mobile-section__name" id="name-msection-0">
                     Каталог <span class="parent-arrow"></span>
                 </div>
                 <ul class="mobile-submenu">
@@ -87,7 +91,7 @@
                             <li class="mobile-section<?= $arSection['IS_PARENT'] ? ' parent' : '' ?>"
                                 id="msection-<?= $arSection['ITEM_INDEX'] ?>"
                                 data-href="<?= $arSection['LINK'] ?>">
-                                <div id="name-msection-<?= $arSection['ITEM_INDEX'] ?>">
+                                <div  class="mobile-section__name" id="name-msection-<?= $arSection['ITEM_INDEX'] ?>">
                                     <?= $arSection['TEXT'] ?><?= $arSection['IS_PARENT'] ? '<span class="parent-arrow"></span>' : '' ?>
                                 </div>
                                 <ul class="mobile-submenu">
@@ -99,7 +103,7 @@
                                         <li class="mobile-section<?= $arSubSection['IS_PARENT'] ? ' parent' : '' ?>"
                                             id="msection-<?= $arSubSection['ITEM_INDEX'] ?>"
                                             data-href="<?= $arSubSection['LINK'] ?>">
-                                            <div id="name-msection-<?= $arSubSection['ITEM_INDEX'] ?>">
+                                            <div  class="mobile-section__name" id="name-msection-<?= $arSubSection['ITEM_INDEX'] ?>">
                                                 <?= $arSubSection['TEXT'] ?><?= $arSubSection['IS_PARENT'] ? '<span class="parent-arrow"></span>' : '' ?>
                                             </div>
                                             <? if ($arSubSection['IS_PARENT']): ?>
@@ -111,7 +115,7 @@
                                                         <li class="mobile-section<?= $arSubSubSection['IS_PARENT'] ? ' parent' : '' ?>"
                                                             id="msection-<?= $arSubSubSection['ITEM_INDEX'] ?>"
                                                             data-href="<?= $arSubSubSection['LINK'] ?>">
-                                                            <div id="name-msection-<?= $arSubSubSection['ITEM_INDEX'] ?>">
+                                                            <div  class="mobile-section__name" id="name-msection-<?= $arSubSubSection['ITEM_INDEX'] ?>">
                                                                 <?= $arSubSubSection['TEXT'] ?>
                                                             </div>
                                                         </li>
@@ -127,8 +131,10 @@
                 </ul>
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="/sale/">
+
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/sale.svg')"></div>
+                <div class="mobile-section__name">
                     Акции
                 </div>
             </li>
@@ -136,32 +142,33 @@
                 Покупателям
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="/personal/">
+
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/login.svg')"></div>
+                <div class="mobile-section__name">
                     Вход или регистрация
                 </div>
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="/delivery/">
+
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/shipment.svg')"></div>
+                <div class="mobile-section__name">
                     Доставка
                 </div>
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="/contacts/">
+
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/location.svg')"></div>
+                <div class="mobile-section__name">
                     Контакты
                 </div>
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
-                    Чат с оператором
-                </div>
-            </li>
-            <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="https://www.blog.dobriy-jar.ru/calculators">
+                <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/calc.svg')"></div>
+                <div class="mobile-section__name">
                     Калькуляторы
                 </div>
             </li>
@@ -169,26 +176,26 @@
                 Проекты
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="https://www.blog.dobriy-jar.ru/">
+                <div class="mobile-section__name">
                     Блог
                 </div>
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="https://www.youtube.com/c/%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%D0%96%D0%B0%D1%80%D0%B4%D0%BE%D0%B1%D1%80%D1%8B%D0%B9_%D0%B6%D0%B0%D1%80">
+                <div class="mobile-section__name">
                     Ютуб-канал
                 </div>
             </li>
             <li class="mobile-section"
-                href="/sale/">
-                <div>
+                data-href="https://www.opt.dobriy-jar.ru/">
+                <div class="mobile-section__name">
                     Оптовикам
                 </div>
             </li>
-            <li class="mobile-section"
-                href="/sale/">
-                <div>
+            <li class="https://www.franchize.dobriy-jar.ru/"
+                data-href="/sale/">
+                <div class="mobile-section__name">
                     Франшиза
                 </div>
             </li>

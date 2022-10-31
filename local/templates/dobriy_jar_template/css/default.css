@@ -4,7 +4,7 @@
 }
 
 html, body {
-     font-family: Open sans, Helvetica, Arial, sans-serif;
+     font-family: Inter, Helvetica, Arial, sans-serif;
      touch-action: manipulation;
      scrollbar-gutter:stable;
 }
@@ -120,13 +120,6 @@ select option:checked {
 
           overflow-x: hidden;
      }
-
-    .center-contentw {
-          margin: 15px 15px;
-	}
-	div.brands-detail .brands-header {
-          padding: 0;
-    }
 }
 
 

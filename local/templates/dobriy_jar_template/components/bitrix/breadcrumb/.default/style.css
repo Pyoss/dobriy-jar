@@ -1,8 +1,8 @@
 .bx-breadcrumb {
-    max-width: 1200px;
+    max-width: 1470px;
     margin: 20px auto;
     position: relative;
-}
+    padding-left: 4%;}
 
 .bx-breadcrumb-item:not(.bx-breadcrumb-item:nth-last-child(1)) {
     position: relative;
@@ -13,18 +13,17 @@
 
 .bx-breadcrumb-item:nth-last-child(1) a {
     pointer-events: none;
-    font-size: 17px;
-    text-transform: none;
+    font-size: 18px;
+    text-transform: uppercase;
     display: inline;
     font-weight: bold;
-    color: #ff7300;
+    color: black;
 }
 
 .bx-breadcrumb-item h1 {
     font-size: inherit;
     margin: inherit;
     display: inline;
-    font-weight: 500;
 }
 
 @media (max-width: 980px){

@@ -25,27 +25,6 @@ if ($hasOffers) {
     $article = $curOffer['DISPLAY_PROPERTIES']['ARTNUMBER']['DISPLAY_VALUE'];
     $is_available = true;
 }
-$desc = $arResult['IPROPERTY_VALUES']['ELEMENT_META_DESCRIPTION'];
-DJgeo::geoReplace($desc);
- $schemaParams = array(
-		"AGGREGATEOFFER" => "N",
-		"DESCRIPTION" =>  $desc,
-		"ITEMAVAILABILITY" => "InStock",
-		"ITEMCONDITION" => "NewCondition",
-		"NAME" => $arResult['IPROPERTY_VALUES']['ELEMENT_PAGE_TITLE'],
-		"PARAM_RATING_SHOW" => "N",
-		"PAYMENTMETHOD" => array(),
-		"PRICE" => $arResult['VIEW']['RAW_PRICE'],
-		"PRICECURRENCY" => "RUB",
-     "IMG" => $arResult['VIEW']['GALLERY'][0]['src'],
-		"SHOW" => "Y"
-	);
-$APPLICATION->IncludeComponent(
-	"coffeediz:schema.org.Product",
-	".default",
-	$schemaParams,
-    $component
-);
 ?>
 <div class="product-wrapper" id="<?= $arResult['ID'] ?>" data-product-id="<?= $arResult['ID'] ?>">
     <div class="detail-product-top">
@@ -156,7 +135,7 @@ $APPLICATION->IncludeComponent(
                     </div>
                     <? endif;*/?>
                         <span  id="price-<?=$arResult['VIEW']['ID']?>" class="price rub"><?= $arResult['VIEW']['PRICE'] ?></span>
-                        <span class="base-price rub"><?= $arResult['VIEW']['DISCOUNT'] ? $arResult['VIEW']['BASE_PRICE'] : "" ?>
+                        <span class="base-price rub desktop"><?= $arResult['VIEW']['DISCOUNT'] ? $arResult['VIEW']['BASE_PRICE'] : "" ?>
                     </span>
                     </div>
                 <?else:?>
@@ -269,13 +248,13 @@ $APPLICATION->IncludeComponent(
             </div>
             <div class="tab-content">
                 <?foreach ($video as $video_link):?>
-                    <div class="desc-block video">
-                        <div class="video-wrapper">
-                            <iframe
-                                    src="https://www.youtube.com/embed/<?= $video_link ?>">
-                            </iframe>
-                        </div>
+                <div class="desc-block video">
+                    <div class="video-wrapper">
+                        <iframe
+                                src="https://www.youtube.com/embed/<?= $video_link ?>">
+                        </iframe>
                     </div>
+                </div>
                 <? endforeach;?>
             </div>
         </div>

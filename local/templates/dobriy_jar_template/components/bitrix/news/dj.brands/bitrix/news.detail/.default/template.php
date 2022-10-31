@@ -12,15 +12,15 @@
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-?><div class="brands-detail center-contentw">
+?>
+<div class="brands-detail center-contentw">
 
     <div class="brands-header">
 	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
-		<h2 class="brands-title"><?=$arResult["NAME"]?></h2>
+		<h3 class="brands-title"><?=$arResult["NAME"]?></h3>
     </div>
 	<?endif;?>	<?if($arParams["DISPLAY_PICTURE"]!="N" && is_array($arResult["DETAIL_PICTURE"])):?>
-<div class="img_brand">
-<img
+        <img
                 class="detail_picture"
                 border="0"
                 src="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>"
@@ -29,13 +29,11 @@ $this->setFrameMode(true);
                 alt="<?=$arResult["DETAIL_PICTURE"]["ALT"]?>"
                 title="<?=$arResult["DETAIL_PICTURE"]["TITLE"]?>"
         />
-	</div>
     <?endif?>
-    <div class="text_brand">
 	<?if($arResult["DETAIL_TEXT"] <> ''):?>
 		<?echo $arResult["DETAIL_TEXT"];?>
 	<?endif?>
-	</div>
+	<br />
 </div>
 <?
 $rs = \Bitrix\Iblock\ElementPropertyTable::getList(
@@ -45,10 +43,10 @@ $rs = \Bitrix\Iblock\ElementPropertyTable::getList(
 $elementIDs = array_map(function($a){return $a['IBLOCK_ELEMENT_ID'];}, $rs -> fetchAll());
 if ($elementIDs):
 ?>
-<h3 class="brand-items-header center-contentw">
+<h2 class="brand-items-header center-contentw">
     Товары <?=$arResult['NAME']?> в каталоге:
-</h3>
-<div class="catalog--wrapper center-contentw">
+</h2>
+<div class="catalog--wrapper">
     <div class="catalog">
 <?
 $GLOBALS['sectionFilter'] = array('ID' => $elementIDs, 'ACTIVE' => 'Y');

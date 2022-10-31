@@ -82,25 +82,25 @@ class SliderDev{
     }
 
     mousedown(){
-       return BX.proxy( function(e){
-           if (this.pressed || this.blocked){
-               return
-           }
-           this.press(e)
-           e.myX = e.pageX || e.touches[0].clientX
-           this.startX = e.myX - this.container.offsetLeft;
-           this.startOffset = this.container.offsetLeft;
-       }, this)
+        return BX.proxy( function(e){
+            if (this.pressed || this.blocked){
+                return
+            }
+            this.press(e)
+            e.myX = e.pageX || e.touches[0].clientX
+            this.startX = e.myX - this.container.offsetLeft;
+            this.startOffset = this.container.offsetLeft;
+        }, this)
     }
 
     mouseleave(){
         return BX.proxy( function(e){
-        if(!this.pressed || this.blocked){
-            return
-        }
-        this.free(e)
-        this.update(e)
-    }, this)
+            if(!this.pressed || this.blocked){
+                return
+            }
+            this.free(e)
+            this.update(e)
+        }, this)
     }
 
     mousemove(){
@@ -203,6 +203,12 @@ class SliderDev{
             } else if (this.cur_index > this.container.children.length - 1){
                 this.cur_index = this.container.children.length - 1
             }
+        } else {
+            if (this.cur_index > this.container.children.length - 1){
+                this.cur_index = 1
+            } else if(this.cur_index < 0) {
+                this.cur_index = this.container.children.length - 1
+            }
         }
     }
 
@@ -223,7 +229,8 @@ class SliderDev{
     shiftSlides(){
         let slider_move = setInterval(function (){
             let requiredOffset = - this.cur_index * this.slide_width
-            let interval_px = requiredOffset < this.container.offsetLeft ? -100 : 100;
+            let interval_speed = Math.abs(requiredOffset - this.container.offsetLeft) / 5
+            let interval_px = requiredOffset < this.container.offsetLeft ? -interval_speed : interval_speed;
             if (!this.pressed && this.container.offsetLeft !== requiredOffset) {
                 let distance = this.container.offsetLeft - requiredOffset
                 this.container.style.left = (Math.abs(distance) < Math.abs(interval_px) ?

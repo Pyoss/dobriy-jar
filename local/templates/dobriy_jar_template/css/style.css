@@ -202,11 +202,6 @@
     background-image: url('../images/svg/trash.svg');
 }
 
-.zen-icon {
-    background-image: url('../images/svg/zen.svg');
-    background-size: contain;
-}
-
 .footer-logo {
     background-image: url('../images/svg/logo_footer.svg');
     background-position: center;
@@ -275,12 +270,9 @@
 }
 
 .center-contentw {
-    max-width: 1200px;
+    max-width: 1470px;
     margin-left: auto;
     margin-right: auto;
-}
-.center-contentw .slider.hit {
-    width: 100%;
 }
 
 .description-point {

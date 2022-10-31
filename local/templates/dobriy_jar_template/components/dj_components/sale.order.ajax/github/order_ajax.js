@@ -6750,7 +6750,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
                 shopId: 'd2ae263f-98d8-486a-82ea-91b45de94fec',
                 showcaseId: '638e23b3-661a-45ea-a311-5d6433005245',
                 demoFlow: 'sms',
-                promoCode: 'installment_0_0_6_8,84',
+                promoCode: 'installment_0_0_6_10,68',
                 items: items_list,
                 sum: this.result.TOTAL.ORDER_PRICE
             })
@@ -6944,7 +6944,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
                             props: {
                                 className: 'bx-soa-bonus-tip'
                             },
-                            text: 'Вы можете оплатить баллами до 30% от суммы товаров в корзине'
+                            text: 'Вы можете оплатить баллами до 10% от суммы товаров в корзине'
                         }),
                     ]
                 });

@@ -1,4 +1,4 @@
-/* ----------- ОБЩЕЕ ДЛЯ ВСЕХ ТИПОВ СПИСКА -----------*/
+/* ----------- ÐžÐ‘Ð©Ð•Ð• Ð”Ð›Ð¯ Ð’Ð¡Ð•Ð¥ Ð¢Ð˜ÐŸÐžÐ’ Ð¡ÐŸÐ˜Ð¡ÐšÐ -----------*/
 
 .item-discount {
     position: absolute;
@@ -70,6 +70,7 @@
     width: 10em;
     white-space: nowrap;
     display: block;
+    margin: auto;
 }
 
 .product-element--action-wrapper .product-element--basket-button:hover {
@@ -88,7 +89,7 @@
     margin-top: 0.3em;
 }
 
-/* ----------- ПЕРВЫЙ ТИП СПИСКА --------------*/
+/* ----------- ÐŸÐ•Ð Ð’Ð«Ð™ Ð¢Ð˜ÐŸ Ð¡ÐŸÐ˜Ð¡ÐšÐ --------------*/
 
 .row-view .product-element--drop {
     position: absolute;
@@ -163,7 +164,7 @@
 }
 
 @media (min-width: 981px){
-    /* -------------- ВТОРОЙ ТИП СПИСКА --------------------*/
+    /* -------------- Ð’Ð¢ÐžÐ ÐžÐ™ Ð¢Ð˜ÐŸ Ð¡ÐŸÐ˜Ð¡ÐšÐ --------------------*/
     .column-view  .product-element--info-wrapper,
     .column-view  .offer-sku,
     .column-view  .product-element--drop,
@@ -235,7 +236,6 @@
 
     .product-element .product-element--info-wrapper {
         padding-top: 1.38em
-
     }
 
     .product-element--drop {
@@ -244,11 +244,17 @@
         opacity: 1 !important;
     }
 
+    .row-view .product-element:hover {
+        border-bottom:1px solid #cccccc;
+    }
+
 }
 
+/*
 
 @media (max-width: 680px){
     .product-element {
         font-size: 4vw;
     }
 }
+*/
