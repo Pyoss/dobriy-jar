@@ -8,8 +8,12 @@
 /* переключение sku */
 
 .main-sliders {
-    display: block;
-    padding: 40px;}
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 40px;
+}
 
 .sku-prop {
     border: 1px solid #AAAAAA;
