@@ -33,7 +33,7 @@ $this->setFrameMode(true);
         </div>
         <div class="catalog-section--wrapper">
             <div class="catalog-section--image-wrapper">
-                <img class="load-transition" onload="this.style.opacity='1'" src="<?=$section['RESIZED_IMAGES'][$section['RESIZED_IMAGES']['optimal']]['path']?>">
+                <img class="load-transition" onload="this.style.opacity='1'" src="<?=$section['RESIZED_IMAGES']['default']['path']?>">
             </div>
             <div class="catalog-section--upper-title"><?=$section['SUBTITLE']?></div>
             <div class="catalog-section--bold-title"><?='<b>' . $first_word[0] . '</b>' . $second_word[0]?></div>

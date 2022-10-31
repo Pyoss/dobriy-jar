@@ -11,7 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-?><div class="brands-list center-content">
+?>
+<div class="brands-list center-content">
     <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
         <?= $arResult["NAV_STRING"] ?><br/>
     <? endif; ?>
@@ -55,3 +56,4 @@ $this->setFrameMode(true);
         <br/><?= $arResult["NAV_STRING"] ?>
     <? endif; ?>
 </div>
+

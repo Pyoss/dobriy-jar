@@ -18,14 +18,7 @@ $FILTER_IBLOCK_ID = 11;
 if ($_COOKIE['VIEW_MODE']) {
     $arParams["VIEW_MODE"] = $_COOKIE['VIEW_MODE'];
 }
-DJMain::consoleString($arResult['ITEMS']);
-for ($i=0; $i < (count($arResult['ITEMS']));$i++){
-    if ($arResult['ITEMS'][$i]['CATALOG_QUANTITY'] <= 0 && !$arResult['ITEMS'][$i]['OFFERS']){
-        $item_tmp = $arResult['ITEMS'][$i];
-        unset($arResult['ITEMS'][$i]);
-        $arResult['ITEMS'][] = $item_tmp;
-    }
-}
+
 // Ищем переопределение SEO от фильтра
 $filter_url = $_SERVER['SCRIPT_URL'];
 $element = \Bitrix\Iblock\ElementTable::getList(['filter' => ['IBLOCK_ID' => $FILTER_IBLOCK_ID, 'CODE' => $filter_url, 'ACTIVE' => 'Y'], 'select' => ['ID', 'DETAIL_TEXT']])->Fetch();

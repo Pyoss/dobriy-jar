@@ -8,11 +8,8 @@
 /* переключение sku */
 
 .main-sliders {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-    justify-content: center;
-}
+    display: block;
+    padding: 40px;}
 
 .sku-prop {
     border: 1px solid #AAAAAA;
@@ -186,31 +183,9 @@
 }
 /* Описание под мобилки*/
 
-
-.company-history, .company-history tr, .company-history td {
-    border: 5px solid #ffffff;
+.mobile {
+    display: none!important;
 }
-
-/* 404 */
-
-
-.container-404 {/* padding-top: 20rem; */text-align: center;color: grey;}
-
-.container-404__code {
-    font-size: 10rem;
-}
-
-.container-404__text {
-    font-size: 1rem;
-    padding: 0 0 10px 0;
-}
-
-.container-404__quote {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 40px 0 60px 0;
-}
-
 
 @media (max-width: 980px) {
 
@@ -238,5 +213,18 @@
     .featured-list--container> * {
         width: 90%;
         list-style-type: decimal;
+    }
+
+    .desktop {
+        display: none!important;
+    }
+
+    .mobile {
+        display: block!important;
+    }
+
+
+    jdiv.__jivoMobileButton {
+        bottom: 70px!important;
     }
 }

@@ -9,13 +9,15 @@ $rsBanners = \Bitrix\Iblock\ElementTable::getList([
         'select' => array(
             'ID', 'DETAIL_PICTURE', 'CODE', 'PREVIEW_PICTURE'
         ),
-        'order' => array('SORT' => 'asc')]
+        'order' => array('ID' => 'asc')]
 );
 $index = 0;
 while ($banner = $rsBanners -> Fetch()){
     if ($banner['DETAIL_PICTURE']){
         $banner['IMG_FILE'] = CFile::GetByID($banner['DETAIL_PICTURE']) -> fetch();
-        $banner['IMG'] = CFile::GetPath($banner['DETAIL_PICTURE']);
+        $banner['IMG'] = CFile::ResizeImageGet($banner['DETAIL_PICTURE'], array('width' => 800,
+            'height' => 300,
+            BX_RESIZE_IMAGE_PROPORTIONAL,))['src'];
     } else {
         $banner['IMG'] = DJMain::IMAGE_TEMPLATE_SRC;
     }

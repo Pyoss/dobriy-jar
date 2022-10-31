@@ -1,15 +1,6 @@
 <!doctype html>
 <html lang="ru">
 <head>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-57RC53R');</script>
-<!-- End Google Tag Manager -->
-
     <meta http-equiv="Content-Type" content="text/html; charset=<?= LANG_CHARSET;?>">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -17,7 +8,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="date=no">
     <meta name="format-detection" content="address=no">
-    <meta name="mailru-verification" content="5eb8d0fb152d515e" />
     <title><?=$APPLICATION->ShowTitle()?></title>
     <?php
 use Bitrix\Main\Page\Asset;
@@ -29,10 +19,12 @@ foreach ($arDirCss as $сssFile){
         $APPLICATION -> SetAdditionalCSS($cssDir . $сssFile);
     };
 }
+
+$GLOBALS['phone'] = '8(800) 600-45-96';
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/mobile.js");
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/default.js");
 Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/skusetter.js");
-$GLOBALS['phone'] = '8(800) 600-45-96';
+include $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . "/analytics.php";
 $APPLICATION -> ShowHead();
     global $USER;
     ;?>
@@ -42,18 +34,8 @@ $APPLICATION -> ShowHead();
         Asset::getInstance()->addJs('/local/admin/custom.js');
     }?></div>
     <script src="//code.jivo.ru/widget/mfRfI5Oga4" async></script>
-
-<link rel="icon" href="https://dobriy-jar.ru/favicon.ico" type="image/x-icon">
-<link rel="icon" href="https://dobriy-jar.ru/favicon.svg" type="image/svg+xml">
-
 </head>
 <body>
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57RC53R"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <header>
     <div class="header-top">
         <div class="header-left">
@@ -82,7 +64,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a id='call' class="phone-main" href="tel:<?=$GLOBALS['phone']?>">
                 <div class="mobile">Телефон интернет-магазина</div>
                 <i class="inline-icon phone-icon"></i>
-                8(800) 600-45-96</a>
+                <?=$GLOBALS['phone']?></a>
         </div>
     </div>
     <div class="header-center dj-background">
@@ -135,10 +117,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	false
 ); ?>
             </div>
-            <ul class="user-buttons">
-                <li class="user-buttons--element call">
-                    <span id='call-mobile' class="inline-icon call-icon mobile-button" data-popup-name="call"></span>
-                </li>
+            <ul class="user-buttons desktop">
+
                 <?php $APPLICATION->IncludeComponent(
                     "bitrix:sale.basket.basket",
                     "basket.DJ.ajax",
@@ -147,7 +127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     ),
                     false
                 );?>
-                <li style='     display: flex;flex-flow: column nowrap;justify-content: center;align-items: center;'  class="user-buttons--element personal">
+                <li style='display: flex;flex-flow: column nowrap;justify-content: center;align-items: center;'  class="user-buttons--element personal desktop">
                     <a href="/personal/" class="inline-icon personal-icon"></a>
                     <a href="/personal/" class="user-button--text desktop"><?=$USER -> GetID() ? $USER -> GetFirstName() : 'Войти';?></a>
                 </li>
@@ -155,6 +135,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <span class="inline-icon search-icon mobile-button" data-popup-name="search"></span>
                 </li>
            </ul>
+            <ul class="user-buttons mobile">
+                <li class="user-buttons--element search">
+                    <span class="inline-icon search-icon mobile-button" data-popup-name="search"></span>
+                </li>
+            </ul>
         </div>
     </div>
     <?php $APPLICATION->IncludeComponent(

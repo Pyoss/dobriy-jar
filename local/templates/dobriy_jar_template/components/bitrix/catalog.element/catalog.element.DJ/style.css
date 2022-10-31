@@ -124,8 +124,8 @@
 }
 
 .img-overlay img {
-max-width: 100%;
-max-height: 100%
+	max-width: 100%;
+	max-height: 100%
 }
 
 .img-overlay.popup-fixed {
@@ -155,7 +155,7 @@ max-height: 100%
 .offer-wrapper .product-type{
 	color: black;
 	padding-right: 160px;
-    font-size: 18px;
+	font-size: 18px;
 }
 
 .offer-wrapper .product-name{
@@ -383,7 +383,7 @@ max-height: 100%
 	padding: 30px;
 }
 .tab-content h2, .tab-content h3 {
-    color: #ff6100;
+	color: #ff6100;
 }
 
 .characteristics.active {
@@ -545,11 +545,12 @@ max-height: 100%
 		z-index: 20;
 		font-size: 0.2vw;
 		position: fixed;
-		bottom: 0;
+		bottom: 55px;
 		top: unset;
 		flex-flow: row;
 		background-color: #fff;
 		width: 100%;
+		height: em;
 	}
 
 
@@ -560,9 +561,13 @@ max-height: 100%
 	.order-blocks .price-block,
 	.order-blocks .price-block--unavailable{
 		width: 40%;
-		padding: 10em 10em 10em 40em;
-		text-align: center;
+		/* padding: 10em 10em 10em 40em; */
+		/* text-align: center; */
 		min-height: unset;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
 	}
 
 	.order-blocks .price-block .base-price {
@@ -571,23 +576,34 @@ max-height: 100%
 	}
 
 	.order-blocks .action-block {
-		bottom: 0;
-		right: 0;
+		/* bottom: 0; */
+		/* right: 0; */
 		background-color: #fff;
+		/* margin: 0; */
+		/* padding: 9em 40em; */
+		/* flex-grow: 2; */
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		margin: 0;
-		padding: 9em 40em;
-		flex-grow: 2;}
+		width: 60%;
+		padding: 9em;
+	}
 
 	.order-blocks .action-block .cart-action {
 		font-size: 20em;
-		padding: 0.36em 1.12em;
-		margin-top: 0;
+		padding: 0;
+		line-height: 1.9em;
+		width: 10em;
+		/* padding: 0.36em 1.12em; */
+		/* margin-top: 0; */
 	}
 
 	.order-blocks .price-block .price,
 	.order-blocks .price-block--unavailable .price{
 		font-size: 26em;
 		text-align: left;
+		white-space: nowrap;
 	}
 
 	.characteristics .prop-picture {

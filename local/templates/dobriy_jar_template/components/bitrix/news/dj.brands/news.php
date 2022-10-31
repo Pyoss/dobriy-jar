@@ -12,6 +12,7 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
+
 <?if($arParams["USE_RSS"]=="Y"):?>
 	<?
 	if(method_exists($APPLICATION, 'addheadstring'))

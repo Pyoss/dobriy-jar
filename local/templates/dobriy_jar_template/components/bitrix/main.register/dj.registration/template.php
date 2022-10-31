@@ -109,8 +109,6 @@ if ($arResult["SHOW_SMS_FIELD"] == true) {
             <div class="regform">
                 <div class="regform__title"><span class="dj-color">Добрый Жар</span> <br/><?= GetMessage("AUTH_REGISTER") ?></div>
 
-                <?/*Реферальная система*/?>
-                <input type="hidden" name="ref" value="<?=html_entity_decode($_GET['ref'])?>">
                 <? foreach ($arResult["SHOW_FIELDS"] as $FIELD): ?>
                     <? if ($FIELD == "AUTO_TIME_ZONE" && $arResult["TIME_ZONE_ENABLED"] == true): ?>
                         <div class="regform__timezone">
