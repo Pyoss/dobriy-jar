@@ -79,10 +79,26 @@
 
 .desc-block {
     border-bottom: 1px solid #F0F0F0;
-    padding: 3% 0;
     width: 100%;
 }
 
+.desc-block p, .desc-block li, .catalog-section-text p {
+line-height: 1.5;
+font-size: 1.1em;
+}
+
+.desc-block li::marker, .catalog-section-text li::marker {
+color: firebrick;
+font-size: 21px;
+}
+
+.desc-block ul li, .catalog-section-text ul li {
+margin-bottom: 0.3em;
+}
+
+.desc-block h4, .catalog-section-text h4 {
+font-size: 1.1em;
+}
 
 .desc-block .desc-block--title {
     font-size: 30px;
