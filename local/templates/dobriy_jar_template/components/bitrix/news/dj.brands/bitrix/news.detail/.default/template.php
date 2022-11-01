@@ -47,7 +47,7 @@ if ($elementIDs):
     Товары <?=$arResult['NAME']?> в каталоге:
 </h2>
 <div class="catalog--wrapper">
-    <div class="catalog">
+    <div class="catalog brands">
 <?
 $GLOBALS['sectionFilter'] = array('ID' => $elementIDs, 'ACTIVE' => 'Y');
 
