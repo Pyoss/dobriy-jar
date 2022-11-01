@@ -1,5 +1,5 @@
 div.brands-detail .brands-header {
-	padding: 20px 0 20px 40px;
+	padding: 0;
 }
 
 div.brands-detail .brands-title
@@ -14,21 +14,26 @@ div.brands-detail .brands-title
 
 div.brands-detail img.detail_picture
 {
-	width: 40%;
+	width: 33%;
 	float: right;
-	padding: 120px 110px;
+	padding: 0 110px;
 	height: auto;
 }
 
 .brands-detail {
 	border-bottom: 1px solid #CCCCCC;
 	padding-bottom: 80px;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
 }
 
+.brands-detail.center-contentw, .brand-items-header.center-contentw {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .catalog {
-	max-width: 1470px;
+	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	width: 100%;
@@ -78,8 +83,18 @@ div.brands-detail img.detail_picture
 	color: grey
 }
 
+.catalog.brands {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.catalog.brands .catalog-section-text {
+    padding: 0;
+}
+
 
 @media (max-width:980px) {
 	.catalog .catalog-filter {display: none}
 	.catalog .catalog-products-container {width: 100%; justify-content: center}
+	.brands-detail.center-contentw, .brand-items-header.center-contentw {margin: 0 15px;}
 }
