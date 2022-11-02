@@ -1,23 +1,24 @@
-
 .brands-list {
 	display: flex;
 	flex-wrap: wrap;
+        justify-content: center;
 }
 
 .brands-item {
 	display: flex;
-	justify-content: end;
-	align-items: end;
+	justify-content: center;
 	flex-wrap: wrap;
+        flex-direction: column;
 	width: 26%;
-	margin-bottom: 40px;
+	padding-bottom: 10px;
+        border: 1px solid #cecece;
 }
 
 .brands-item .preview-picture--wrapper
 {
-	width: 70%;
+	width: 60%;
 	height: auto;
-	align-self: start;
+	align-self: center;
 }
 
 .brands-item .preview-picture
@@ -26,9 +27,8 @@
 }
 
 .brands-item .brands-item--content {
-	width: 30%;
-	padding-left: 40px;
-	padding-bottom: 50px;
+	width: auto;
+	text-align: center;
 }
 
 .brands-item .brands-item--content b{
@@ -42,17 +42,15 @@ div.brands-item:after {
 }
 
 @media (max-width: 980px) {
+	.brands-item {width: auto;}
 
 	.brands-item .preview-picture--wrapper
 	{
-		width: 100%;
 		height: auto;
+                text-align: center;
 	}
 
 	.brands-item .brands-item--content {
 		width: 100%;
-		padding-left: 40px;
-		padding-bottom: 15px;
-		padding-top: 15px;
 	}
 }

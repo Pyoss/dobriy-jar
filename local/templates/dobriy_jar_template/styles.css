@@ -82,21 +82,21 @@
     width: 100%;
 }
 
-.desc-block p, .desc-block li, .catalog-section-text p {
+.desc-block p, .desc-block li, .catalog-section-text p, .brands-detail p, .brands-detail li {
 line-height: 1.5;
 font-size: 1.1em;
 }
 
-.desc-block li::marker, .catalog-section-text li::marker {
+.desc-block li::marker, .catalog-section-text li::marker, .brands-detail li::marker {
 color: firebrick;
 font-size: 21px;
 }
 
-.desc-block ul li, .catalog-section-text ul li {
+.desc-block ul li, .catalog-section-text ul li, .brands-detail ul li {
 margin-bottom: 0.3em;
 }
 
-.desc-block h4, .catalog-section-text h4 {
+.desc-block h4, .catalog-section-text h4, .brands-detail h4 {
 font-size: 1.1em;
 }
 

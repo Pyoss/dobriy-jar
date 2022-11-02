@@ -154,7 +154,7 @@ footer .footer-mobile li {
         justify-content: center;
         flex-wrap: wrap;
     }
-    footer .footer-wrapper {margin: 0 15px;}
+    footer .footer-wrapper {margin: 0 15px;padding-bottom: 55px;}
     footer .footer-link-group--title {margin-top: 15px;}
     footer .phone-main {font-size: 22px;margin-bottom: 20px;}
     .footer-mobile__img {
