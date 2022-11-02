@@ -166,7 +166,7 @@
                 </div>
             </li>
             <li class="mobile-section"
-                data-href="https://www.blog.dobriy-jar.ru/calculators">
+                data-href="https://blog.dobriy-jar.ru/calculators">
                 <div class="mobile-section__icon" style="background-image: url('/upload/images/svg/mobile/calc.svg')"></div>
                 <div class="mobile-section__name">
                     Калькуляторы
@@ -176,7 +176,7 @@
                 Проекты
             </li>
             <li class="mobile-section"
-                data-href="https://www.blog.dobriy-jar.ru/">
+                data-href="https://blog.dobriy-jar.ru/">
                 <div class="mobile-section__name">
                     Блог
                 </div>
