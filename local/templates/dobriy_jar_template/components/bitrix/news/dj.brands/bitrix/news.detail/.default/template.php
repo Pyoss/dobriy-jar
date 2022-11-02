@@ -12,8 +12,9 @@
 /** @var CBitrixComponent $component */
 
 $this->setFrameMode(true);
-?>
-<div class="brands-detail center-contentw">
+?><?
+$GLOBALS['sectionFilter'] = array('ID' => $elementIDs, 'ACTIVE' => 'Y');?>
+    <div class="brands-detail center-contentw">
 
     <div class="brands-header">
 	<?if($arParams["DISPLAY_NAME"]!="N" && $arResult["NAME"]):?>
