@@ -92,7 +92,7 @@ color: firebrick;
 font-size: 21px;
 }
 
-.desc-block ul li, .catalog-section-text ul li, .brands-detail ul li {
+.desc-block ul li, .catalog-section-text ul li, .catalog-section-text ol li, .brands-detail ul li {
 margin-bottom: 0.3em;
 }
 
