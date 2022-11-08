@@ -79,6 +79,12 @@
     background: #ffffff;
 }
 
+.catalog-sections .catalog-section-text {
+    flex: 100%;
+    margin: 40px 45px 0 45px;
+    padding: 0 20px 20px 20px;
+}
+
 @media (max-width: 900px) {
     .catalog-sections {
         max-width: 600px;
@@ -91,6 +97,10 @@
     .catalog-section--wrapper {
         padding: 0 5px 5px 5px ;
     }
+    
+    .catalog-sections .catalog-section-text {
+        margin: 25px 6px 6px 6px;
+        padding: 0 10px 10px 10px;
 }
 
 @media (max-width: 616px) {

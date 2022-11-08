@@ -42,4 +42,7 @@ $this->setFrameMode(true);
     <?endforeach;?>
     <div class="catalog-section--background">
     </div>
+    <div class="catalog-section-text">
+      <?=$arResult['SECTION']['DESCRIPTION']?>
+    </div>
 </div>
