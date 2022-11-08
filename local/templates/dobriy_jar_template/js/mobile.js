@@ -326,7 +326,7 @@ class Popup {
 
     calcMaxHeight() {
         let height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
-        return height - 90;
+        return height - 150;
     }
 
     show() {

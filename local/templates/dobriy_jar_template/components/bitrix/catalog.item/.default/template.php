@@ -20,7 +20,7 @@ if ($price < $bprice) {
     $percent = $curOffer ? $curOffer['ITEM_PRICES'][0]['PERCENT'] : $ITEM['ITEM_PRICES'][0]['PERCENT'];
 }
 ?>
-    <div class="product-element" id="<?= $arResult['AREA_ID'] ?>"
+    <div class="product-element" id="<?= $arResult['AREA_ID'] ?>" <? if(!$is_available):?>style="order:99"<?php endif;?>
          data-product-id="<?= $ITEM['ID'] ?>" <?= $ITEM['IBLOCK_SECTION_ID'] ? 'data-section-id="' . $ITEM['IBLOCK_SECTION_ID'] . '"' : '' ?>>
         <a class="product-element--link" href="<?= $ITEM['URL_WO_PARAMS'] ?: $ITEM['DETAIL_PAGE_URL']; ?>">
 

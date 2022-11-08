@@ -188,7 +188,7 @@
                 </div>
             </li>
             <li class="mobile-section"
-                data-href="https://www.opt.dobriy-jar.ru/">
+                data-href="https://opt.dobriy-jar.ru/">
                 <div class="mobile-section__name">
                     Оптовикам
                 </div>

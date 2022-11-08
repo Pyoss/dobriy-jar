@@ -131,9 +131,6 @@ $APPLICATION -> ShowHead();
                     <a href="/personal/" class="inline-icon personal-icon"></a>
                     <a href="/personal/" class="user-button--text desktop"><?=$USER -> GetID() ? $USER -> GetFirstName() : 'Войти';?></a>
                 </li>
-                <li class="user-buttons--element search">
-                    <span class="inline-icon search-icon mobile-button" data-popup-name="search"></span>
-                </li>
            </ul>
             <ul class="user-buttons mobile">
                 <li class="user-buttons--element search">

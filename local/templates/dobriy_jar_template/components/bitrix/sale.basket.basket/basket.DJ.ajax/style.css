@@ -305,7 +305,7 @@
     }
 
     .cart-popup {
-        top: 80px;
+        top: 80px!important;
         display: grid;grid-template-rows: 40px 1fr;bottom: 80px;
         font-size: 14px;
         padding: 0;
