@@ -361,6 +361,18 @@
     padding-top: 10px;
 }
 
+.container-404 {
+   text-align: center;
+}
+.container-404 span {
+   line-height: 1.5;
+   font-size: 1.1em;
+}
+
+.container-404__code span {
+   font-size: 1.7em;
+}
+
 @media (max-width: 1000px) {
 
     .center-content {
@@ -380,6 +392,10 @@
     .timelapse {
         margin: 20px 0;
     }
+    
+    .container-404 img {
+       max-width: 100%;
+}
 }
 
 /* TODO: temp*/
