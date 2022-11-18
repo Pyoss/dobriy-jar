@@ -413,6 +413,7 @@
 	max-width: 800px;
 	margin: auto;
 	font-size: 1.1em;
+	line-height: 1.5;
 }
 
 @media (max-width: 1380px) {
