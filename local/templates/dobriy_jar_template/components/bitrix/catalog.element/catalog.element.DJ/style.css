@@ -331,7 +331,7 @@
 
 .product-wrapper .prop-space {
 	flex-grow: 100;
-	border-bottom: 2px dotted #cccccc;
+	border-bottom: 1px solid #cccccc;
 	margin: 0 3px;
 	position: relative;
 	bottom: 4px;
@@ -412,6 +412,7 @@
 .characteristics .char-list {
 	max-width: 800px;
 	margin: auto;
+	font-size: 1.1em;
 }
 
 @media (max-width: 1380px) {
