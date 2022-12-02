@@ -470,6 +470,11 @@
 		margin-top: 20px;
 		top: 0;
 	}
+	
+	.image-wrapper.center .product-image {
+               position: relative;
+       }
+	
 }
 
 @media (max-width: 800px) {
