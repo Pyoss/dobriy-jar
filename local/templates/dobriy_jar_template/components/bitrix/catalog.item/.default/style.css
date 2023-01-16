@@ -85,10 +85,22 @@
     padding: 1.25em;
 }
 
-.product-element .product-element--info-wrapper * {
+.product-element .product-element--info-wrapper>* {
     margin-top: 0.3em;
 }
+.product-element--rating-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+}
 
+.rating__reviews {
+    opacity: .5;
+}
+.product-element--rating-wrapper .rating__star {
+    height: 1em;
+    width: 1.3em;
+}
 /* ----------- ÐŸÐ•Ð Ð’Ð«Ð™ Ð¢Ð˜ÐŸ Ð¡ÐŸÐ˜Ð¡ÐšÐ --------------*/
 
 .row-view .product-element--drop {
@@ -140,6 +152,63 @@
 .row-view .product-element--link{
     background-color: white;
     padding-bottom: 0.8em;
+}
+.product-element--stickers {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .5em;
+    font-size: .8em;
+    width: min-content;
+    text-align: right;
+}
+
+.product-element--stickers-hit {
+    background-color: lightgreen;
+    /* border-radius: .2em; */
+    /* padding: .1em .3em; */
+}
+
+.product-element--stickers>div {
+    border-radius: 0.2em;
+    padding: 0.1em 0.3em;
+    /* width: min-content; */
+    white-space: nowrap;
+    margin: .2em;
+    display: inline-block;
+    text-align: right;
+}
+
+.product-element--stickers-new {
+    color: white;
+    background-color: #ff7300;
+}
+
+
+.product-element--stickers-discount {
+    color: white;
+    background-color: red;
+}
+
+.product-element--video-sticker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .2em;
+    font-size: .8em;
+    margin: .4em;
+    display: flex;
+    justify-content: center;
+}
+
+.product-element--video-sticker::before {
+    content: '';
+    background: url("/images/png/youtube-logo.png");
+    display: inline-block;
+    width: 1.9em;
+    height: 1.2em;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 @media (min-width: 981px){

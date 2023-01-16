@@ -31,8 +31,11 @@
     }
 
     .slider.main .slide-background{
-        margin: 0 15px;
         max-width: calc(100% - 30px);
         border-radius: 15px;
+    }
+    
+    main .main-sliders {
+        padding: 0 5px;
     }
 }
