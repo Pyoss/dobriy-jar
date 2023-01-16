@@ -125,7 +125,10 @@
 
 .img-overlay img {
 	max-width: 100%;
-	max-height: 100%
+	max-height: 100%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .img-overlay.popup-fixed {
@@ -470,11 +473,11 @@
 		margin-top: 20px;
 		top: 0;
 	}
-	
+
 	.image-wrapper.center .product-image {
-               position: relative;
-       }
-	
+		position: relative;
+	}
+
 }
 
 @media (max-width: 800px) {
@@ -718,7 +721,138 @@ a .package-item__name {
 	margin-left: 20px;
 }
 
+.review__header {
+	display: grid;
+	grid-template-columns: 60px auto 1fr;
+	align-items: center;
+}
 
+.review__stars.rating__stars {
+	margin-left: auto;
+}
+
+.review__avatar {
+	color: white;
+	background-color: orange;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.review__name {
+	font-size: 18px;
+	font-weight: 900;
+}
+
+.reviews__block {
+	margin-left: 60px;
+}
+
+.reviews__block.reviews__block--image {
+	display: flex;
+	gap: 20px;
+	flex-flow: row wrap;
+}
+
+.reviews__block--image img.fullscreen-option {
+	width: 400px;
+}
+
+h6.reviews__block-title {
+	font-size: 1em;
+	margin: 1em 0 .8em 0;
+}
+
+button.desc-action-button {
+	background-color: #ff6100;
+	border: 0;
+	color: wheat;
+	border-radius: 7px;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: 600;
+	margin: 10px 0 0 0;
+}
+
+.review {
+	margin: 20px 0;
+}
+
+.question__question img {
+	filter: brightness(0);
+	width: 30px;
+	height: 35px;
+}
+
+.question__question {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin: 20px 0;
+}
+
+.question p {
+	margin: 5px 0;
+}
+
+p {}
+
+.question__question {}
+
+.question__answer img {
+	height: 35px;
+	width: 35px;
+}
+.question__answer {
+	display: flex;
+	gap: 15px;
+	margin: 10px 20px;
+}
+
+.question__question p {
+	font-weight: bold;
+}
+
+.question {
+	margin-bottom: 20px;
+}
+
+.contact-popup__text a {
+	color: #ff7300;
+	text-decoration: underline;
+}
+
+.contact-popup__messengers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+.contact-popup__messengers a{
+	display: block;
+	width: 60px;
+	height: 60px;
+	/* gap: 20px; */
+	background-size: contain;
+}
+
+.contact-popup__text {
+	padding: 20px;
+	font-size: 20px;
+	line-height: 1.7;
+}
+
+a.contact-popup__messengers-tg {
+	background-image: url("/images/png/tg.png");
+}
+
+a.contact-popup__messengers-whatsapp {
+	background-image: url("/images/png/whatsapp.png");
+}
 @media (max-width: 880px) {
 
 	.package-block__title {

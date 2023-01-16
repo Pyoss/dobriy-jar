@@ -8,6 +8,9 @@
 // -------------------------------- Тут встроенный компонент битрикс делает какую-то кашу, сохраню картинки
 
 CModule::IncludeModule("landing");
+CModule::IncludeModule("dj.imgref");
+
+use DJScripts\ImgRef;
 
 $productGallery = $arResult['MORE_PHOTO'];
 $component = $this->getComponent();
@@ -166,6 +169,50 @@ if($arResult['PROPERTIES']['BRAND']){
         'ID' => $arResult['PROPERTIES']['BRAND']['VALUE']], 'select' => ['CODE', 'ID', 'PREVIEW_PICTURE']]) -> Fetch();
     $brand['PREVIEW_PICTURE'] = CFile::GetPath($brand['PREVIEW_PICTURE']);
     $arResult['BRAND'] = $brand;
+}
+
+/* -------------------------- ОТЗЫВЫ ---------------------*/
+$resReviews = \Bitrix\Iblock\ElementPropertyTable::getList(
+    ['select' => ['IBLOCK_ELEMENT_ID'],
+        'filter' => ['IBLOCK_PROPERTY_ID' => 92, 'VALUE' => $arResult['ID']]]
+);
+while ($arReview = $resReviews -> fetch()){
+    $resReviewDetails = CIBlockElement::GetList(
+        array(),
+        array(
+            "IBLOCK_ID" => 15, 'ID' => $arReview['IBLOCK_ELEMENT_ID']
+        ),
+        false,
+        false,
+        array("ID", "PROPERTY_stars", "PROPERTY_strength", 'PROPERTY_weakness', 'PROPERTY_comment', 'PROPERTY_name', 'PROPERTY_logo')
+    );
+    $REVIEW = $resReviewDetails -> fetch();
+    $res = CIBlockElement::GetProperty(15, $REVIEW['ID'], "sort", "asc", array("CODE" => "gallery"));
+    while ($ob = $res->GetNext())
+    {
+        $REVIEW['GALLERY'][] =  ImgRef::optimizeImg(
+            $ob['VALUE'],
+            array('width' => 800, 'height' => 800),
+            array('width' => 800, 'height' => 800));
+    }
+    $arResult['REVIEWS'][] = $REVIEW;
+}
+/* -------------------------- ВОПРОС\ОТВЕТ ---------------------*/
+$resReviews = \Bitrix\Iblock\ElementPropertyTable::getList(
+    ['select' => ['IBLOCK_ELEMENT_ID'],
+        'filter' => ['IBLOCK_PROPERTY_ID' => 99, 'VALUE' => $arResult['ID']]]
+);
+while ($arReview = $resReviews -> fetch()){
+    $resReviewDetails = CIBlockElement::GetList(
+        array(),
+        array(
+            "IBLOCK_ID" => 16, 'ID' => $arReview['IBLOCK_ELEMENT_ID']
+        ),
+        false,
+        false,
+        array("ID", "PROPERTY_QUESTION", "PROPERTY_ANSWER")
+    );
+    $arResult['QUESTIONS'][] = $resReviewDetails -> fetch();
 }
 DJMain::consoleString($arResult);
 /*

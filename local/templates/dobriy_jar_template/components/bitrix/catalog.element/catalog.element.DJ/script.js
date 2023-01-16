@@ -85,11 +85,41 @@ function bindShowImage(src){
        image_popup.popupDOM.innerHTML = `<img src='${event.target.src}'>`
         image_popup.show()
     }
-    BX.bind(document.querySelector('.product-image'), 'click', BX.proxy(image_popup.showSrc, image_popup))
+    for (let element of document.querySelectorAll('.fullscreen-option')){
+
+        BX.bind(element, 'click', BX.proxy(image_popup.showSrc, image_popup))
+    }
+}
+
+
+function bindShowContacts(){
+    let popup_container = BX.create(
+        'div', {
+            props: {
+                className:'contact-overlay',
+                id: 'contact-popup',
+            },
+            html: '<div class="contact-popup__text">' +
+                'Чтобы оставить отзыв свяжитесь с нами по почте<br>' +
+                '<a href="mailto: info@dobriy-jar.ru">info@dobriy-jar.ru</a> ' +
+                '</div>' +
+                '<div class="contact-popup__messengers">' +
+                '<a class="contact-popup__messengers-tg" href="http://t.me/dobriyjar"></a> ' +
+                '<a class="contact-popup__messengers-whatsapp" href="https://wa.me/79645036043?text=Здравствуйте%2C+хочу+оставить+отзыв"></a> ' +
+                '</div>'
+        }
+    )
+    let contact_popup = new Popup(popup_container, {focused: true, animation: 'fade', parent: BX('detail-image-container')})
+
+    for (let element of document.querySelectorAll('.contact-popup')){
+
+        BX.bind(element, 'click', BX.proxy(contact_popup.show, contact_popup))
+    }
 }
 
 setDetailListeners()
 bindShowImage()
+bindShowContacts()
 
 
 

@@ -52,3 +52,13 @@ if($ITEM['OFFERS']){
         $arResult['JS_OFFERS_MAP'][$OFFER_CODE] = $OFFER_DATA;
     }
 }
+
+// Подсчитываем отзывы
+$resReviews = \Bitrix\Iblock\ElementPropertyTable::getList(
+    ['select' => ['IBLOCK_ELEMENT_ID'],
+        'filter' => ['IBLOCK_PROPERTY_ID' => 92, 'VALUE' => $arResult['ITEM']['ID']]]
+);
+$arResult['ITEM']['REVIEWS']['NUMBER'] = 0;
+while ($arReview = $resReviews -> fetch()){
+    $arResult['ITEM']['REVIEWS']['NUMBER'] += 1;
+}

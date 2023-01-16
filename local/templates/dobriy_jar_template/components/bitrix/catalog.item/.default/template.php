@@ -20,7 +20,8 @@ if ($price < $bprice) {
     $percent = $curOffer ? $curOffer['ITEM_PRICES'][0]['PERCENT'] : $ITEM['ITEM_PRICES'][0]['PERCENT'];
 }
 ?>
-    <div class="product-element" id="<?= $arResult['AREA_ID'] ?>" <? if(!$is_available):?>style="order:99"<?php endif;?>
+    <div class="product-element" id="<?= $arResult['AREA_ID'] ?>"
+         <? if (!$is_available): ?>style="order:99"<?php endif; ?>
          data-product-id="<?= $ITEM['ID'] ?>" <?= $ITEM['IBLOCK_SECTION_ID'] ? 'data-section-id="' . $ITEM['IBLOCK_SECTION_ID'] . '"' : '' ?>>
         <a class="product-element--link" href="<?= $ITEM['URL_WO_PARAMS'] ?: $ITEM['DETAIL_PAGE_URL']; ?>">
 
@@ -28,6 +29,20 @@ if ($price < $bprice) {
                 <? if ($arResult['LOADING']): ?>
                     <div class="loading-overlay"></div>
                 <? endif; ?>
+                <? if($ITEM['PROPERTIES']['stickers']['VALUE']):?>
+                <div class="product-element--stickers">
+                    <? for ($i=0; $i < count($ITEM['PROPERTIES']['stickers']['VALUE']); $i++):?>
+                    <div class="product-element--stickers-<?=$ITEM['PROPERTIES']['stickers']['VALUE_XML_ID'][$i]?>">
+                        <?=$ITEM['PROPERTIES']['stickers']['VALUE'][$i]?>
+                    </div>
+                    <? endfor;?>
+                </div>
+                <?endif;?>
+                <? if($ITEM['PROPERTIES']['VIDEO']['VALUE']):?>
+                    <div class="product-element--video-sticker">
+                        Есть видео
+                    </div>
+                <?endif;?>
                 <img class="product-element--image"
                     <? if ($arResult['LOADING']): ?>
                         loading="lazy"
@@ -45,6 +60,27 @@ if ($price < $bprice) {
                     <? else: ?>
 
                         <span class="price">Нет в наличии</span>
+                    <? endif; ?>
+                </div>
+                <div class="product-element--rating-wrapper">
+                    <? if ($ITEM['PROPERTIES']['rating']): ?>
+                        <div class="rating__stars">
+                            <? for ($i = 0; $i < $ITEM['PROPERTIES']['rating']['VALUE'] && $i < 5; $i++): ?>
+                                <span class="rating__star"></span>
+                            <? endfor; ?>
+                        </div>
+                    <? endif ?>
+                    <? if ($ITEM['REVIEWS']['NUMBER'] > 0): ?>
+                        <div class="rating__reviews">
+                            <?= $ITEM['REVIEWS']['NUMBER'] ?>
+                            <?if ($ITEM['REVIEWS']['NUMBER'] % 10 == 1 && $ITEM['REVIEWS']['NUMBER'] != 11){
+                                echo 'отзыв';
+                            } elseif (in_array(($ITEM['REVIEWS']['NUMBER'] % 10), [2, 3]) && !in_array($ITEM['REVIEWS']['NUMBER'], [12, 13])){
+                                echo 'отзыва';
+                            } else {
+                                echo 'отзывов';
+                            }?>
+                        </div>
                     <? endif; ?>
                 </div>
                 <div class="product-element--name-wrapper">
@@ -91,18 +127,18 @@ if ($price < $bprice) {
             // --------------------------------------------------------------------------------------------- //
             ?>
         </div>
-            <? if ($is_available): ?>
-        <div class="product-element--drop desktop">
-            <div class="product-element--action-wrapper">
+        <? if ($is_available): ?>
+            <div class="product-element--drop desktop">
+                <div class="product-element--action-wrapper">
             <span class="product-element--basket-button basket-add"
                   data-product-id="<?= $curOffer ? $curOffer['ID'] : $ITEM['ID'] ?>">В корзину</span>
+                </div>
             </div>
-        </div>
-        <div class="product-element--drop mobile">
-            <div class="product-element--action-wrapper">
-                <span class="product-element--basket-button">Подробнее</span>
+            <div class="product-element--drop mobile">
+                <div class="product-element--action-wrapper">
+                    <span class="product-element--basket-button">Подробнее</span>
+                </div>
             </div>
-        </div>
         <? endif; ?>
         <?php if ($hasOffers): ?>
             <json>

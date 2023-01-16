@@ -54,19 +54,21 @@ if ($hasOffers) {
         </div>
         <div class="offer-wrapper">
             <? if ($arResult['BRAND']): ?>
-                <a href="<?='https://'.$_SERVER['SERVER_NAME'] . '/brands/'.$arResult['BRAND']['CODE'].'/'?>">
+                <a href="<?= 'https://' . $_SERVER['SERVER_NAME'] . '/brands/' . $arResult['BRAND']['CODE'] . '/' ?>">
                     <div class="product-brand">
-                        <?=$arResult['BRAND']['PREVIEW_PICTURE']?
+                        <?= $arResult['BRAND']['PREVIEW_PICTURE'] ?
                             '<img src=' . $arResult["BRAND"]["PREVIEW_PICTURE"] . '>' :
-                            $arResult['BRAND']['NAME']?>
+                            $arResult['BRAND']['NAME'] ?>
                     </div>
                 </a>
             <? endif; ?>
             <? if ($arResult['PROPERTIES']['PRODUCT_TYPE']['VALUE']): ?>
-                <div id="type-<?=$arResult['VIEW']['ID']?>" class="product-type"><?= $arResult['PROPERTIES']['PRODUCT_TYPE']['VALUE'] ?></div>
+                <div id="type-<?= $arResult['VIEW']['ID'] ?>"
+                     class="product-type"><?= $arResult['PROPERTIES']['PRODUCT_TYPE']['VALUE'] ?></div>
             <? endif; ?>
-            <div id="name-<?=$arResult['VIEW']['ID']?>" class="product-name"><?= $arResult['VIEW']['NAME'] ?></div>
-            <div class="article">Артикул: <span id="article-<?=$arResult['VIEW']['ID']?>" ><?= $arResult['VIEW']['ARTNUMBER'] ?></span></div>
+            <div id="name-<?= $arResult['VIEW']['ID'] ?>" class="product-name"><?= $arResult['VIEW']['NAME'] ?></div>
+            <div class="article">Артикул: <span
+                        id="article-<?= $arResult['VIEW']['ID'] ?>"><?= $arResult['VIEW']['ARTNUMBER'] ?></span></div>
 
             <div class="offer-sku noselect">
                 <? if ($arResult['OFFERS']):
@@ -118,41 +120,44 @@ if ($hasOffers) {
             // --------------------------------------------------------------------------------------------- //
             ?>
             <?php
-            if($hasOffers):?>
+            if ($hasOffers):?>
                 <json>
-                    <?=json_encode($arResult['JS_OFFERS_MAP'])?>
+                    <?= json_encode($arResult['JS_OFFERS_MAP']) ?>
                 </json>
-            <?php endif;?>
+            <?php endif; ?>
         </div>
         <div class="order-wrapper">
             <div class="order-blocks">
-                <?if ($is_available):?>
+                <? if ($is_available): ?>
                     <div class="price-block">
-                        <?/* if ($arResult['VIEW']['PERCENT']):?>
+                        <? /* if ($arResult['VIEW']['PERCENT']):?>
                     <div class="item-discount">
                         -<?=$arResult['VIEW']['PERCENT']?>%
 
                     </div>
-                    <? endif;*/?>
-                        <span  id="price-<?=$arResult['VIEW']['ID']?>" class="price rub"><?= $arResult['VIEW']['PRICE'] ?></span>
+                    <? endif;*/ ?>
+                        <span id="price-<?= $arResult['VIEW']['ID'] ?>"
+                              class="price rub"><?= $arResult['VIEW']['PRICE'] ?></span>
                         <span class="base-price rub desktop"><?= $arResult['VIEW']['DISCOUNT'] ? $arResult['VIEW']['BASE_PRICE'] : "" ?>
                     </span>
                     </div>
-                <?else:?>
+                <? else: ?>
                     <div class="price-block--unavailable">
-                        <?/* if ($arResult['VIEW']['PERCENT']):?>
+                        <? /* if ($arResult['VIEW']['PERCENT']):?>
                     <div class="item-discount">
                         -<?=$arResult['VIEW']['PERCENT']?>%
 
                     </div>
-                    <? endif;*/?>
+                    <? endif;*/ ?>
                         <span class="price">Нет в наличии
                     </span>
                     </div>
-                <?endif;?>
+                <? endif; ?>
                 <div class="order-block">
                     <div class="order-block--title">Рассрочка</div>
-                    <div class="order-block--text">Платеж от <?=floor((int)$arResult['VIEW']['RAW_PRICE'] / 6)?> руб/мес</div>
+                    <div class="order-block--text">Платеж от <?= floor((int)$arResult['VIEW']['RAW_PRICE'] / 6) ?>
+                        руб/мес
+                    </div>
                     <div class="order-block--decor">Покупка без переплат</div>
                 </div>
                 <? /*
@@ -163,11 +168,13 @@ if ($hasOffers) {
                 </div>
                 */ ?>
                 <div class="action-block">
-                    <?if ($is_available):?>
-                        <div class="cart-action basket-add goal_basket_add" data-product-id="<?= $arResult['VIEW']['ID'] ?>">В корзину</div>
-                    <?else:?>
+                    <? if ($is_available): ?>
+                        <div class="cart-action basket-add goal_basket_add"
+                             data-product-id="<?= $arResult['VIEW']['ID'] ?>">В корзину
+                        </div>
+                    <? else: ?>
                         <div class="cart-action--unavailable">В корзину</div>
-                    <?endif;?>
+                    <? endif; ?>
                 </div>
                 <div class="cart-bought<?= ($arResult['VIEW']['BASKET']['QUANTITY']) ? ' visible' : '' ?>">
                     В корзине <?= ($arResult['VIEW']['BASKET']['QUANTITY']) ?> шт. товара
@@ -189,6 +196,12 @@ if ($hasOffers) {
                 покупают
             </li>
         <? endif; ?>
+        <? if ($arResult['REVIEWS']): ?>
+            <li class="tab-title reviews" id='reviews-tab-title' onclick=changeTab(this.id)>Отзывы</li>
+        <? endif; ?> <? if ($arResult['QUESTIONS']): ?>
+            <li class="tab-title questions" id='questions-tab-title' onclick=changeTab(this.id)>Вопрос\Ответ</li>
+        <? endif; ?>
+
     </ul>
     <div class="product-tab description active mobile-active" id="desc-tab">
         <div class="mobile-tab">
@@ -217,7 +230,7 @@ if ($hasOffers) {
                         </div>
                     <? endforeach; ?>
                 </div>
-                <?if ($arResult['VIEW']['DISPLAY_PROPERTIES']): ?>
+                <? if ($arResult['VIEW']['DISPLAY_PROPERTIES']): ?>
                     <div class="char-list">
                         <? foreach ($arResult['VIEW']['DISPLAY_PROPERTIES'] as $property):
                             ?>
@@ -229,7 +242,7 @@ if ($hasOffers) {
                             </div>
                         <? endforeach; ?>
                     </div>
-                <? endif?>
+                <? endif ?>
                 <!--
                 <div class="prop-picture">
                     <img class="fullscreen-option" loading="lazy" src="<?= $arResult['PROP_PICT'] ?>"
@@ -247,19 +260,19 @@ if ($hasOffers) {
                 <span class="mobile-arrow"></span>
             </div>
             <div class="tab-content">
-                <?foreach ($video as $video_link):?>
-                <div class="desc-block video">
-                    <div class="video-wrapper">
-                        <iframe
-                                src="https://www.youtube.com/embed/<?= $video_link ?>">
-                        </iframe>
+                <? foreach ($video as $video_link): ?>
+                    <div class="desc-block video">
+                        <div class="video-wrapper">
+                            <iframe
+                                    src="https://www.youtube.com/embed/<?= $video_link ?>">
+                            </iframe>
+                        </div>
                     </div>
-                </div>
-                <? endforeach;?>
+                <? endforeach; ?>
             </div>
         </div>
     <? endif; ?>
-    <? if  ($arResult['PROPERTIES']['RECOMMEND']['VALUE']): ?>
+    <? if ($arResult['PROPERTIES']['RECOMMEND']['VALUE']): ?>
         <div class="product-tab additions" id="additions-tab">
             <div class="mobile-tab">
                 <span class="mobile-tab--header">С этим товаром покупают</span>
@@ -349,7 +362,7 @@ if ($hasOffers) {
             </div>
         </div>
     <? endif; ?>
-    <? if  ($arResult['COMPLECTATION']): ?>
+    <? if ($arResult['COMPLECTATION']): ?>
         <div class="product-tab package" id="package-tab">
             <div class="mobile-tab">
                 <span class="mobile-tab--header">Комплектация</span>
@@ -358,9 +371,9 @@ if ($hasOffers) {
             <div class="tab-content">
                 <? foreach ($arResult['COMPLECTATION'] as $comp_block_name => $comp_block_array):
                     ?>
-                    <? if($comp_block_name):?>
+                    <? if ($comp_block_name): ?>
                     <h5 class="package-block__title"><?= $comp_block_name ?></h5><br>
-                <?endif;?>
+                <? endif; ?>
                     <ol class="package-block">
                         <? foreach ($comp_block_array as $comp_item): ?>
                             <? if ($comp_item['active'] == 'Y'): ?>
@@ -377,6 +390,91 @@ if ($hasOffers) {
                             <? endif; ?>
                         <? endforeach; ?>
                     </ol>
+                <? endforeach; ?>
+            </div>
+        </div>
+    <? endif; ?>
+    <? if ($arResult['REVIEWS']): ?>
+        <div class="product-tab reviews" id="reviews-tab">
+            <div class="mobile-tab">
+                <span class="mobile-tab--header">Отзывы</span>
+                <span class="mobile-arrow"></span>
+            </div>
+            <div class="reviews__content tab-content">
+                <button class="reviews__button desc-action-button contact-popup">ОСТАВИТЬ ОТЗЫВ</button>
+                <? foreach ($arResult['REVIEWS'] as $REVIEW): ?>
+                    <div class="review">
+                        <div class="review__header">
+                            <div class="review__avatar"><?= substr($REVIEW['PROPERTY_NAME_VALUE'], 0, 1); ?></div>
+                            <div class="review__name"><?= $REVIEW['PROPERTY_NAME_VALUE'] ?></div>
+                            <div class="review__stars rating__stars">
+                                <? for ($i = 0; $i < 5 && $i < (int)$REVIEW['PROPERTY_STARS_VALUE']; $i++): ?>
+                                    <span class="rating__star"></span>
+                                <? endfor; ?>
+                            </div>
+                        </div>
+                        <? if ($REVIEW['PROPERTY_STRENGTH_VALUE']['TEXT']): ?>
+                            <div class="reviews__block">
+                                <h6 class="reviews__block-title">
+                                    Достоинства
+                                </h6>
+                                <p class="reviews__block-text">
+                                    <?= $REVIEW['PROPERTY_STRENGTH_VALUE']['TEXT'] ?>
+                                </p>
+                            </div>
+                        <? endif; ?>
+                        <? if ($REVIEW['PROPERTY_WEAKNESS_VALUE']['TEXT']): ?>
+                            <div class="reviews__block">
+                                <h6 class="reviews__block-title">
+                                    Недостатки
+                                </h6>
+                                <p class="reviews__block-text">
+                                    <?= $REVIEW['PROPERTY_WEAKNESS_VALUE']['TEXT'] ?>
+                                </p>
+                            </div>
+                        <? endif; ?>
+                        <? if ($REVIEW['PROPERTY_COMMENT_VALUE']['TEXT']): ?>
+                            <div class="reviews__block">
+                                <h6 class="reviews__block-title">
+                                    Комментарий
+                                </h6>
+                                <p class="reviews__block-text">
+                                    <?= $REVIEW['PROPERTY_COMMENT_VALUE']['TEXT'] ?>
+                                </p>
+                            </div>
+                        <? endif; ?>
+
+                        <? if ($REVIEW['GALLERY']): ?>
+                            <div class="reviews__block reviews__block--image">
+                                <?foreach ($REVIEW['GALLERY'] as $PICTURE):?>
+                                    <img src="<?=$PICTURE['auto']?>" class="fullscreen-option">
+                                <?endforeach;?>
+                            </div>
+                        <? endif; ?>
+                    </div>
+                <? endforeach; ?>
+            </div>
+        </div>
+    <? endif; ?>
+    <? if ($arResult['QUESTIONS']): ?>
+        <div class="product-tab questions" id="questions-tab">
+            <div class="mobile-tab">
+                <span class="mobile-tab--header">Вопрос\Ответ</span>
+                <span class="mobile-arrow"></span>
+            </div>
+            <div class="questions__content tab-content">
+                <button class="questions__button desc-action-button contact-popup">ЗАДАТЬ ВОПРОС</button>
+                <? foreach ($arResult['QUESTIONS'] as $QUESTION): ?>
+                    <div class="question">
+                        <div class="question__question">
+                            <img loading="lazy" src="/images/svg/profile.svg">
+                            <p><?= $QUESTION['PROPERTY_QUESTION_VALUE']['TEXT'] ?></p>
+                        </div>
+                        <div class="question__answer">
+                            <img loading="lazy" class="fullscreen-option" src="/upload/images/png/favicon.jpg">
+                            <p><?= $QUESTION['PROPERTY_ANSWER_VALUE']['TEXT'] ?></p>
+                        </div>
+                    </div>
                 <? endforeach; ?>
             </div>
         </div>
