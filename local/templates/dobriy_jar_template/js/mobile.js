@@ -28,7 +28,6 @@ class PopupManager {
         if (this.blockedInteraction) {
             return false;
         }
-        console.log(event);
         const popup_id = event.target.dataset.popupName;
         this.blockedInteraction = true;
         if (this.openedPopup == null) {
@@ -326,7 +325,7 @@ class Popup {
 
     calcMaxHeight() {
         let height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
-        return height - 150;
+        return height - 90;
     }
 
     show() {

@@ -405,7 +405,7 @@ if ($hasOffers) {
                 <? foreach ($arResult['REVIEWS'] as $REVIEW): ?>
                     <div class="review">
                         <div class="review__header">
-                            <div class="review__avatar"><?= substr($REVIEW['PROPERTY_NAME_VALUE'], 0, 1); ?></div>
+                            <div class="review__avatar"><?= mb_substr($REVIEW['PROPERTY_NAME_VALUE'], 0, 1,'UTF-8'); ?></div>
                             <div class="review__name"><?= $REVIEW['PROPERTY_NAME_VALUE'] ?></div>
                             <div class="review__stars rating__stars">
                                 <? for ($i = 0; $i < 5 && $i < (int)$REVIEW['PROPERTY_STARS_VALUE']; $i++): ?>

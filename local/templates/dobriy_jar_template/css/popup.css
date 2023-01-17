@@ -45,6 +45,7 @@
 @media (max-width: 980px){
 
     .popup-fixed {
-        top: 50% !important
+        top: 50vh !important;
+        transform: translateY(-50%);
     }
 }

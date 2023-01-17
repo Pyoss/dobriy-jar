@@ -1,24 +1,122 @@
-section.popular-categories, section.blog, section.hit, section.useful {
-    padding: 35px 0 0 0;
+
+.sliders__container {
+    display: grid;
+    grid-template-columns: 3.82fr 1fr;
+    column-gap: 2%;
+    overflow: hidden;
+    margin: 1% 1% 2% 1%;
 }
 
-.section-title {
-    max-width: 1470px;
-    width: 100%;
-    position: relative;
+.main-slider .slick-dots {
+    display: flex;
+    justify-content: center;
+    column-gap: 5%;
+    bottom: 0;
+    width: 100vw;
+    position: absolute;
+}
+
+a.slider-dots {
+    width: 2em;
+    height: 2em;
     display: block;
-    margin: auto;
-    padding: 15px 0 15px 15%;
+    font-size: 1vw;
+    border: 6px solid #ff7300;
+    border-radius: 50%;
+    box-sizing: border-box;
 }
 
-.section-title--name {
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
+.slick-active a.slider-dots {
+
+    background-color: #ff7300;
 }
 
-.section-title--name:after {
-    content: '/';
-    font-size: 18px;
-    padding: 0 15px
+.slick-slider__wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.main-slider__wrapper::before {
+    padding-bottom: 43%;
+}
+.filter-slider__wrapper::before {
+    padding-bottom: 141%;
+}
+
+.slick-slider__wrapper::before {
+    content: '';
+    display: block;
+    position: relative;
+}
+
+.slick-slider__wrapper::before + .slick-initialized {
+    display: none;
+}
+.main-slider__wrapper + .main-slider__wrapper {
+
+}
+
+
+.slick-template {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s opacity;
+    top: 0;
+    left: 0;
+}
+
+.slick-template.slick-initialized {
+    visibility: visible;
+    opacity: 1;
+}
+
+.main-slider {
+    padding-bottom: 6%;
+}
+
+.slick-dots {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (min-width: 1981px) {
+    .sliders__container {
+        width: 1980px;
+        margin-inline: auto;
+    }
+
+
+    .main-slider .slick-dots {
+        width: 1980px;
+    }
+
+    a.slider-dots {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+
+@media (max-width: 980px) {
+    .sliders__container {
+        grid-template-columns: 1fr;
+        margin: 3% 2% 4% 2%;
+    }
+
+    .filter-slider__wrapper {
+        display: none
+    }
+
+    a.slider-dots {
+        font-size: 2.5vw;
+        border-width: .5vw;
+    }
 }

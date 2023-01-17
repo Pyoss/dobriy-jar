@@ -174,13 +174,13 @@ if($arResult['PROPERTIES']['BRAND']){
 /* -------------------------- ОТЗЫВЫ ---------------------*/
 $resReviews = \Bitrix\Iblock\ElementPropertyTable::getList(
     ['select' => ['IBLOCK_ELEMENT_ID'],
-        'filter' => ['IBLOCK_PROPERTY_ID' => 92, 'VALUE' => $arResult['ID']]]
+        'filter' => ['IBLOCK_PROPERTY_ID' => 105, 'VALUE' => $arResult['ID']]]
 );
 while ($arReview = $resReviews -> fetch()){
     $resReviewDetails = CIBlockElement::GetList(
         array(),
         array(
-            "IBLOCK_ID" => 15, 'ID' => $arReview['IBLOCK_ELEMENT_ID']
+            "IBLOCK_ID" => 15, 'ID' => $arReview['IBLOCK_ELEMENT_ID'], 'ACTIVE' => 'Y'
         ),
         false,
         false,
@@ -200,13 +200,13 @@ while ($arReview = $resReviews -> fetch()){
 /* -------------------------- ВОПРОС\ОТВЕТ ---------------------*/
 $resReviews = \Bitrix\Iblock\ElementPropertyTable::getList(
     ['select' => ['IBLOCK_ELEMENT_ID'],
-        'filter' => ['IBLOCK_PROPERTY_ID' => 99, 'VALUE' => $arResult['ID']]]
+        'filter' => ['IBLOCK_PROPERTY_ID' => 114, 'VALUE' => $arResult['ID']]]
 );
 while ($arReview = $resReviews -> fetch()){
     $resReviewDetails = CIBlockElement::GetList(
         array(),
         array(
-            "IBLOCK_ID" => 16, 'ID' => $arReview['IBLOCK_ELEMENT_ID']
+            "IBLOCK_ID" => 16, 'ID' => $arReview['IBLOCK_ELEMENT_ID'], 'ACTIVE' => 'Y'
         ),
         false,
         false,

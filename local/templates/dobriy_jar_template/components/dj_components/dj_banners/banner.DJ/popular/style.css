@@ -58,3 +58,83 @@
     font-weight: bold;
     text-wrap: none;
 }
+
+
+@media (max-width: 980px) {
+    .slider.popular:before {
+        content: none;
+    }
+
+    .slider.popular .control {
+        display: none;
+    }
+
+    .popular__mobile.mobile {
+        display: grid!important;
+        grid-template-columns: 50% 50%;
+        background-color: #ff7300;
+    }
+
+    .popular__mobile .popular__mobile-item img {
+        width: 30rem;
+        height: auto;
+        max-width: 100%;
+
+    }
+
+    .popular__mobile-item {
+        border: 1.4rem solid white;
+        display: flex;
+        margin: 0;
+        flex-flow: column;
+        justify-content: space-around;
+        padding: 2.2rem;
+        height: 45rem
+    }
+
+    .popular__mobile .popular__mobile-item:first-child {
+        grid-column: span 2;
+        justify-content: center;
+        align-items: center;
+        flex-flow: row;
+        line-height: 6rem;
+    }
+
+    .popular__mobile .popular__mobile-item:first-child img {
+        width: auto;
+        height: auto;
+        max-width: 48rem;
+        max-height: 40rem;
+    }
+
+    .popular__mobile .popular__mobile-item:first-child img {
+        width: auto;
+        height: auto;
+        max-width: 48rem;
+        max-height: 40rem;
+    }
+
+    figcaption.popular__mobile-text {
+        font-size: 3.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+    }
+
+    .popular-categories .section-title {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    main section.popular-categories {
+        padding-top: 0;
+    }
+
+    .popular-categories .section-title--name {
+        font-size: 5rem
+    }
+
+    .popular-categories .section-title--name:after {
+        display: none;
+    }
+}

@@ -56,7 +56,7 @@ if($ITEM['OFFERS']){
 // Подсчитываем отзывы
 $resReviews = \Bitrix\Iblock\ElementPropertyTable::getList(
     ['select' => ['IBLOCK_ELEMENT_ID'],
-        'filter' => ['IBLOCK_PROPERTY_ID' => 92, 'VALUE' => $arResult['ITEM']['ID']]]
+        'filter' => ['IBLOCK_PROPERTY_ID' => 105, 'VALUE' => $arResult['ITEM']['ID']]]
 );
 $arResult['ITEM']['REVIEWS']['NUMBER'] = 0;
 while ($arReview = $resReviews -> fetch()){

@@ -650,7 +650,7 @@
 	animation: append-animate .3s linear;
 }
 
-/* ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ Ð´Ð»Ñ Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½Ð½Ñ‹Ñ… ÑÐ¾ ÑÑ‚Ð°Ñ€Ð¾Ð³Ð¾ ÑÐ°Ð¹Ñ‚Ð° Ð¸Ð·Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ð¹*/
+/* ÃÅ¾ÃÂ¿ÃÂ¸Ã‘ÂÃÂ°ÃÂ½ÃÂ¸ÃÂµ ÃÂ´ÃÂ»Ã‘Â ÃÂ·ÃÂ°ÃÂ³Ã‘â‚¬Ã‘Æ’ÃÂ¶ÃÂµÃÂ½ÃÂ½Ã‘â€¹Ã‘â€¦ Ã‘ÂÃÂ¾ Ã‘ÂÃ‘â€šÃÂ°Ã‘â‚¬ÃÂ¾ÃÂ³ÃÂ¾ Ã‘ÂÃÂ°ÃÂ¹Ã‘â€šÃÂ° ÃÂ¸ÃÂ·ÃÂ¾ÃÂ±Ã‘â‚¬ÃÂ°ÃÂ¶ÃÂµÃÂ½ÃÂ¸ÃÂ¹*/
 .detail_text-content {
 	display: flex;
 	justify-content: center;
@@ -678,7 +678,7 @@
 	margin-top: 20px;
 }
 
-/* ÐšÐ¾Ð¼Ð¿Ð»ÐµÐºÑ‚Ð°Ñ†Ð¸Ñ */
+/* ÃÅ¡ÃÂ¾ÃÂ¼ÃÂ¿ÃÂ»ÃÂµÃÂºÃ‘â€šÃÂ°Ã‘â€ ÃÂ¸Ã‘Â */
 .package-block {
 	margin: 50px auto;
 	padding: 10px 0 40px 0;
@@ -755,6 +755,7 @@ a .package-item__name {
 	display: flex;
 	gap: 20px;
 	flex-flow: row wrap;
+	align-items: flex-start;
 }
 
 .reviews__block--image img.fullscreen-option {

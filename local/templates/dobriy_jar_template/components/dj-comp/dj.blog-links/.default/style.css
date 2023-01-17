@@ -1,0 +1,16 @@
+.blog-links__container {
+    width: 1280px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: min-content min-content;
+    justify-content: center;
+    gap: 25px;
+}
+
+@media (max-width: 1280px) {
+    .blog-links__container {
+        width: 80%;
+        display: flex;
+        flex-flow: column;
+    }
+}

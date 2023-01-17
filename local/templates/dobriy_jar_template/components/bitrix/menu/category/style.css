@@ -191,6 +191,8 @@
     display: block;
     transform: translateY(100%);
     visibility: visible;
+    /* width: 100vw; */
+    padding-bottom: 200px;
 }
 
 .mobile-catalog--wrapper ul{
@@ -271,6 +273,7 @@
     font-size: 18px;
     font-weight: 600;
     background: #dddddd;
+    /* width: 100vw; */
 }
 
 .back-message {
