@@ -72,7 +72,7 @@ $APPLICATION -> ShowHead();
             <div class="header-center--mobile-menu" id="mobile-catalog-open" data-popup-name="header-menu"></div>
             <a href="/" class="header-logo">
             </a>
-            <div class="desktop">
+            <div class="header-center--geo-container">
                        <?$APPLICATION->IncludeComponent(
                 "dj_components:dj.geolocation",
                 ".default",

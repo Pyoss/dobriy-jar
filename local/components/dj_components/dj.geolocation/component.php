@@ -11,6 +11,7 @@ use \Bitrix\Iblock\ElementPropertyTable;
 
 $arParams['REGION_NAME_DECLINE_PP'] = 70;
 $arParams['REGION_NAME_DECLINE_IP'] = 71;
+$arParams['KEY_CITY'] = 104;
 
 function getInfoByIp(): array
 {
@@ -41,9 +42,10 @@ $resGeo = \Bitrix\Iblock\ElementTable::getList(
 );
 
 while ($arGeo = $resGeo -> fetch()){
+
     $resDomain = \Bitrix\Iblock\ElementPropertyTable::getList(array(
         'filter' => array('IBLOCK_PROPERTY_ID' => array($arParams['DOMAIN_PROP_ID'],
-                                                        70, 71), 'IBLOCK_ELEMENT_ID' => $arGeo['ID']),
+                                                        70, 71, $arParams['KEY_CITY']), 'IBLOCK_ELEMENT_ID' => $arGeo['ID']),
         'select' => array('*')
     ));
     $arGeo['REPLACE_VALUES']['#REGION_NAME_DECLINE_IP#'] = false;
@@ -59,6 +61,9 @@ while ($arGeo = $resGeo -> fetch()){
                 break;
             case $arParams['REGION_NAME_DECLINE_IP']:
                 $arGeo['REPLACE_VALUES']['#REGION_NAME_DECLINE_IP#'] = $arDomain['VALUE'];
+                break;
+            case $arParams['KEY_CITY']:
+                $arGeo['KEY_CITY'] = boolval($arDomain['VALUE'] === 'Y');
                 break;
             default:
                 break;

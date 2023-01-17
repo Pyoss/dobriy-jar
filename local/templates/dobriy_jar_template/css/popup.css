@@ -47,5 +47,6 @@
     .popup-fixed {
         top: 50vh !important;
         transform: translateY(-50%);
+        max-width: 100%;
     }
 }

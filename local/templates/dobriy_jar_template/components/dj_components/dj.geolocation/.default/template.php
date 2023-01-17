@@ -17,6 +17,6 @@ $chosen_domain = $arResult['chosen_domain'];
     var domain_array = Object.keys(domains).sort(function(a, b) {
         return parseInt(domains[a].SORT) - parseInt(domains[b].SORT)}
         ).map(function(key) {
-            return new GeoData(domains[key]['DOMAIN'], domains[key]['NAME'], domains[key]['ID']);
+            return new GeoData(domains[key]['DOMAIN'], domains[key]['NAME'], domains[key]['ID'], domains[key]['KEY_CITY']);
         });
 </script>

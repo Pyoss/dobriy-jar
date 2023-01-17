@@ -1,3 +1,5 @@
+
+
 header .geo {
     margin: 8px 0 8px 20px;
     padding: 5px 0;
@@ -6,6 +8,7 @@ header .geo {
     min-width: 122px;
     position: relative;
 }
+
 
 header .geo>*>span {
     font-weight: bold;
@@ -45,17 +48,31 @@ header .geo i{
     top: 100%;
 }
 
+.geo--popup-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 25px
+}
 .geo--popup{
-    padding: 20px
-;display: grid;grid-template-columns: 1fr 1fr 1fr;overflow-y: scroll;}
+    padding: 20px;
+    display: block;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    overflow-y: scroll;
+    width: 500px;
+    text-align: left;
+}
 
 .geo--popup-title {
-    font-weight: bold;
-    grid-column-end: 4;grid-column-start: 1;}
+    font-size: 25px;
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
 
 .geo--popup-city {
     cursor: pointer;
-    padding: 20px;
+    padding: 6px 20px;
+    text-decoration: underline;
 }
 
 .geo--popup-city:hover {
@@ -75,4 +92,92 @@ header .geo i{
     top: 20px;
     width: 500px;
     z-index: 20;
+}
+
+.geo--popup-cities {
+    display: flex;
+    flex-flow: column;
+}
+
+.geo--popup-chosen-city {
+    margin: 20px 0 10px;
+}
+
+input.geo--popup-city-search {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    border-color: #d7d7d7;
+    border-style: solid;
+}
+.geo--nodes-title {
+    margin: 30px 0 20px 0;
+    font-size: 21px;
+}
+
+.geo--chosen-city {
+    color: #ff7300;
+}
+
+.geo--popup-cities-key {
+    /* color: black; */
+    /* background-color: gold; */
+    display: flex;
+    margin: 20px 0;
+    gap: 15px;
+    font-size: 18px;
+    flex-flow: row wrap;
+}
+
+.geo--popup-city-key {
+    color: firebrick;
+    padding: 5px 15px;
+    background-color: #ff7300;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+h1.contacts__title {
+    font-size: 1.6em;
+}
+
+span.contacts__city-choice {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+button#geo-alt {
+    color:  white;
+    border:  none;
+    background-color: #ff7300;
+    padding: 5px 10px;
+    box-shadow: 1px 1px 2px 0px black;
+}
+
+@media(max-width: 980px){
+    header .geo {
+        position: absolute;
+        width: 0;
+        height: 0;
+        min-width: 0;
+    }
+
+    .click-wrapper {
+        display: none;
+    }
+
+    .geo--popup-conf{
+        width: 60vw;
+        left: -50vw;
+    }
+
+    .geo--popup-conf-text {
+        font-size: 18px;
+        margin: 0 20px 20px 20px;
+    }
+
+    .geo--popup{
+        top: 54px !important;
+        transform: none;
+    }
 }
