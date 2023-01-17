@@ -66,6 +66,7 @@ function showDomainChoicePopup(){
                     {className: 'geo--popup-title noselect'},
                 text: 'Выбор региона'
             })]
+
         for (let geoData of domain_array){
             city_nodes_array.push(BX.create('span',
             {props:

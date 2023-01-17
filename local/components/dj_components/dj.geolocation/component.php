@@ -2,6 +2,7 @@
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 use \Bitrix\Main\Service\GeoIp;
+use \Itconstruct\DadataGeoIP\Services\Dadata\GeoIpService;
 use \Bitrix\Iblock\ElementPropertyTable;
 
 /***
@@ -14,7 +15,8 @@ $arParams['REGION_NAME_DECLINE_IP'] = 71;
 function getInfoByIp(): array
 {
     $ipAddress = GeoIp\Manager::getRealIp();
-    $result = GeoIp\Manager::getDataResult($ipAddress, "ru");
+    /*$gservice = new GeoIpService;
+    $result = $gservice -> getDataResult($ipAddress);
     if ($result){
         $geoData = $result->getGeoData();
         $city_name = $geoData->cityName;
@@ -22,7 +24,7 @@ function getInfoByIp(): array
         return array(
             'IP_CITY_NAME' => $city_name,
             'IP_COORDINATES' => $coords
-        );}
+        );}*/
     return array(
     'IP_CITY_NAME' => '',
     'IP_COORDINATES' => ''
@@ -33,7 +35,8 @@ $arResult['geoIpData'] = getInfoByIp();
 $resGeo = \Bitrix\Iblock\ElementTable::getList(
     array(
         'filter' => array('IBLOCK_ID' => $arParams['IBLOCK_ID']),
-        'select' => array('ID', 'NAME', 'DETAIL_TEXT')
+        'select' => array('ID', 'NAME', 'DETAIL_TEXT', 'SORT'),
+        'order' => array('SORT' => 'ASC'),
     )
 );
 
@@ -72,7 +75,7 @@ while ($arGeo = $resGeo -> fetch()){
 }
 $arResult['geoIBlock'] = $arGeoList;
 $arResult['current_domain'] = $arResult['geoIBlock'][$arResult['CURRENT_DOMAIN']];
-$arResult['ip_domain'] = $arResult['geoIBlock'][$arResult['IP_REGION']];
+$arResult['ip_domain'] = $arResult['geoIBlock'][$arResult['IP_REGION']]?:$arResult['geoIBlock'][2337];
 $arResult['chosen_domain']= $arResult['geoIBlock'][$_COOKIE['DOMAIN_ID']];
 
 /*Устанавливаем глобальную переменную GEODJ*/
