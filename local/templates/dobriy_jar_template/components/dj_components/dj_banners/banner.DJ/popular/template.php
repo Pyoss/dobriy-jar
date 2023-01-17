@@ -1,7 +1,7 @@
 <?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 
 ?>
-<div class="wrapper">
+<div class="wrapper desktop">
     <div class="slides" style="left:-<?php echo !$endless ? 0 : $VIEW_OFFSET?>px">
         <?php foreach($arResult['BANNER_DATA'] as $banner):
             preg_match("/[^\s]+/", $banner['NAME'], $first_word);
@@ -24,4 +24,12 @@
             </div>
         <?php endforeach;?>
     </div>
+</div>
+<div class="popular__mobile mobile">
+    <?foreach($arResult['BANNER_DATA'] as $banner):?>
+    <figure class="popular__mobile-item">
+        <img src="<?=$banner['PICTURE']?>" alt="<?=$banner['NAME']?>" class="popular__mobile-img">
+        <figcaption class="popular__mobile-text"><?=$banner['NAME']?></figcaption>
+    </figure>
+    <?endforeach;?>
 </div>

@@ -9,7 +9,7 @@ $rsBanners = \Bitrix\Iblock\ElementTable::getList([
         'select' => array(
             'ID', 'DETAIL_PICTURE', 'CODE', 'PREVIEW_PICTURE'
         ),
-        'order' => array('ID' => 'asc')]
+        'order' => array('SORT' => 'asc')]
 );
 $index = 0;
 while ($banner = $rsBanners -> Fetch()){

@@ -89,11 +89,16 @@ function setMenuListeners(){
 
     // SET UP LISTENER FOR BURGER IN THE TOP MENU (FOR MOBILE)
     document.getElementById('mobile-catalog-open').addEventListener('click',
-    popupManager.togglePopup.bind(popupManager),
+        (event)=>{
+        popupManager.togglePopup.bind(popupManager)(event)
+        }
+    ,
         {passive:false})
     mobile_catalog.overlay.addEventListener('click',
-    popupManager.closePopup.bind(popupManager),
-        {passive:false})
+        (event) => {
+        popupManager.closePopup.bind(popupManager)(event)
+
+        }, {passive:false})
 
 
 }
@@ -143,6 +148,7 @@ class MobileCatalogController{
     show(instant=true) {
         if (this.hidden){
             document.querySelector('body').classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
             this.wrapper.classList.add('open');
             this.overlay.classList.add('show');
             this.overlay.classList.add('transparent');
@@ -153,10 +159,12 @@ class MobileCatalogController{
         } else {
             if(instant){
                 document.querySelector('body').classList.remove('no-scroll');
+                document.documentElement.classList.remove('no-scroll');
             }
             else {
                 setTimeout(function(){
                     document.querySelector('body').classList.remove('no-scroll');
+                    document.documentElement.classList.remove('no-scroll');
                 }, 500)
             }
             this.wrapper.classList.remove('open')

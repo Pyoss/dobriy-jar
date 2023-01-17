@@ -28,7 +28,6 @@ class PopupManager {
         if (this.blockedInteraction) {
             return false;
         }
-        console.log(event);
         const popup_id = event.target.dataset.popupName;
         this.blockedInteraction = true;
         if (this.openedPopup == null) {
@@ -214,6 +213,9 @@ class PopupManagerDev {
 
     setOverlay(popup) {
         if (this.overlay === null) {
+
+            document.querySelector('body').classList.add('no-scroll');
+            document.documentElement.classList.add('no-scroll');
             let overlayDOM = BX.create('div',
                 {
                     props: {className: 'popup-overlay'},
@@ -246,6 +248,9 @@ class PopupManagerDev {
         }
 
         if (this.overlay) {
+
+            document.querySelector('body').classList.remove('no-scroll');
+            document.documentElement.classList.remove('no-scroll');
             if (popup.animation !== 'instant') {
                 this.overlay.classList.add('animation-fade')
                 setTimeout(BX.delegate(remove_overlay, this), animationTimeoutOut)
@@ -326,7 +331,7 @@ class Popup {
 
     calcMaxHeight() {
         let height = isNaN(window.innerHeight) ? window.clientHeight : window.innerHeight;
-        return height - 150;
+        return height - 90;
     }
 
     show() {
