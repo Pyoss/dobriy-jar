@@ -3,7 +3,7 @@
 /** @var array $arComponentParameters Настройки параметров */
 /** @var array $componentPath Путь к компоненту */
 
-$arComponentParameters['PARAMETERS']['BACKGROUND_IMAGE'] = array(
+$arComponentParameters['PARAMETERS']['BACKGROUND'] = array(
     "NAME" => 'Фон контейнера',
     "TYPE" => "FILE",
     "FD_TARGET" => "F",
@@ -12,7 +12,7 @@ $arComponentParameters['PARAMETERS']['BACKGROUND_IMAGE'] = array(
     "FD_USE_MEDIALIB" => true,
     "FD_MEDIALIB_TYPES" => Array('image')
 );
-$arComponentParameters['PARAMETERS']['BACKGROUND_IMAGE_MOBILE'] = array(
+$arComponentParameters['PARAMETERS']['BACKGROUND_MOBILE'] = array(
     "NAME" => 'Фон контейнера мобильный',
     "TYPE" => "FILE",
     "FD_TARGET" => "F",

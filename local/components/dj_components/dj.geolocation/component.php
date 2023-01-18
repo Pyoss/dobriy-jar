@@ -11,7 +11,7 @@ use \Bitrix\Iblock\ElementPropertyTable;
 
 $arParams['REGION_NAME_DECLINE_PP'] = 70;
 $arParams['REGION_NAME_DECLINE_IP'] = 71;
-$arParams['KEY_CITY'] = 104;
+$arParams['KEY_CITY'] = 118;
 
 function getInfoByIp(): array
 {

@@ -1,3 +1,7 @@
+:root {
+    --dj-main-color: #ff7300;
+}
+
 .catalog-products-container {
     display: flex;
     flex-wrap: wrap;

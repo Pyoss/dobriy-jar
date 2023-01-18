@@ -1,0 +1,121 @@
+.hit__item {
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: 2em;
+    border: 3px solid #ff7300;
+    padding: 2em 2em 4em 2em;
+}
+
+.slick-initialized .slick-slide.hit__item {
+    display: flex;
+    height: 70em;
+    /* justify-content: center; */
+    align-items: center;
+    grid-template-rows: 9em 35em 5em 6em;
+}
+.hit__item {
+    margin: 0 .3em;
+}
+.hit__list {
+    display: grid;
+    font-size: 1vw;
+    width: 94%;
+    margin: auto;
+    column-gap: .5em;
+}
+
+.hit__info {
+    text-align: right;
+    padding-left: 28%;
+    margin-bottom: auto;
+    position: relative;
+}
+
+span.hit__info-type {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+span.hit__info-name {
+    font-size: 3em;
+    font-weight: 500;
+}
+
+span.hit__price {
+    font-size: 5em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hit__info-sale {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3em;
+    font-weight: 700;
+    background: linear-gradient(0, #ff3100, #ff7300);
+}
+
+button.hit__button {
+    background: linear-gradient(90deg, #ff3100, #ff7300);
+    border: 0;
+    width: 10em;
+    color: white;
+    position: relative;
+    height: 3em;
+    /* flex-basis: 3em; */
+    /* flex-shrink: 0; */
+    border-radius: 2em;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 20px 1px #ff7300;
+    font-size: 2.5em;
+}
+
+img.hit__img {
+    /* flex-basis: 20em; */
+    /* flex-shrink: 3; */
+    max-width: 100%;
+    object-fit: contain;
+    min-width: 1px;
+    height: 34em;
+}
+
+button.hit__button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid white;
+    top: 3px;
+    left: 6px;
+    right: 6px;
+    bottom: 4px;
+    border-radius: inherit;
+}
+.hit .slick-dots {
+    margin: 20px 0 30px 0;
+    gap: 30px;
+}
+
+
+@media (min-width: 1200px){
+    .hit__list {
+        font-size: 7px;
+        max-width: 1280px;
+        margin: auto;
+
+        display: grid;
+        grid-template-columns: repeat(4, 324px);
+    }
+    .hit .slick-dots {
+        margin: 3em;
+        gap: 2em;
+    }
+}

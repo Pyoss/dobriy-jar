@@ -5,7 +5,7 @@ $APPLICATION->SetTitle("Добрый Жар #REGION_NAME_DECLINE_PP#");
 ?>
 <div class="center-content">
     <h1 class="contacts__title"> Интернет-магазин "Добрый Жар"</h1>
-    <span class="contacts__city-choice"> Магазины в г. <?=$_SESSION['GEODJ']['NAME']?></span>
+    <span class="contacts__city-choice"> Магазины в г. <?=$_SESSION['GEODJ']['NAME']?></span>&nbsp;
     <button id="geo-alt" class="contacts__change-city">Изменить город</button>
 <?php
 if ($_SESSION['GEODJ']['DETAIL_TEXT'] !== ''){
