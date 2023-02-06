@@ -85,7 +85,6 @@ function showDomainChoicePopup() {
             text: 'X',
             events: {
                 click: () => {
-                    console.log(1)
                     popupManagerDev.hidePopup('geo-popup')
                 }
             }
@@ -94,7 +93,7 @@ function showDomainChoicePopup() {
         let geo_chosen_city = BX.create('div', {
             props:
                 {className: 'geo--popup-chosen-city'},
-            html: '<span>Выбран город: </span><span class="geo--chosen-city">' + current_domain.domain_name + '</span>'
+            html: '<span>Выбран город: </span><span class="geo--chosen-city">' + current_domain.city_name + '</span>'
         })
 
         let geo_city_input = BX.create('input', {

@@ -190,6 +190,9 @@ while ($arReview = $resReviews -> fetch()){
     $res = CIBlockElement::GetProperty(15, $REVIEW['ID'], "sort", "asc", array("CODE" => "gallery"));
     while ($ob = $res->GetNext())
     {
+        if(!$ob['VALUE']){
+            continue;
+        }
         $REVIEW['GALLERY'][] =  ImgRef::optimizeImg(
             $ob['VALUE'],
             array('width' => 800, 'height' => 800),
