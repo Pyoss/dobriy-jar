@@ -10,10 +10,11 @@ class DJResourcesComponent extends CBitrixComponent
     public function getFileId($path)
     {
         $path = explode('/', $path);
+        $name = $path[count($path) - 1];
         unset($path[count($path) - 1]);
         unset($path[1]);;
         unset($path[0]);
-        $res = CFile::getList(array(), ['SUBDIR' => implode('/', $path)]);
+        $res = CFile::getList(array(), ['SUBDIR' => implode('/', $path), 'FILE_NAME' => $name]);
 
         return $res->fetch()['ID'];
     }

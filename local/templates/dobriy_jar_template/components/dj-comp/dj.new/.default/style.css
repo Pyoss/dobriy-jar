@@ -9,6 +9,15 @@
     row-gap: 2em;
     border: 3px solid var(--color-new-red);
     padding: 2em 2em 4em 2em;
+    position: relative;
+}
+.new__list-link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .slick-initialized .slick-slide.new__item {

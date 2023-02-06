@@ -4,8 +4,8 @@
 
 $cmp = $this -> getComponent();
 
-$arResult['images']['BACKGROUND'] = $cmp -> formatImage(
-    $arParams['BACKGROUND_IMAGE'],
+$arResult['images']['BACKGROUND_RES'] = $cmp -> formatImage(
+    $arParams['BACKGROUND_RES'],
     array('width' => 1470, 'height' => 1342),
     array('width' => 1237, 'height' => 150));
 

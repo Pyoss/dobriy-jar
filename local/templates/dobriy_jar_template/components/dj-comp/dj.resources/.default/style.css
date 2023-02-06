@@ -1,10 +1,11 @@
 section.resources {
+    /* margin-top: 200px; */
     background-size: 1920px;
     background-position: center;
     background-repeat: no-repeat;
-    height: 634px;
+    /* height: 634px; */
     /* width: 1920px; */
-    margin: auto;
+    margin: 100px auto auto auto;
 }
 
 .resources__container {
@@ -23,6 +24,16 @@ section.resources {
     padding: 20px;
     display: flex;
     flex-flow: column;
+    position: relative;
+}
+
+.resources__link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 span.resource__item-text {
@@ -39,6 +50,7 @@ span.resource__item-text {
         font-size: 1vw;
         background-size: 320%;
         width: 80em;
+        margin-top: 10em;
     }
     .resources__container {
         grid-template-columns: min-content min-content;

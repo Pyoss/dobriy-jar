@@ -16,7 +16,18 @@
 }
 .hit__item {
     margin: 0 .3em;
+    position: relative;
 }
+
+.hit__list-link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .hit__list {
     display: grid;
     font-size: 1vw;

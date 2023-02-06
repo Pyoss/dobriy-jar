@@ -14,6 +14,7 @@
     <div class="new__list">
         <? foreach ($arResult['ITEMS'] as $ITEM): ?>
             <div class="new__item">
+                <a class="new__list-link" href="<?= $ITEM['CODE'] ?>"></a>
                 <div class="new__info">
                     <div class="new__info-sale">NEW</div>
                     <span class="new__info-type">

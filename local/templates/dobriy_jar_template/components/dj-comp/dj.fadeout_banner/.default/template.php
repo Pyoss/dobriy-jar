@@ -10,7 +10,8 @@
     <?php
         foreach($arResult['BANNERS'] as $BANNER):
     ?>
-        <img class="main-slider__img" src="<?=$BANNER['img']['auto']?>">
+        <a href="<?=$BANNER['CODE']?>">
+        <img class="main-slider__img" src="<?=$BANNER['img']['auto']?>"></a>
     <? endforeach;?>
 </div>
 </div>

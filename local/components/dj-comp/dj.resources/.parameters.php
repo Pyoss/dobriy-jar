@@ -3,7 +3,7 @@
 /** @var array $arComponentParameters Настройки параметров */
 /** @var array $componentPath Путь к компоненту */
 
-$arComponentParameters['PARAMETERS']['BACKGROUND_IMAGE'] = array(
+$arComponentParameters['PARAMETERS']['BACKGROUND_RES'] = array(
     "NAME" => 'Фон контейнера',
     "TYPE" => "FILE",
     "FD_TARGET" => "F",

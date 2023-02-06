@@ -76,6 +76,11 @@ a.slider-dots {
     padding-bottom: 6%;
 }
 
+
+.main-slider__img {
+    width: 100%;
+}
+
 .slick-dots {
     padding: 0;
     margin: 0;
@@ -84,7 +89,9 @@ a.slider-dots {
     justify-content: center;
 }
 
-
+select[data-bx-property-id="CATEGORY_ID"] {
+    height: 600px!important;
+}
 
 @media (min-width: 1981px) {
     .sliders__container {
@@ -150,8 +157,8 @@ a.slider-dots {
     color: var(--dj-main-color)
 }
 
-@media (max-width: 980px){
 
+@media (max-width: 980px){
 
     div.container__title {
         font-size: 1vw;

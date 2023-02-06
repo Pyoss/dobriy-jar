@@ -7,13 +7,14 @@
 ?>
 <section class="hit section">
     <div class="hit__title container__title">
-        <span class="container__title-current">Хит продаж</span>
+        <span class="container__title-current">Хиты продаж</span>
         <span class="container__title-slash">/</span>
         <a class="container__title-link" href="/catalog/">Показать всё</a>
     </div>
     <div class="hit__list">
         <? foreach ($arResult['ITEMS'] as $ITEM): ?>
             <div class="hit__item">
+                <a class="hit__list-link" href="<?= $ITEM['CODE'] ?>"></a>
                 <div class="hit__info">
                     <div class="hit__info-sale">15%</div>
                     <span class="hit__info-type">
@@ -32,6 +33,7 @@
                     Подробнее
                 </button>
             </div>
+
         <? endforeach; ?>
     </div>
 </section>

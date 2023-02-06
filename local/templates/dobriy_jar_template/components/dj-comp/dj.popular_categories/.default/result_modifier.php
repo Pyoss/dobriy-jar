@@ -13,12 +13,18 @@ foreach ($arResult['SECTIONS'] as &$SECTION) {
             array('width' => 250, 'height' => 250));
 }
 
-for ($i =0; $i <= (count($SECTION) % 3); $i ++ ){
-    $arResult['SECTIONS'][] = 'blank';
+$length = count($arResult['SECTIONS']);
+$i = $length % 3;
+if ($i !== 0) {
+    while ($i < 3) {
+        $arResult['SECTIONS'][] = 'blank';
+        $i++;
+    }
 }
+
 
 $arResult['BACKGROUND'] =
     $cmp->formatImage(
         $arParams['BACKGROUND'],
-        array('width' => 1000, 'height' => 1000),
+        array('width' => 1000, 'height' => 2000),
         array('width' => 1440, 'height' => 1440));
