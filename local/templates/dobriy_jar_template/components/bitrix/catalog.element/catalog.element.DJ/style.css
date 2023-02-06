@@ -650,7 +650,7 @@
 	animation: append-animate .3s linear;
 }
 
-/* ÃÅ¾ÃÂ¿ÃÂ¸Ã‘ÂÃÂ°ÃÂ½ÃÂ¸ÃÂµ ÃÂ´ÃÂ»Ã‘Â ÃÂ·ÃÂ°ÃÂ³Ã‘â‚¬Ã‘Æ’ÃÂ¶ÃÂµÃÂ½ÃÂ½Ã‘â€¹Ã‘â€¦ Ã‘ÂÃÂ¾ Ã‘ÂÃ‘â€šÃÂ°Ã‘â‚¬ÃÂ¾ÃÂ³ÃÂ¾ Ã‘ÂÃÂ°ÃÂ¹Ã‘â€šÃÂ° ÃÂ¸ÃÂ·ÃÂ¾ÃÂ±Ã‘â‚¬ÃÂ°ÃÂ¶ÃÂµÃÂ½ÃÂ¸ÃÂ¹*/
+/* ÃƒÂÃ…Â¾ÃƒÂÃ‚Â¿ÃƒÂÃ‚Â¸Ãƒâ€˜Ã‚ÂÃƒÂÃ‚Â°ÃƒÂÃ‚Â½ÃƒÂÃ‚Â¸ÃƒÂÃ‚Âµ ÃƒÂÃ‚Â´ÃƒÂÃ‚Â»Ãƒâ€˜Ã‚Â ÃƒÂÃ‚Â·ÃƒÂÃ‚Â°ÃƒÂÃ‚Â³Ãƒâ€˜Ã¢â€šÂ¬Ãƒâ€˜Ã†â€™ÃƒÂÃ‚Â¶ÃƒÂÃ‚ÂµÃƒÂÃ‚Â½ÃƒÂÃ‚Â½Ãƒâ€˜Ã¢â‚¬Â¹Ãƒâ€˜Ã¢â‚¬Â¦ Ãƒâ€˜Ã‚ÂÃƒÂÃ‚Â¾ Ãƒâ€˜Ã‚ÂÃƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â°Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â¾ÃƒÂÃ‚Â³ÃƒÂÃ‚Â¾ Ãƒâ€˜Ã‚ÂÃƒÂÃ‚Â°ÃƒÂÃ‚Â¹Ãƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â° ÃƒÂÃ‚Â¸ÃƒÂÃ‚Â·ÃƒÂÃ‚Â¾ÃƒÂÃ‚Â±Ãƒâ€˜Ã¢â€šÂ¬ÃƒÂÃ‚Â°ÃƒÂÃ‚Â¶ÃƒÂÃ‚ÂµÃƒÂÃ‚Â½ÃƒÂÃ‚Â¸ÃƒÂÃ‚Â¹*/
 .detail_text-content {
 	display: flex;
 	justify-content: center;
@@ -678,7 +678,7 @@
 	margin-top: 20px;
 }
 
-/* ÃÅ¡ÃÂ¾ÃÂ¼ÃÂ¿ÃÂ»ÃÂµÃÂºÃ‘â€šÃÂ°Ã‘â€ ÃÂ¸Ã‘Â */
+/* ÃƒÂÃ…Â¡ÃƒÂÃ‚Â¾ÃƒÂÃ‚Â¼ÃƒÂÃ‚Â¿ÃƒÂÃ‚Â»ÃƒÂÃ‚ÂµÃƒÂÃ‚ÂºÃƒâ€˜Ã¢â‚¬Å¡ÃƒÂÃ‚Â°Ãƒâ€˜Ã¢â‚¬Â ÃƒÂÃ‚Â¸Ãƒâ€˜Ã‚Â */
 .package-block {
 	margin: 50px auto;
 	padding: 10px 0 40px 0;
@@ -723,12 +723,14 @@ a .package-item__name {
 
 .review__header {
 	display: grid;
-	grid-template-columns: 60px auto 1fr;
+	grid-template-columns: 60px auto;
 	align-items: center;
 }
 
 .review__stars.rating__stars {
-	margin-left: auto;
+	margin-right: auto;
+	grid-column: 2/3;
+	/* text-align: left; */
 }
 
 .review__avatar {
@@ -759,12 +761,14 @@ a .package-item__name {
 }
 
 .reviews__block--image img.fullscreen-option {
-	width: 400px;
+	width: 96px;
+	height: 128px;
+	object-fit: cover;
 }
 
 h6.reviews__block-title {
 	font-size: 1em;
-	margin: 1em 0 .8em 0;
+	margin: 1em 0 0 0;
 }
 
 button.desc-action-button {
@@ -780,6 +784,10 @@ button.desc-action-button {
 
 .review {
 	margin: 20px 0;
+}
+
+.review .reviews__block-text {
+	margin-top: 0;
 }
 
 .question__question img {

@@ -3,17 +3,32 @@
 /** @var array $arComponentParameters Настройки параметров */
 /** @var array $componentPath Путь к компоненту */
 
-$arComponentParameters['PARAMETERS']['BACKGROUND'] = array(
-    "NAME" => 'Фон контейнера',
-    "TYPE" => "FILE",
-    "FD_TARGET" => "F",
-    "FD_EXT" => array('png', 'jpg', 'jpeg', 'gif'),
-    "FD_UPLOAD" => true,
-    "FD_USE_MEDIALIB" => true,
-    "FD_MEDIALIB_TYPES" => Array('image')
+CModule::IncludeModule("iblock");
+
+$rsSection = \Bitrix\Iblock\SectionTable::getList(array(
+    'filter' => array(
+        'IBLOCK_ID' => 2,
+    ),
+    'select' =>  array(
+        'ID',
+        'NAME',
+    ),
+));
+
+while ($section = $rsSection -> fetch()){
+    $arSectionsParameters[$section['ID']] = $section['NAME'];
+}
+
+$arComponentParameters['PARAMETERS']['CATEGORY_ID'] = array(
+    "PARENT"=> 'BASE',
+    "NAME" => 'Категории',
+    "TYPE" => "LIST",
+    "MULTIPLE" => "Y",
+    "VALUES" => $arSectionsParameters
 );
-$arComponentParameters['PARAMETERS']['BACKGROUND_MOBILE'] = array(
-    "NAME" => 'Фон контейнера мобильный',
+
+$arComponentParameters['PARAMETERS']['BACKGROUND'] = array(
+    "NAME" => 'фон',
     "TYPE" => "FILE",
     "FD_TARGET" => "F",
     "FD_EXT" => array('png', 'jpg', 'jpeg', 'gif'),

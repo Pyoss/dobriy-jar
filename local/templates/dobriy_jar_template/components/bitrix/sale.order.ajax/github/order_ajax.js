@@ -279,7 +279,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
                 this.mapsReady && this.initMaps();
                 BX.saleOrderAjax && BX.saleOrderAjax.initDeferredControl();
             }
-
+            BX.bind(BX('tinkoff-loan'), 'click', BX.proxy(this.createTinkoffLoad, this))
             return true;
         },
 

@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Магазин самогонных аппаратов и товаров для самогоноварения, виноделия и пивоварения. Магазин \"Добрый Жар\" #REGION_NAME_DECLINE_PP#. Доставка по РФ. Гарантии производителя, консультации и помощь в подборе. Телефон: 8 800-600-45-96.");
-$APPLICATION->SetPageProperty("title", "Интернет магазин Добрый Жар #REGION_NAME_DECLINE_PP# - самогонные аппараты, комплектующие и ингредиенты");
-$APPLICATION->SetTitle("Интернет-магазин \"Добрый Жар\"");
+$APPLICATION->SetPageProperty("title", "Добрый Жар #REGION_NAME_DECLINE_PP#: интернет-магазин самогонных аппаратов, комплектующих и ингредиентов");
+$APPLICATION->SetTitle("Интернет-магазин \"Добрый Жар\" #REGION_NAME_DECLINE_PP# ");
 ?>
     <section class="sliders">
         <div class="sliders__container">
@@ -20,19 +20,23 @@ $APPLICATION->SetTitle("Интернет-магазин \"Добрый Жар\""
             ); ?>
         </div>
     </section>
+
+
 <? $APPLICATION->IncludeComponent(
     "dj-comp:dj.popular_categories",
     ".default",
     array(
         "COMPONENT_TEMPLATE" => ".default",
         "CATEGORY_ID" => array(
-            0 => "39",
-            1 => "40",
-            2 => "41",
-            3 => "42",
-            4 => "43",
-            5 => "44",
-        )
+            0 => "18",
+            1 => "24",
+            2 => "25",
+            3 => "26",
+            4 => "29",
+            5 => "101",
+            6 => "102",
+        ),
+        "BACKGROUND" => "/upload/medialibrary/2df/orcynmyfet9ey0byuma7j451uv612ep4.png"
     ),
     false
 ); ?>
@@ -64,16 +68,9 @@ $APPLICATION->SetTitle("Интернет-магазин \"Добрый Жар\""
 <? $APPLICATION->IncludeComponent(
     "dj-comp:dj.blog-links",
     ".default",
-    array(
-    ),
+    array(),
     false
 ); ?>
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
 
-<? $APPLICATION->IncludeComponent(
-    "dj-comp:dj.callback",
-    ".default",
-    array(
-    ),
-    false
-); ?>
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+?>
