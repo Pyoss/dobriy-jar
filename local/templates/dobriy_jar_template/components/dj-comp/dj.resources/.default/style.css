@@ -1,0 +1,106 @@
+section.resources {
+    /* margin-top: 200px; */
+    background-size: 1920px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* height: 634px; */
+    /* width: 1920px; */
+    margin: 100px auto auto auto;
+}
+
+.resources__container {
+    display: grid;
+    grid-template-columns: repeat(4, 313px);
+    justify-content: center;
+    padding: 70px 0;
+    column-gap: 33px;
+}
+
+.resources__item {
+    border: 3px solid white;
+    border-radius: 48px;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+.resources__link {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+span.resource__item-text {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    /* text-align: center; */
+}
+
+@media(max-width: 1440px){
+    .section.resources {
+        height: unset;
+        font-size: 1vw;
+        background-size: 320%;
+        width: 80em;
+        margin-top: 10em;
+    }
+    .resources__container {
+        grid-template-columns: min-content min-content;
+        height: unset;
+        gap: 3em;
+        justify-content: center;
+        padding: 4em 0;
+    }
+
+    .resources__item {
+        width: 40em;
+        position: relative;
+        height: 40em;
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 2em;
+        margin: auto;
+        z-index: 2;
+        border-radius: 3em;
+    }
+
+    .resources__item::after {
+        content: ' ';
+        display: block;
+        top: -2em;
+        bottom: -2em;
+        left: -2em;
+        right: -2em;
+        position: absolute;
+        background-color: transparent;
+        border: 3em solid white;
+        border-radius: 5em;
+        z-index: 1;
+        outline: 3em solid white;
+        outline-radius: 4em;
+
+    }
+
+    .resources__item img {
+        max-height: 27em;
+        width: auto;
+        object-fit: contain;
+    }
+
+    span.resource__item-text {
+        color: white;
+        text-transform: uppercase;
+        font-size: 3em;
+        font-weight: bold;
+        /* text-align: center; */
+    }
+
+}
