@@ -2,10 +2,12 @@ header .header-search {
 	flex-grow: 1;
 	background-color: white;
 	border-radius: 15px;
-	padding: 3px 5px;
-	margin: 10px 20px;
+	padding: 7px 5px;
+	margin: 10px auto 10px 20px;
 	position: relative;
 	z-index:501;
+	max-width: 550px;
+	height: 39px;
 }
 
 .title-search-result {

@@ -1,4 +1,4 @@
-<!doctype html>
+ <!doctype html>
 <html lang="ru">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=<?= LANG_CHARSET;?>">
@@ -118,7 +118,14 @@ $APPLICATION -> ShowHead();
 ); ?>
             </div>
             <ul class="user-buttons desktop">
-
+                <li class="messenger-buttons">
+                    <a href="http://t.me/dobriyjar">
+                        <img src="/images/png/tg_header.png">
+                    </a>
+                    <a href="https://wa.me/79645036043?text=Здравствуйте%2C+у+меня+есть+вопрос">
+                        <img src="/images/png/whatsapp_header.png">
+                    </a>
+                </li>
                 <?php $APPLICATION->IncludeComponent(
                     "bitrix:sale.basket.basket",
                     "basket.DJ.ajax",

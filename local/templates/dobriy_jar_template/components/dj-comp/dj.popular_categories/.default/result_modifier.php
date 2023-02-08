@@ -14,9 +14,9 @@ foreach ($arResult['SECTIONS'] as &$SECTION) {
 }
 
 $length = count($arResult['SECTIONS']);
-$i = $length % 3;
+$i = $length % 4;
 if ($i !== 0) {
-    while ($i < 3) {
+    while ($i < 4) {
         $arResult['SECTIONS'][] = 'blank';
         $i++;
     }

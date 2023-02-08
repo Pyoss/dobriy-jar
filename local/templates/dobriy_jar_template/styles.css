@@ -269,10 +269,9 @@
 html, body {
     font-family: Open sans, Helvetica, Arial, sans-serif;
     touch-action: manipulation;
-    scrollbar-gutter:stable;
     overflow-x: hidden;
     overflow-y: visible;
-    max-width: 100% ;
+    max-width: 100%;
 }
 
 body.no-scroll {
@@ -545,6 +544,7 @@ span.rating__star {
 
 .search-icon {
     background-image: url('/images/svg/magnifier.svg');
+    filter: brightness(.3);
 }
 
 .personal-icon {

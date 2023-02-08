@@ -1,6 +1,6 @@
 .popular-categories__list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: auto;
     width: min-content;
     background-color: #ff7300;
@@ -67,7 +67,7 @@ img.popular-categories__img {
 
 @media (min-width: 1440px) {
     .popular-categories__list {
-        font-size: 13px;
+        font-size: 12.7px;
     }
 
 }
