@@ -15,7 +15,7 @@
     grid-template-rows: 9em 35em 5em 6em;
 }
 .hit__item {
-    margin: 0 .3em;
+    margin: 1px;
     position: relative;
 }
 
@@ -116,12 +116,11 @@ button.hit__button::before {
 }
 
 
-@media (min-width: 1200px){
+@media (min-width: 980px){
     .hit__list {
         font-size: 7px;
-        max-width: 1280px;
-        margin: auto;
-
+        max-width: 1470px;
+        margin: 20px auto;
         display: grid;
         grid-template-columns: repeat(4, 324px);
     }
