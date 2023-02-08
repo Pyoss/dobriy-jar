@@ -119,10 +119,10 @@ $APPLICATION -> ShowHead();
             </div>
             <ul class="user-buttons desktop">
                 <li class="messenger-buttons">
-                    <a href="">
+                    <a href="http://t.me/dobriyjar">
                         <img src="/images/png/tg_header.png">
                     </a>
-                    <a href="">
+                    <a href="https://wa.me/79645036043?text=Здравствуйте%2C+у+меня+есть+вопрос">
                         <img src="/images/png/whatsapp_header.png">
                     </a>
                 </li>
