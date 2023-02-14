@@ -51,15 +51,3 @@ class FeedbackForm{
         }
     }
 }
-
-BX(function(){
-    let callbuttonDOMs = document.querySelectorAll('.callback_button');
-    for (let callbackDOM of callbuttonDOMs){
-        BX.bind(callbackDOM, 'click', function (){
-            let callbackNode = BX('mfeedback-container').cloneNode(true)
-            callbackNode.id = 'mfeedback-alert'
-            let callbackFormPopup = new Popup(callbackNode, {focused:true, temp: true, animation: 'fade'})
-            callbackFormPopup.show()
-        })
-    }
-})
