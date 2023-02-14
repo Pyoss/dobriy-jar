@@ -1,27 +1,15 @@
-
-
 <?php
 $APPLICATION->IncludeComponent(
-	"dj_components:main.feedback", 
-	"dj_feedback", 
+	"dj-comp:dj.callback", 
+	".default", 
 	array(
-		"EMAIL_TO" => "nazliev@dobriy-jar.ru",
-		"EVENT_MESSAGE_ID" => array(
-			0 => "7",
-		),
-		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
-		"REQUIRED_FIELDS" => array(
-			0 => "NAME",
-			1 => "EMAIL",
-			2 => "PHONE",
-			3 => "CITY",
-		),
-		"USE_CAPTCHA" => "N",
-		"COMPONENT_TEMPLATE" => "dj_feedback",
-		"BACKGROUND_FILE" => "/upload/medialibrary/988/6lftgi0idkcxwrhmhg7cpjhz2zj11kdw.png"
+		"COMPONENT_TEMPLATE" => ".default",
+		"BACKGROUND" => "/upload/medialibrary/b62/dzulmwnbbbt7ea9we4rc34t8d5a58goo.png",
+		"BACKGROUND_MOBILE" => "/upload/medialibrary/52b/sdrxsn2tqigvcfoxa2v7yaofl3032zgf.png"
 	),
 	false
 ); ?>
+
 </main>
 <footer class="footer">
     <div class="footer-wrapper">

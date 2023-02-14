@@ -15,6 +15,8 @@ if ($hasOffers) {
 DJMain::consoleString($arResult['ITEM']);
 $price = $curOffer ? $curOffer['ITEM_PRICES'][0]['PRINT_PRICE'] : $ITEM['ITEM_PRICES'][0]['PRINT_RATIO_PRICE'];
 $bprice = $curOffer ? $curOffer['ITEM_PRICES'][0]['PRINT_BASE_PRICE'] : $ITEM['ITEM_PRICES'][0]['PRINT_BASE_PRICE'];
+DJMain::consoleString($price);
+DJMain::consoleString($bprice);
 $percent = false;
 if ($price < $bprice) {
     $percent = $curOffer ? $curOffer['ITEM_PRICES'][0]['PERCENT'] : $ITEM['ITEM_PRICES'][0]['PERCENT'];

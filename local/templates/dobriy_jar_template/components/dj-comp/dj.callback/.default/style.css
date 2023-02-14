@@ -1,19 +1,19 @@
 .callback__container {
-    width: 1119px;
-    height: 1360px;
+    width: 914px;
+    height: 1035px;
     margin: auto;
 }
 
 section.callback {
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1980px;
+    background-size: 1420px;
 }
 
 .callback__wrapper {
-    width: 526px;
+    width: 411px;
     float: right;
-    padding-top: 178px;
+    padding-top: 126px;
     display: flex;
     flex-flow: column;
     row-gap: 40px;
@@ -21,48 +21,52 @@ section.callback {
 
 
 h3.callback__title {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     text-align: right;
     margin: 0;
 }
 
 .callback__text {
-    font-size: 36px;
+    font-size: 29px;
     color: white;
     /* text-align: right; */
 }
 
 img.callback__messenger {
-    width: 151px;
-    height: 151px;
+    width: 110px;
+    height: 110px;
 }
 
 .callback__messengers {
     display: flex;
     justify-content: center;
-    column-gap: 45px;
+    column-gap: 34px;
 }
 
 input.callback__phone {
-    height: 152px;
-    width: 477px;
-    border-radius: 48px;
+    height: 106px;
+    width: 425px;
+    border-radius: 39px;
     border: none;
     text-align: center;
-    font-size: 36px;
+    font-size: 32px;
 }
 
 button.callback__button {
-    width: 477px;
-    height: 152px;
-    border-radius: 48px;
+    width: 425px;
+    height: 106px;
+    border-radius: 39px;
     background-color: var(--dj-main-color);
     border: none;
     font-weight: bold;
     color: white;
-    font-size: 36px;
+    font-size: 29px;
     text-transform: uppercase;
+}
+#form-message {
+    font-size: 20px;
+    line-height: 30px;
 }
 
 @media(max-width: 1280px){

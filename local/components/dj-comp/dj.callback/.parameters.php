@@ -21,3 +21,30 @@ $arComponentParameters['PARAMETERS']['BACKGROUND_MOBILE'] = array(
     "FD_USE_MEDIALIB" => true,
     "FD_MEDIALIB_TYPES" => Array('image')
 );
+$arComponentParameters['PARAMETERS']['VIBER_LOGO'] = array(
+    "NAME" => 'Лого вайбер',
+    "TYPE" => "FILE",
+    "FD_TARGET" => "F",
+    "FD_EXT" => array('png', 'jpg', 'jpeg', 'gif'),
+    "FD_UPLOAD" => true,
+    "FD_USE_MEDIALIB" => true,
+    "FD_MEDIALIB_TYPES" => Array('image')
+);
+$arComponentParameters['PARAMETERS']['TG_LOGO'] = array(
+    "NAME" => 'Лого телеграмм',
+    "TYPE" => "FILE",
+    "FD_TARGET" => "F",
+    "FD_EXT" => array('png', 'jpg', 'jpeg', 'gif'),
+    "FD_UPLOAD" => true,
+    "FD_USE_MEDIALIB" => true,
+    "FD_MEDIALIB_TYPES" => Array('image')
+);
+$arComponentParameters['PARAMETERS']['WHATSAPP_LOGO'] = array(
+    "NAME" => 'Лого вотсапп',
+    "TYPE" => "FILE",
+    "FD_TARGET" => "F",
+    "FD_EXT" => array('png', 'jpg', 'jpeg', 'gif'),
+    "FD_UPLOAD" => true,
+    "FD_USE_MEDIALIB" => true,
+    "FD_MEDIALIB_TYPES" => Array('image')
+);
