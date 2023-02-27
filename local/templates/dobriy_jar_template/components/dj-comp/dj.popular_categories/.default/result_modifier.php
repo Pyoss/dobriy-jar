@@ -21,6 +21,11 @@ if ($i !== 0) {
         $i++;
     }
 }
+$e = $length % 2;
+if ($e == 0) {
+        $arResult['SECTIONS'][] = 'blank-mob';
+
+}
 
 
 $arResult['BACKGROUND'] =

@@ -14,9 +14,13 @@
     <div class="popular-categories__list" style='background-image: url("<?= $arResult['BACKGROUND'] ?>")'>
         <? foreach ($arResult['SECTIONS'] as $SECTION): ?>
             <? if ($SECTION === 'blank'): ?>
-                <div class="popular-categories__item popular-categories__item-blank">
+                <div class="popular-categories__item popular-categories__item-blank desktop">
 
                 </div>
+        <? elseif ($SECTION === 'blank-mob'): ?>
+        <div class="popular-categories__item popular-categories__item-blank mobile">
+
+        </div>
             <? else: ?>
                     <div class="popular-categories__item">
                         <a href="/catalog/<?= $SECTION['CODE'] ?>">

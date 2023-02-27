@@ -85,13 +85,5 @@ img.popular-categories__img {
         flex-flow: row;
     }
 
-    .popular-categories__item-blank + .popular-categories__item-blank{
-        display: none;
-    }
-
-    .popular-categories__item-blank:nth-child(2n){
-        display: none;
-    }
-
 
 }

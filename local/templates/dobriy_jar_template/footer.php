@@ -4,8 +4,11 @@ $APPLICATION->IncludeComponent(
 	".default", 
 	array(
 		"COMPONENT_TEMPLATE" => ".default",
-		"BACKGROUND" => "/upload/medialibrary/b62/dzulmwnbbbt7ea9we4rc34t8d5a58goo.png",
-		"BACKGROUND_MOBILE" => "/upload/medialibrary/52b/sdrxsn2tqigvcfoxa2v7yaofl3032zgf.png"
+		"BACKGROUND" => "/upload/medialibrary/59c/qnezciufe0kf3nt81eei91ukmvmdv04z.png",
+		"BACKGROUND_MOBILE" => "/upload/medialibrary/5dc/gw9i0qgbyj1fjgpmse1ds6t0o5qcba71.png",
+		"VIBER_LOGO" => "/upload/medialibrary/765/k121p0uboerlsdqvm6libs717ey01iv5.png",
+		"TG_LOGO" => "/upload/medialibrary/9eb/9v8hjli7og9si57wlhh68fog8wapz37p.png",
+		"WHATSAPP_LOGO" => "/upload/medialibrary/a3c/4a8ahstj0srr3yk71e5ohh1l13oqj5bh.png"
 	),
 	false
 ); ?>
@@ -144,7 +147,7 @@ $APPLICATION->IncludeComponent(
         <div class="footer-mobile__button">
             <a href="/contacts/">
                 <img class="footer-mobile__img" src="/upload/images/svg/mobile/location.svg">
-                <span class="footer-mobile__text">Магазины</span>
+                <span class="footer-mobile__text">Контакты</span>
             </a>
         </div>
         <div class="footer-mobile__button">

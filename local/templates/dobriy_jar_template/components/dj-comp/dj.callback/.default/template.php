@@ -8,17 +8,17 @@
 <section class="callback section" id="callback" style='background-image: url("<?= $arResult['images']['BACKGROUND'] ?>")'>
     <div class="callback__container">
         <div class="callback__wrapper">
-            <h3 class="callback__title">Хотите заказать нашу продукцию или есть вопросы?</h3>
+            <h3 class="callback__title">Хотите заказать нашу&nbspпродукцию или есть вопросы?</h3>
             <span class="callback__text">Напишите нам в удобный для вас мессенджер и мы проконсультируем вас в течение рабочего дня!</span>
             <div class="callback__messengers">
-                <a href="">
+                <a href="viber://chat?number=79645036043" class="mobile">
                     <img src="<?= $arResult['images']['vb'] ?>" alt="" class="callback__messenger">
                 </a>
-                <a href="">
+                <a href="http://t.me/dobriyjar" target="_blank">
                     <img src="<?= $arResult['images']['tg'] ?>" alt="" class="callback__messenger">
                 </a>
-                <a href="">
-                    <img src="<?= $arResult['images']['ws'] ?>" alt="" class="callback__messenger">
+                <a href="https://wa.me/79645036043?text=Здравствуйте%2C+у+меня+есть+вопрос" target="_blank">
+                <img src="<?= $arResult['images']['ws'] ?>" alt="" class="callback__messenger">
                 </a>
             </div>
             <input type="text" class="callback__phone tel-mask" id='callback-input' placeholder="+ 7 (999) 999-99-99">

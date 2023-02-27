@@ -18,7 +18,7 @@ $bprice = $curOffer ? $curOffer['ITEM_PRICES'][0]['PRINT_BASE_PRICE'] : $ITEM['I
 DJMain::consoleString($price);
 DJMain::consoleString($bprice);
 $percent = false;
-if ($price < $bprice) {
+if (preg_replace('[\D]', '', $price) < preg_replace('[\D]', '', $bprice)) {
     $percent = $curOffer ? $curOffer['ITEM_PRICES'][0]['PERCENT'] : $ITEM['ITEM_PRICES'][0]['PERCENT'];
 }
 ?>
@@ -58,7 +58,7 @@ if ($price < $bprice) {
                         <span id="price-<?= $curOffer ? $curOffer['ID'] : $ITEM['ID'] ?>"
                               class="price"><?= $price ?></span>
 
-                        <span class="base-price <?= $price < $bprice ? '' : 'hidden' ?>"><?= $bprice ?></span>
+                        <span class="base-price <?= (preg_replace('[\D]', '', $price) < preg_replace('[\D]', '', $bprice)) ? '' : 'hidden' ?>"><?= $bprice ?></span>
                     <? else: ?>
 
                         <span class="price">Нет в наличии</span>

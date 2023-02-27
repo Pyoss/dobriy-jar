@@ -58,6 +58,34 @@ AddEventHandler("search", "BeforeIndex", "BeforeIndexHandler");
 //Добавляем пункт в главное меню
 AddEventHandler('main', 'OnBuildGlobalMenu', 'addMenuItem');
 
+AddEventHandler("main", "OnBeforeUserLogin", Array("B2BUserDeny", "OnBeforeUserLoginHandler"));
+
+class B2BUserDeny
+{
+    // создаем обработчик события "OnBeforeUserLogin"
+    public static function OnBeforeUserLoginHandler(&$arFields)
+    {
+        $rsUser = CUser::GetByLogin($arFields["LOGIN"]);
+        $arUser = $rsUser->Fetch();
+        $arUserGroups = CUser::GetUserGroup($arUser['ID']);
+        $b2bGroupId = 0;
+        $result = \Bitrix\Main\GroupTable::getList(array(
+            'select'  => array('ID'),
+            'filter'  => array('STRING_ID'=>'b2b_clients')
+        ));
+
+        while ($arGroup = $result->fetch()) {
+            $b2bGroupId = $arGroup['ID'];
+        }
+        if (in_array($b2bGroupId, $arUserGroups)) {
+            global $APPLICATION;
+            $APPLICATION->throwException("Вы пытаетесь авторизоваться на розничном сайте с аккаунтом B2B кабинета.\nДля доступа к B2B кабинету перейдите по ссылке https://b2b.dobriy-jar.ru, или авторизуйтесь с помощью аккаунта розничного сайта.");
+            return false;
+        }
+        return true;
+    }
+}
+
 /* Начисление бонусов */
 $eventManager->AddEventHandler("main", "OnAfterUserRegister", "RegisterBonus");
 $eventManager->AddEventHandler("main", "OnAfterUserRegister", "OnAfterUserRegisterHandler");

@@ -8,6 +8,7 @@ section.callback {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 1420px;
+    margin-top: 80px;
 }
 
 .callback__wrapper {
@@ -72,9 +73,10 @@ button.callback__button {
 @media(max-width: 1280px){
     section.callback.section {
         background-size: contain;
-        padding-top: 3em;
-        padding-right: 5em;
+        padding-top: 0;
+        /* padding-right: 5em; */
         background-position: top;
+        margin-top: 3rem;
     }
     .callback__container {
         width: 100%;
@@ -89,11 +91,13 @@ button.callback__button {
     }
 
     h3.callback__title {
-        font-size: 6em;
-        font-weight: bolder;
-        line-height: 1.3;
-        width: 90%;
+        font-size: 7em;
+        font-weight: 900;
+        line-height: 1.4;
+        width: 97%;
         margin-left: auto;
+        padding-right: 2em;
+        margin-top: 1em;
     }
 
 
@@ -123,6 +127,7 @@ button.callback__button {
         width: 15em;
         border-radius: 5em;
         font-size: 5em;
+        border: .1em solid grey;
     }
 
     button.callback__button {

@@ -12,6 +12,7 @@
     <title><?= $APPLICATION->ShowTitle() ?></title>
     <?php
 
+
     use Bitrix\Main\Page\Asset;
 
     // Загрузка ВСЕХ стилей для шаблона из папки template/css
@@ -23,6 +24,26 @@
         };
     }
 
+    function checkB2BUser()
+    {
+        global $USER;
+        $arUserGroups = $USER->GetUserGroupArray();
+        $b2bGroupId = 0;
+        $result = \Bitrix\Main\GroupTable::getList(array(
+            'select' => array('ID'),
+            'filter' => array('STRING_ID' => 'b2b_clients')
+        ));
+
+        while ($arGroup = $result->fetch()) {
+            $b2bGroupId = $arGroup['ID'];
+        }
+        if (in_array($b2bGroupId, $arUserGroups)) {
+            $USER->Logout();
+        }
+        return true;
+
+    }
+    checkB2BUser();
     $GLOBALS['phone'] = '8(800) 600-45-96';
     $assets = Asset::getInstance();
     $assets->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.6.0.min.js");

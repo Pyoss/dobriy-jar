@@ -48,6 +48,12 @@
 .sku-prop.inactive{
     color: grey
 }
+.errortext {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    display: block;
+}
 
 /* Описание */
 
