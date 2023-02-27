@@ -14,9 +14,6 @@ class Api
         'default' => 12490
     ];
 
-    /**
-     * @param string $guid
-     */
     public function __construct()
     {
         $this->setCurrentClient();
@@ -104,31 +101,6 @@ class Api
         return $request;
     }
 
-    public function CreateCompany()
-    {
-        $link = $this->base_link . 'company';
-        $arCompany['inn'] = '123243352328';
-        $arCompany['ogrn'] = '11111111111111';
-        $arCompany['name'] = 'ИП тест 0407';
-        $arCompany['reg_address'] = 'Тест адрес рег';
-        $arCompany['act_address'] = 'Тест адрес акт';
-        $arCompany['company_status'] = 'ИП';
-        $arCompany['phone'] = '71111111111';
-        $arCompany['mail'] = '711test@gmail.com';
-        $arCompany['manager'] = '4a9520f3-8260-11ec-aedc-da838655f028';
-        $arCompany['bank_req'] = [
-            "num" => "40702810438000236919",
-            "bik" => "044525225",
-            "kor" => "30101810400000000225"
-        ];
-        $request = $this->formRequest();
-        $request->SetPayload($arCompany);
-        $request->SetLink($link);
-        $request->SetMethod('post');
-        $request->Exec();
-        $this->log('response_code', $request->getResponseCode());
-        $this->log('response_text', $request->getResponseBody());
-    }
 
     public function GetCompany($custom_guid = false)
     {
@@ -234,15 +206,6 @@ class Api
             return base64_decode($bin);
         }
         return false;
-    }
-
-    public function getClientManager()
-    {
-        if ($this->getClientManagerId() == 12490) {
-            return ['guid' => 'b4dd6138-39f1-11eb-a45a-18c04d3850b8'];
-        } else {
-            return ['guid' => '1aac7f81-3a0c-11eb-a45a-18c04d3850b8'];
-        }
     }
 
     public function getClientManagerId(): int
