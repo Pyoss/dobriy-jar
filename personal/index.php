@@ -42,6 +42,9 @@ $user = $USER->GetID();
 if (!$user){
     LocalRedirect('/auth/');
 }
+
+
+
 $APPLICATION->IncludeComponent(
     "bitrix:breadcrumb",
     ".default",

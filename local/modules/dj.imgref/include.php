@@ -4,4 +4,4 @@ const APP = __DIR__ . "/";
 const LIB = APP . "lib/";
 
 
-require LIB . "ImgRef.php";
+require "/home/bitrix/www/local/modules/dj.imgref/lib/ImgRef.php";

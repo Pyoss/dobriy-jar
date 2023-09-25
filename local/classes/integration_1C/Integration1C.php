@@ -255,7 +255,6 @@ class Integration1C
         $this -> start_log();
         //Полный список, полученный от базы 1С
         $catalog = $this -> GetCatalog();
-        //Полный список, полученный от GUID
 
         //$this->log(print_r($catalog, true));
         foreach($catalog as $product_id => $product) {

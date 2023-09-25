@@ -8,6 +8,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Бренды", 
+		"/brands/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Оплата", 
 		"/payment/", 
 		Array(), 
@@ -22,22 +29,15 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Блог", 
+		"https://blog.dobriy-jar.ru/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Контакты", 
 		"/contacts/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Блог", 
-		"/blog/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"B2B", 
-		"https://b2b.dobriy-jar.ru", 
 		Array(), 
 		Array(), 
 		"" 

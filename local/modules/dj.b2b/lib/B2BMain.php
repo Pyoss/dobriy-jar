@@ -154,8 +154,8 @@ class B2BMain
     {
         $api = new \DJ\B2B\Bitrix1C\Api;
         $guid = $api->GetCompanyByInn($inn);
-        $company = $api -> GetCompany($guid);
-        if ($company['error'] == false){
+        $company = json_decode($api -> GetCompany($guid), true);
+        if ($company['error'] != false){
             return $company['error'];
         }
 
@@ -176,8 +176,8 @@ class B2BMain
     {
         $api = new \DJ\B2B\Bitrix1C\Api;
         $guid = $api->GetCompanyByInn($inn);
-        $company = $api -> GetCompany($guid);
-        if ($company['error'] == false){
+        $company = json_decode($api -> GetCompany($guid), true);
+        if ($company['error'] != false){
             return $company['error'];
         }
         $rsUser = $this->createClient($email?? $company['email'], $first_name ?? $company['name'], $last_name, $phone??$company['phone'][0]);

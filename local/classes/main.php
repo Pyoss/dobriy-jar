@@ -59,6 +59,15 @@ class DJMain
         }
     }
 
+    public static function getPhone(){
+        $resDomain = \Bitrix\Iblock\ElementPropertyTable::getList(array(
+            'filter' => array('IBLOCK_PROPERTY_ID' => 77,
+                    'IBLOCK_ELEMENT_ID' => 2336),
+            'select' => array('VALUE')
+        ));
+        return $resDomain->fetch()['VALUE'];
+    }
+
     /**
      * Вывод строки на страницу внутрь тэга <pre>
      * @param $string

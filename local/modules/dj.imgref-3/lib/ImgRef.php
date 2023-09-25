@@ -40,12 +40,12 @@ class ImgRef
         } else {
             $mod = imagecolorallocate($im, 255, 255, 255);
         }
+
         imagefilledrectangle($im, 0, 0, $newWidth - 1, $newHeight - 1, $mod);
 
         // copy png to canvas
 
         imagecopyresampled($im, $sourceImg, 0, 0, 0, 0, $newWidth, $newHeight, $sourceWidth, $sourceHeight);
-
 
         // lastly, save canvas as a webp
         return $im;
@@ -57,14 +57,13 @@ class ImgRef
         $file = \CFile::GetByID($file_id)->GetNext();
         $file['RESOURCE'] = substr($file['FILE_NAME'], 0, strrpos($file['FILE_NAME'], "."));;
         $resizedPath =
-            '/upload/dj_resized_cache/' .
+            'upload/dj_resized_cache/' .
             $file['SUBDIR'] .
             '/' . $file['RESOURCE'] . '/' . implode('_', array_values($size_array)) .
             '/' . ($transparent ? 'alpha/' : 'white/');
 
         $cachedDefault = File::isFileExists($_SERVER['DOCUMENT_ROOT'] . $resizedPath . $file['RESOURCE'] . ($transparent ? '.png' : '.jpg'));
         $cachedWebp = File::isFileExists($_SERVER['DOCUMENT_ROOT'] . $resizedPath . $file['RESOURCE'] . '.webp');
-
         if (!$cachedDefault || !$cachedWebp) {
             Directory::createDirectory($_SERVER['DOCUMENT_ROOT'] . $resizedPath);
             if ($file['CONTENT_TYPE'] == 'image/png') {
@@ -77,12 +76,8 @@ class ImgRef
                 if (!$sourceImg) {
                     return false;
                 }
-
             }
             $outputImage = self::createImage($sourceImg, $size_array, $transparent);
-
-
-
         }
         if (!$cachedWebp){
             imagewebp($outputImage, $_SERVER['DOCUMENT_ROOT'] .$resizedPath . $file['RESOURCE'] . '.webp');
@@ -97,13 +92,12 @@ class ImgRef
         if ($outputImage){
             imagedestroy($outputImage);
         }
-        $arResult = array('webp' => array('path' => $resizedPath . $file['RESOURCE'] . '.webp', 'cached' => $cachedWebp), 'default' => array('path' => $resizedPath . $file['RESOURCE'] . ($transparent ? '.png' : '.jpg'), 'cached' => $cachedDefault));
+        $arResult = array('webp' => array('path' => '/' . $resizedPath . $file['RESOURCE'] . '.webp', 'cached' => $cachedWebp), 'default' => array('path' => '/' . $resizedPath . $file['RESOURCE'] . ($transparent ? '.png' : '.jpg'), 'cached' => $cachedDefault));
         if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) {
             $arResult['optimal'] = 'webp';
         } else {
             $arResult['optimal'] = 'default';
         }
-        $arResult['auto'] = $arResult[$arResult['optimal']]['path'];
         return $arResult;
     }
 }

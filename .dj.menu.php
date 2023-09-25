@@ -8,6 +8,13 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
+		"Бренды", 
+		"/brands/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Контакты и реквизиты", 
 		"https://dobriy-jar.ru/contacts/", 
 		Array(), 

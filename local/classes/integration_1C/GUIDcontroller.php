@@ -27,6 +27,14 @@ class GUIDController
         return $rsSelect->Fetch();
     }
 
+    public function getRowByID($ID){
+        $rsSelect = $this -> entity_data_class::getList(array(
+            "select" => array("*"),
+            "filter" => array("UF_ELEMENT_ID" => $ID)
+        ));
+        return $rsSelect->Fetch();
+    }
+
     public function updateRow(array $product, array $row){
         /*if (
             $product['available'] != $row['UF_PRODUCT_QUANTITY'] ||
@@ -67,9 +75,10 @@ class GUIDController
     }
 
     public function rewriteGuidId($product, $ID, $IBLOCK_ID){
-        $row = $this -> getRowByGUID($product['GUID']);
+        $row = $this -> getRowByID($ID);
         if ($row){
             $row['UF_ELEMENT_RETAIL_PRICE'] = $product['retail_price'];
+            $row['UF_GUID'] = $product['GUID'];
             $row['UF_PRODUCT_QUANTITY'] = $product['available'];
             $row['UF_ELEMENT_STOCK_PRICE'] = $product['trade_price'];
             $row['UF_OUTDATED'] = 'Y';

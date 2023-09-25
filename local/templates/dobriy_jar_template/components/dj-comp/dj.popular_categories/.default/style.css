@@ -71,6 +71,12 @@ img.popular-categories__img {
     }
 
 }
+@media (max-width: 1500px){
+
+    .popular-categories__list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 @media (max-width: 980px)
 {
 

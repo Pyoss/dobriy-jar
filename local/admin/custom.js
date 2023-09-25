@@ -14,7 +14,7 @@ BX(function(){
             let element_id = event.target.dataset.id
             let iblock_id = event.target.dataset.iblockId
             let article = event.target.dataset.article
-            BX.ajax.get('/local/classes/integration_1C/rewriteGuid.php?ID=' +
+            BX.ajax.get('/local/classes/integration_1C/rewriteguid.php?ID=' +
                 element_id + '&IBLOCK_ID=' + iblock_id+ '&ARTICLE=' + article,
                 function (result){
                     location.reload()

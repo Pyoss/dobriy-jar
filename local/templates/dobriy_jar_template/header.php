@@ -12,7 +12,7 @@
     <title><?= $APPLICATION->ShowTitle() ?></title>
     <?php
 
-
+    $GLOBALS['phone'] = DJMain::getPhone();
     use Bitrix\Main\Page\Asset;
 
     // Загрузка ВСЕХ стилей для шаблона из папки template/css
@@ -44,7 +44,6 @@
 
     }
     checkB2BUser();
-    $GLOBALS['phone'] = '8(800) 600-45-96';
     $assets = Asset::getInstance();
     $assets->addJs(SITE_TEMPLATE_PATH . "/js/jquery-3.6.0.min.js");
     $assets->addJs(SITE_TEMPLATE_PATH . "/js/jquery.mask.js");

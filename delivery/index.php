@@ -22,7 +22,7 @@ $APPLICATION->SetTitle("Доставка");
 <tr>
 	<td>
 		<p style="text-align: center;">
- <b><span style="color: #ff6100; font-size: 16pt;">ДОСТАВКА ОСУЩЕСТВЛЯЕТСЯ ОТ 1000 РУБЛЕЙ</span></b><b><span style="font-size: 16pt;"> </span></b><span style="font-size: 16pt;"> </span>
+ <b><span style="color: #ff6100; font-size: 16pt;">ДОСТАВКА ОСУЩЕСТВЛЯЕТСЯ ПРИ ЗАКАЗАХ ОТ 1000 РУБЛЕЙ</span></b><b><span style="font-size: 16pt;"> </span></b><span style="font-size: 16pt;"> </span>
 		</p>
  <span style="font-size: 16pt;"> </span><b><span style="font-size: 16pt;"> </span></b><span style="font-size: 16pt;"> </span>
 		<p style="text-align: center;">
@@ -127,49 +127,6 @@ $APPLICATION->SetTitle("Доставка");
 </tr>
 <tr>
 	<td colspan="1">
-		<table cellpadding="5" cellspacing="1" align="center">
-		<tbody>
-		<tr>
-			<td>
- <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
-			</td>
-			<td>
-				<p>
-					 350 ₽ в пределах МКАД
-				</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
- <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
-			</td>
-			<td>
-				<p>
-					 350 ₽ + 30 ₽&nbsp;за 1 км&nbsp;от МКАД
-				</p>
-			</td>
-		</tr>
-		<tr>
-			<td>
- <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
-			</td>
-			<td>
-				 Заказы на сумму от 12 000 ₽ в пределах <br>
-				 МКАД доставляются&nbsp;<span style="color: #ff6100;">БЕСПЛАТНО!</span><br>
-			</td>
-		</tr>
-		<tr>
-			<td>
- <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
-			</td>
-			<td>
-				<p>
-					 Подъем на этаж в&nbsp;<span style="color: #ff6100;">ПОДАРОК!</span>
-				</p>
-			</td>
-		</tr>
-		</tbody>
-		</table>
 	</td>
 </tr>
 <tr>
@@ -217,16 +174,31 @@ $APPLICATION->SetTitle("Доставка");
 </tr>
 <tr>
 	<td colspan="1" style="text-align: center;">
-		<table cellpadding="5" cellspacing="1" align="center">
+		<table cellpadding="5" cellspacing="1" align="center" style="width: 30%;">
 		<tbody>
+		<tr>
+			<td colspan="1">
+ <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
+			</td>
+			<td colspan="1">
+				 500 ₽ в пределах МКАД
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1">
+ <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
+			</td>
+			<td colspan="1">
+				 70 ₽за 1 км за МКАД
+			</td>
+		</tr>
 		<tr>
 			<td>
  <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
 			</td>
 			<td>
-				<p style="text-align: left;">
- <span style="text-align: center;">Заказы на сумму от 16 000 ₽ в пределах <br>
-					 ЦКАД доставляются&nbsp;<span style="color: #ff6100;">БЕСПЛАТНО!</span></span>
+				<p style="text-align: center;">
+ <span style="text-align: center;">Заказы на сумму от 16 000 ₽ в пределах ЦКАД доставляются&nbsp;<span style="color: #ff6100;">БЕСПЛАТНО!</span></span>
 				</p>
 			</td>
 		</tr>
@@ -235,7 +207,7 @@ $APPLICATION->SetTitle("Доставка");
  <img width="100%" src="/upload/medialibrary/595/b4xrkqbitbi2bv7bd92djf0l37t6a38h.png" height="auto"><br>
 			</td>
 			<td>
-				<p style="text-align: left;">
+				<p style="text-align: center;">
  <span style="text-align: center;">Подъем на этаж в <span style="color: #ff6100;">ПОДАРОК!</span></span>
 				</p>
 			</td>
@@ -259,6 +231,11 @@ $APPLICATION->SetTitle("Доставка");
 		 наличными, пластиковой картой или наложенным платежом при получении. Доставка до двери <br>
  <br>
 		 или терминала. Сроки и стоимость доставки просчитываются индивидуально.&nbsp; <br>
+ <br>
+ <br>
+ <b><span style="color: #ff6100;">Бесплатная доставка СДЭК при заказе от 12 000 ₽ в пределах МКАД<br>
+ </span></b><b><span style="color: #ff6100;"><br>
+ </span></b><b><span style="color: #ff6100;">Бесплатная доставка СДЭК при заказе от 16 000 ₽ в пределах до ЦКАД</span></b><br>
  <br>
 	</td>
 </tr>

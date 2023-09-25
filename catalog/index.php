@@ -4,27 +4,20 @@ $APPLICATION->SetPageProperty("description", "Каталог магазина с
 $APPLICATION->SetPageProperty("title", "Каталог интернет-магазина Добрый Жар");
 
 $APPLICATION->SetTitle("Каталог интернет-магазина Добрый Жар");
-?>
-<div class="catalog--wrapper">
-<?
-
-$APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	".default", 
-	array(
-		"START_FROM" => "1",
+?><div class="catalog--wrapper">
+	 <?$APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb",
+	".default",
+	Array(
+		"COMPONENT_TEMPLATE" => ".default",
 		"PATH" => "",
 		"SITE_ID" => "s1",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?>
-<?
-
-$APPLICATION->IncludeComponent(
-	"bitrix:catalog", 
-	"catalog.DJ", 
-	array(
+		"START_FROM" => "1"
+	)
+);?> <?$APPLICATION->IncludeComponent(
+	"bitrix:catalog",
+	"catalog.DJ",
+	Array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_PICT_PROP" => "MORE_PHOTO",
@@ -47,30 +40,19 @@ $APPLICATION->IncludeComponent(
 		"COMMON_ADD_TO_BASKET_ACTION" => "ADD",
 		"COMMON_SHOW_CLOSE_POPUP" => "N",
 		"COMPATIBLE_MODE" => "N",
-		"COMPONENT_TEMPLATE" => "catalog.DJ",
 		"CONVERT_CURRENCY" => "N",
 		"DETAIL_ADD_DETAIL_TO_SLIDER" => "N",
-		"DETAIL_ADD_TO_BASKET_ACTION" => array(
-			0 => "BUY",
-		),
-		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(
-			0 => "BUY",
-		),
+		"DETAIL_ADD_TO_BASKET_ACTION" => array(0=>"BUY",),
+		"DETAIL_ADD_TO_BASKET_ACTION_PRIMARY" => array(0=>"BUY",),
 		"DETAIL_BACKGROUND_IMAGE" => "-",
 		"DETAIL_BLOG_EMAIL_NOTIFY" => "N",
 		"DETAIL_BLOG_URL" => "catalog_comments",
 		"DETAIL_BLOG_USE" => "Y",
-		"DETAIL_BRAND_PROP_CODE" => array(
-			0 => "",
-			1 => "BRAND_REF",
-			2 => "",
-		),
+		"DETAIL_BRAND_PROP_CODE" => array(0=>"",1=>"BRAND_REF",2=>"",),
 		"DETAIL_BRAND_USE" => "Y",
 		"DETAIL_BROWSER_TITLE" => "-",
 		"DETAIL_CHECK_SECTION_ID_VARIABLE" => "N",
-		"DETAIL_DETAIL_PICTURE_MODE" => array(
-			0 => "MAGNIFIER",
-		),
+		"DETAIL_DETAIL_PICTURE_MODE" => array(0=>"MAGNIFIER",),
 		"DETAIL_DISPLAY_NAME" => "N",
 		"DETAIL_DISPLAY_PREVIEW_TEXT_MODE" => "E",
 		"DETAIL_FB_APP_ID" => "",
@@ -80,26 +62,15 @@ $APPLICATION->IncludeComponent(
 		"DETAIL_MAIN_BLOCK_PROPERTY_CODE" => "",
 		"DETAIL_META_DESCRIPTION" => "-",
 		"DETAIL_META_KEYWORDS" => "-",
-		"DETAIL_OFFERS_FIELD_CODE" => array(
-			0 => "CODE",
-			1 => "NAME",
-			2 => "DETAIL_PICTURE",
-			3 => "",
-		),
-		"DETAIL_OFFERS_PROPERTY_CODE" => array(
-			0 => "ARTNUMBER",
-			1 => "MORE_PHOTO",
-			2 => "",
-		),
+		"DETAIL_OFFERS_FIELD_CODE" => array("CODE","NAME","DETAIL_PICTURE",""),
+		"DETAIL_OFFERS_PROPERTY_CODE" => array(0=>"ARTNUMBER",1=>"MORE_PHOTO",2=>"",),
 		"DETAIL_PRODUCT_INFO_BLOCK_ORDER" => "sku,props",
 		"DETAIL_PRODUCT_PAY_BLOCK_ORDER" => "rating,price,priceRanges,quantityLimit,quantity,buttons",
-		"DETAIL_PROPERTY_CODE" => array(
-			0 => "NEWPRODUCT",
-			1 => "MANUFACTURER",
-			2 => "MATERIAL",
-		),
-		"DETAIL_SET_CANONICAL_URL" => "N",
+		"DETAIL_PROPERTY_CODE" => array(0=>"NEWPRODUCT",1=>"MANUFACTURER",2=>"MATERIAL",),
+		"DETAIL_SET_CANONICAL_URL" => "Y",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "N",
+		"DETAIL_SHOW_BASIS_PRICE" => "Y",
+		"DETAIL_SHOW_MAX_QUANTITY" => "N",
 		"DETAIL_SHOW_POPULAR" => "Y",
 		"DETAIL_SHOW_SLIDER" => "N",
 		"DETAIL_SHOW_VIEWED" => "Y",
@@ -116,11 +87,8 @@ $APPLICATION->IncludeComponent(
 		"ELEMENT_SORT_FIELD2" => "",
 		"ELEMENT_SORT_ORDER" => "asc",
 		"ELEMENT_SORT_ORDER2" => "desc",
-		"FIELDS" => array(
-			0 => "SCHEDULE",
-			1 => "STORE",
-			2 => "",
-		),
+		"FIELDS" => array(0=>"SCHEDULE",1=>"STORE",2=>"",),
+		"FILE_404" => "",
 		"FILTER_HIDE_ON_MOBILE" => "N",
 		"FILTER_NAME" => "",
 		"FILTER_VIEW_MODE" => "VERTICAL",
@@ -147,6 +115,8 @@ $APPLICATION->IncludeComponent(
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"INSTANT_RELOAD" => "Y",
 		"LABEL_PROP" => "",
+		"LABEL_PROP_MOBILE" => "",
+		"LABEL_PROP_POSITION" => "top-left",
 		"LAZY_LOAD" => "N",
 		"LINE_ELEMENT_COUNT" => "3",
 		"LINK_ELEMENTS_URL" => "link.php?PARENT_ELEMENT_ID=#ELEMENT_ID#",
@@ -157,30 +127,12 @@ $APPLICATION->IncludeComponent(
 		"LIST_ENLARGE_PRODUCT" => "STRICT",
 		"LIST_META_DESCRIPTION" => "-",
 		"LIST_META_KEYWORDS" => "-",
-		"LIST_OFFERS_FIELD_CODE" => array(
-			0 => "CODE",
-			1 => "NAME",
-			2 => "PREVIEW_PICTURE",
-			3 => "DETAIL_PICTURE",
-			4 => "",
-		),
+		"LIST_OFFERS_FIELD_CODE" => array("CODE","NAME","PREVIEW_PICTURE","DETAIL_PICTURE",""),
 		"LIST_OFFERS_LIMIT" => "0",
-		"LIST_OFFERS_PROPERTY_CODE" => array(
-			0 => "SIZES_SHOES",
-			1 => "SIZES_CLOTHES",
-			2 => "COLOR_REF",
-			3 => "MORE_PHOTO",
-			4 => "ARTNUMBER",
-			5 => "",
-		),
+		"LIST_OFFERS_PROPERTY_CODE" => array(0=>"SIZES_SHOES",1=>"SIZES_CLOTHES",2=>"COLOR_REF",3=>"MORE_PHOTO",4=>"ARTNUMBER",5=>"",),
 		"LIST_PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
 		"LIST_PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
-		"LIST_PROPERTY_CODE" => array(
-			0 => "NEWPRODUCT",
-			1 => "SALELEADER",
-			2 => "SPECIALOFFER",
-			3 => "",
-		),
+		"LIST_PROPERTY_CODE" => array(0=>"NEWPRODUCT",1=>"SALELEADER",2=>"SPECIALOFFER",3=>"",),
 		"LIST_PROPERTY_CODE_MOBILE" => "",
 		"LIST_SHOW_SLIDER" => "Y",
 		"LIST_SLIDER_INTERVAL" => "3000",
@@ -200,9 +152,7 @@ $APPLICATION->IncludeComponent(
 		"MESS_PRICE_RANGES_TITLE" => "Цены",
 		"MESS_PROPERTIES_TAB" => "Характеристики",
 		"MIN_AMOUNT" => "10",
-		"OFFERS_CART_PROPERTIES" => array(
-			0 => "ARTNUMBER",
-		),
+		"OFFERS_CART_PROPERTIES" => array(0=>"ARTNUMBER",),
 		"OFFERS_SORT_FIELD" => "sort",
 		"OFFERS_SORT_FIELD2" => "id",
 		"OFFERS_SORT_ORDER" => "asc",
@@ -218,9 +168,7 @@ $APPLICATION->IncludeComponent(
 		"PAGER_TITLE" => "Товары",
 		"PAGE_ELEMENT_COUNT" => "33",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
-		"PRICE_CODE" => array(
-			0 => "RETAIL_PRICE",
-		),
+		"PRICE_CODE" => array("RETAIL_PRICE"),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
 		"PRODUCT_DISPLAY_MODE" => "Y",
@@ -246,6 +194,7 @@ $APPLICATION->IncludeComponent(
 		"SECTION_TOP_DEPTH" => "1",
 		"SEF_FOLDER" => "/catalog/",
 		"SEF_MODE" => "Y",
+		"SEF_URL_TEMPLATES" => Array("compare"=>"compare.php?action=#ACTION_CODE#","element"=>"#SECTION_CODE#/#ELEMENT_CODE#/","section"=>"#SECTION_CODE#/","sections"=>"","smart_filter"=>"#SECTION_CODE#/filter/#SMART_FILTER_PATH#/apply/"),
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "Y",
@@ -259,13 +208,12 @@ $APPLICATION->IncludeComponent(
 		"SHOW_PRICE_COUNT" => "1",
 		"SHOW_SKU_DESCRIPTION" => "N",
 		"SHOW_TOP_ELEMENTS" => "N",
+		"SIDEBAR_DETAIL_POSITION" => "right",
 		"SIDEBAR_DETAIL_SHOW" => "Y",
 		"SIDEBAR_PATH" => "/catalog/sidebar.php",
+		"SIDEBAR_SECTION_POSITION" => "right",
 		"SIDEBAR_SECTION_SHOW" => "Y",
-		"STORES" => array(
-			0 => "",
-			1 => "",
-		),
+		"STORES" => array(0=>"",1=>"",),
 		"STORE_PATH" => "/store/#store_id#",
 		"TEMPLATE_THEME" => "site",
 		"TOP_ADD_TO_BASKET_ACTION" => "ADD",
@@ -273,10 +221,7 @@ $APPLICATION->IncludeComponent(
 		"USER_CONSENT_ID" => "1",
 		"USER_CONSENT_IS_CHECKED" => "Y",
 		"USER_CONSENT_IS_LOADED" => "N",
-		"USER_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
+		"USER_FIELDS" => array(0=>"",1=>"",),
 		"USE_ALSO_BUY" => "N",
 		"USE_BIG_DATA" => "Y",
 		"USE_COMMON_SETTINGS_BASKET_POPUP" => "N",
@@ -293,28 +238,8 @@ $APPLICATION->IncludeComponent(
 		"USE_PRODUCT_QUANTITY" => "Y",
 		"USE_SALE_BESTSELLERS" => "Y",
 		"USE_STORE" => "N",
-		"SIDEBAR_SECTION_POSITION" => "right",
-		"SIDEBAR_DETAIL_POSITION" => "right",
-		"DETAIL_SHOW_MAX_QUANTITY" => "N",
-		"DETAIL_SHOW_BASIS_PRICE" => "Y",
-		"LABEL_PROP_MOBILE" => "",
-		"LABEL_PROP_POSITION" => "top-left",
-		"FILE_404" => "",
-		"SEF_URL_TEMPLATES" => array(
-			"sections" => "",
-			"section" => "#SECTION_CODE#/",
-			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
-			"compare" => "compare.php?action=#ACTION_CODE#",
-			"smart_filter" => "#SECTION_CODE#/filter/#SMART_FILTER_PATH#/apply/",
-		),
-		"VARIABLE_ALIASES" => array(
-			"compare" => array(
-				"ACTION_CODE" => "action",
-			),
-		)
-	),
-	false
-);
-?>
-
- </div><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+		"VARIABLE_ALIASES" => array("compare"=>array("ACTION_CODE"=>"action",),)
+	)
+);?>
+</div>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

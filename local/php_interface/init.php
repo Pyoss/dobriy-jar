@@ -247,7 +247,7 @@ function BeforeIndexHandler($arFields) {
 
 class CIBlockBindDiscountProperty
 {
-    public function GetDescription()
+    static public function GetDescription()
     {
         return array(
             "PROPERTY_TYPE"        => "N", #-----один из стандартных типов
@@ -258,7 +258,7 @@ class CIBlockBindDiscountProperty
     }
 
     /*--------- вывод поля свойства на странице редактирования ---------*/
-    public function GetPropertyFieldHtml($arProperty, $value, $strHTMLControlName)
+    static public function GetPropertyFieldHtml($arProperty, $value, $strHTMLControlName)
     {
         $arProductDiscount = \Bitrix\Sale\Internals\DiscountTable::getList([
             'filter' => [
@@ -268,9 +268,8 @@ class CIBlockBindDiscountProperty
                 "*"
             ]
         ]) -> fetch();
-        $description = count($arProductDiscount['NAME'])?'<b style="padding-left:10px">  '.$arProductDiscount['NAME'].'</b>':'  <b style="padding-left:10px;color:red">Скидка не найдена</b>';
+        $description = $arProductDiscount['NAME'] && count($arProductDiscount['NAME'])?'<b style="padding-left:10px">  '.$arProductDiscount['NAME'].'</b>':'  <b style="padding-left:10px;color:red">Скидка не найдена</b>';
         $info = \Bitrix\Sale\Internals\DiscountEntitiesTable::getMap([$value['VALUE']]) ;
-        print_r('<pre>' . print_r($info, true) . '</pre>');
         return '<input type="text" name="'.$strHTMLControlName["VALUE"].'" value="'.$value['VALUE'].'">' . $description;
     }
 }
@@ -280,7 +279,7 @@ $GLOBALS['COMP_COUNT'] = 1;
 
 class CIBlockPackage
 {
-    public function GetDescription()
+    static public function GetDescription()
     {
         return array(
             "PROPERTY_TYPE"        => "N", #-----один из стандартных типов
@@ -291,7 +290,7 @@ class CIBlockPackage
         );
     }
 
-    public function ConvertToDB($arProperty, $arValue){
+    static public function ConvertToDB($arProperty, $arValue){
         if (strlen($arValue['VALUE'])) {
             $item = json_decode($arValue['VALUE'], true)['item'];
             if (ctype_digit($item)){
@@ -302,7 +301,7 @@ class CIBlockPackage
     }
 
     /*--------- вывод поля свойства на странице редактирования ---------*/
-    public function GetPropertyFieldHtml($arProperty, $value, $strHTMLControlName)
+    static public function GetPropertyFieldHtml($arProperty, $value, $strHTMLControlName)
     {
         $value_array = json_decode($value['VALUE'], true);
         $pr = print_r($value_array['item'], true);

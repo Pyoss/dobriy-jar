@@ -2082,11 +2082,6 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
             this.showErrors(this.result.ERROR, false);
             this.showWarnings();
 
-            if (!(this.getSelectedDelivery().ID === '2')) {
-                document.querySelector('div[data-property-id-row="7"]').style.display = 'none'
-            } else {
-                document.querySelector('div[data-property-id-row="7"]').style.display = 'block'
-            }
         },
 
         /**
@@ -4280,7 +4275,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
                                 children: [
                                     BX.create('DIV', {
                                         props: {className: 'bx-soa-pp-list-termin'},
-                                        html: this.params.MESS_PRICE + ':'
+                                        html: this.params.MESS_PRICE
                                     }),
                                     BX.create('DIV', {
                                         props: {className: 'bx-soa-pp-list-description'},
@@ -4560,7 +4555,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
                     children: [
                         BX.create('DIV', {
                             props: {className: 'bx-soa-pp-list-termin'},
-                            html: currentDelivery.PRICE > 0 ? this.params.MESS_PRICE + ':' : ''
+                            html: currentDelivery.PRICE > 0 ? this.params.MESS_PRICE: ''
                         }),
                         BX.create('DIV', {
                             props: {className: 'bx-soa-pp-list-description'},
@@ -4746,8 +4741,8 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
                 price = BX.create('DIV', {
                     props: {className: 'bx-soa-pp-delivery-cost'},
                     html: typeof item.DELIVERY_DISCOUNT_PRICE !== 'undefined'
-                        ? 'Стоимость:' + item.DELIVERY_DISCOUNT_PRICE_FORMATED
-                        : 'Стоимость:' + item.PRICE_FORMATED
+                        ? 'Стоимость: от ' + item.DELIVERY_DISCOUNT_PRICE_FORMATED
+                        : 'Стоимость: от ' + item.PRICE_FORMATED
                 });
             } else if (deliveryCached && (deliveryCached.PRICE >= 0 || typeof deliveryCached.DELIVERY_DISCOUNT_PRICE !== 'undefined')) {
                 labelNodes.push(
@@ -5633,6 +5628,11 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
         },
 
         getPropertyRowNode: function (property, propsItemsContainer, disabled) {
+            // kiriya: Проверка что property - это не просто элемент, в случае скрытого поля адреса
+            // на самовывозе ломалось при попытке получить поле адреса.
+            if (typeof property.getType !== 'function'){
+                return;
+            }
             var propsItemNode = BX.create('DIV'),
                 textHtml = '',
                 propertyType = property.getType() || '',
@@ -6740,20 +6740,18 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
         },
 
         createTinkoffLoad: function () {
-
-            let items_list = []
+            let tinkoff_param_string = 'promoCode=installment_0_0_3_4,34'
+            let item_iter = 0;
             for (const id in this.result.GRID.ROWS) {
                 let item = this.result.GRID.ROWS[id]
-                items_list.push({name: item.data.NAME, price: item.data.PRICE, quantity: item.data.QUANTITY})
+                tinkoff_param_string += '&items.' + item_iter + '.name=' + item.data.NAME
+                tinkoff_param_string += '&items.' + item_iter + '.price=' + item.data.PRICE
+                tinkoff_param_string += '&items.' + item_iter + '.quantity=' + item.data.QUANTITY
+                item_iter++
             }
-            tinkoff.create({
-                shopId: 'd2ae263f-98d8-486a-82ea-91b45de94fec',
-                showcaseId: '638e23b3-661a-45ea-a311-5d6433005245',
-                demoFlow: 'sms',
-                promoCode: 'installment_0_0_6_10,68',
-                items: items_list,
-                sum: this.result.TOTAL.ORDER_PRICE
-            })
+            tinkoff_param_string += '&sum=' + this.result.TOTAL.ORDER_PRICE
+
+            return tinkoff_param_string
         },
 
         editTotalBlock: function () {
@@ -6869,26 +6867,16 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
             );
             /***
              * Tinkoff loans
-             */
+             *              */
             this.totalInfoBlockNode.appendChild(
-                BX.create('DIV', {
-                    props: {
-                        className: 'installment-container',
-                        style: 'pointer-events: all'
-                    },
-                    children: [
-                        BX.create('a', {
-                            props: {
-                                href: 'javascript:void(0)',
-                                className: 'TINKOFF_BTN_YELLOW TINKOFF_SIZE_L',
-                                id: 'tinkoff-loan',
-                                style: 'width: 100%;text-align: center;'
-                            },
-                            html: 'Рассрочка Tinkoff'
-                        })
-                    ]
-                })
+                BX.create('tinkoff-create-button')
             )
+            $('tinkoff-create-button').attr('subtext', 'от ' + Math.floor(this.result.TOTAL.ORDER_PRICE / 3) + ' ₽ в месяц')
+            $('tinkoff-create-button').attr('shopId', 'd2ae263f-98d8-486a-82ea-91b45de94fec')
+            $('tinkoff-create-button').attr('ui-data', 'productType=installment')
+            $('tinkoff-create-button').attr('showcaseId', '638e23b3-661a-45ea-a311-5d6433005245')
+            $('tinkoff-create-button').attr('payment-data', this.createTinkoffLoad())
+
             this.editMobileTotalBlock();
         },
 

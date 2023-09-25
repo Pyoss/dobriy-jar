@@ -44,7 +44,7 @@ php_value session.cookie_domain ".dev.dobriy-jar.ru"
 </IfModule>
 
 Options +FollowSymLinks
-RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/blog/(.*)$
-RewriteRule ^(.*) https://blog.dobriy-jar.ru/%1 [R=302,NC]
+#RewriteEngine On
+#RewriteCond %{REQUEST_URI} ^/blog/(.*)$
+#RewriteRule ^(.*) https://blog.dobriy-jar.ru/%1 [R=302,NC]
 Header unset x-frame-options

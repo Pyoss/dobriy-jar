@@ -23,53 +23,66 @@ $APPLICATION->SetTitle("Интернет-магазин \"Добрый Жар\" 
 
 
 <? $APPLICATION->IncludeComponent(
-    "dj-comp:dj.popular_categories",
-    ".default",
-    array(
-        "COMPONENT_TEMPLATE" => ".default",
-        "CATEGORY_ID" => array(
-            0 => "18",
-            1 => "24",
-            2 => "25",
-            3 => "26",
-            4 => "29",
-            5 => "101",
-            6 => "102",
-        ),
-        "BACKGROUND" => "/upload/medialibrary/2df/orcynmyfet9ey0byuma7j451uv612ep4.png"
-    ),
-    false
+	"dj-comp:dj.popular_categories", 
+	".default", 
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"CATEGORY_ID" => array(
+			0 => "18",
+			1 => "24",
+			2 => "25",
+			3 => "26",
+			4 => "29",
+			5 => "45",
+			6 => "81",
+			7 => "96",
+			8 => "101",
+			9 => "102",
+			10 => "134",
+		),
+		"BACKGROUND" => "/upload/medialibrary/2df/orcynmyfet9ey0byuma7j451uv612ep4.png"
+	),
+	false
 ); ?>
 
 <? $APPLICATION->IncludeComponent(
     "dj-comp:dj.hit",
-    ".default",
+    "alt",
     array()
 ); ?>
 <? $APPLICATION->IncludeComponent(
     "dj-comp:dj.new",
-    ".default",
+    "alt",
     array()
 ); ?>
 <? $APPLICATION->IncludeComponent(
-    "dj-comp:dj.resources",
-    ".default",
-    array(
-        "COMPONENT_TEMPLATE" => ".default",
-        "BACKGROUND_IMAGE" => "/upload/medialibrary/fc2/7swj5u0djux7z0gbaahrgu2pjzsdf5v0.png",
-        "BACKGROUND_IMAGE_MOBILE" => "/upload/medialibrary/fc2/7swj5u0djux7z0gbaahrgu2pjzsdf5v0.png",
-        "IMAGE_CALC" => "/upload/medialibrary/c15/vwxbb6cag9l6u73u2qmc1i4j7w8n2w2d.png",
-        "IMAGE_BRANDS" => "/upload/medialibrary/f1a/mknrtkn9yd1o6xfr1yyq0995ct1lam3k.png",
-        "IMAGE_SHIPMENT" => "/upload/medialibrary/a91/j07sj79nuuxt78zbehxoztwlwmivorue.png",
-        "IMAGE_INSTALLMENT" => "/upload/medialibrary/07c/j35ec46c2a4wku31ca7c8eueemtdaqt8.png"
-    ),
-    false
+	"dj-comp:dj.resources", 
+	".default", 
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"BACKGROUND_IMAGE" => "/upload/medialibrary/fc2/7swj5u0djux7z0gbaahrgu2pjzsdf5v0.png",
+		"BACKGROUND_IMAGE_MOBILE" => "/upload/medialibrary/e62/yrw3b9rua7c91sotz7d4h28r7l6l0c4u.png",
+		"IMAGE_CALC" => "/upload/medialibrary/01c/nbr7vymrqm4r8rjpyqgaxd4cmiv77151.png",
+		"IMAGE_BRANDS" => "/upload/medialibrary/8e9/rhndbi7rx78elxix7eweu4p6htcd2zt9.png",
+		"IMAGE_SHIPMENT" => "/upload/medialibrary/e19/s6ubycguvxixeyhozhk6ekwcr4t53mhh.png",
+		"IMAGE_INSTALLMENT" => "/upload/medialibrary/bdd/p5iu93jppxnenhsxce4vjxe92sb662be.png",
+		"BACKGROUND_RES" => "/upload/medialibrary/e62/yrw3b9rua7c91sotz7d4h28r7l6l0c4u.png"
+	),
+	false
 ); ?>
 <? $APPLICATION->IncludeComponent(
-    "dj-comp:dj.blog-links",
-    ".default",
-    array(),
-    false
+	"dj-comp:dj.blog-links", 
+	".default", 
+	array(
+		"COMPONENT_TEMPLATE" => ".default",
+		"CATEGORY_ID" => array(
+			0 => "6217",
+			1 => "6225",
+			2 => "7259",
+			3 => "7611",
+		)
+	),
+	false
 ); ?>
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php");
 

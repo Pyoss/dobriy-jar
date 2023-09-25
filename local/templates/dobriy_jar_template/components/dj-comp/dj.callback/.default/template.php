@@ -4,8 +4,7 @@
 /** @var array $arParams */
 /** @var array $arResult */
 
-?>
-<section class="callback section" id="callback" style='background-image: url("<?= $arResult['images']['BACKGROUND'] ?>")'>
+?><section class="callback section" id="callback" style='background-image: url("<?= $arResult['images']['BACKGROUND'] ?>")'>
     <div class="callback__container">
         <div class="callback__wrapper">
             <h3 class="callback__title">Хотите заказать нашу&nbspпродукцию или есть вопросы?</h3>
@@ -26,5 +25,3 @@
         </div>
     </div>
 </section>
-
-

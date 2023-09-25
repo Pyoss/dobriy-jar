@@ -9,7 +9,7 @@
     <div class="hit__title container__title">
         <span class="container__title-current">Хиты продаж</span>
         <span class="container__title-slash">/</span>
-        <a class="container__title-link" href="/catalog/">Показать всё</a>
+        <a class="container__title-link" href="/sale/hits/">Показать всё</a>
     </div>
     <div class="hit__list row-view">
         <?
