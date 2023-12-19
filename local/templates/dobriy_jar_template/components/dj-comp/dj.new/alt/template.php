@@ -23,7 +23,7 @@
 
         $APPLICATION->IncludeComponent(
             "bitrix:catalog.top",
-            "hit",
+            "hit_alt",
             array(
                 "IBLOCK_TYPE" => 'catalog',
                 "IBLOCK_ID" => 2,

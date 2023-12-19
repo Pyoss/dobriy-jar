@@ -1,4 +1,5 @@
 <?php
+/*
 $APPLICATION->IncludeComponent(
 	"dj-comp:dj.callback", 
 	".default", 
@@ -11,8 +12,8 @@ $APPLICATION->IncludeComponent(
 		"WHATSAPP_LOGO" => "/upload/medialibrary/a3c/4a8ahstj0srr3yk71e5ohh1l13oqj5bh.png"
 	),
 	false
-); ?>
-
+);
+*/?>
 </main>
 <footer class="footer">
     <div class="footer-wrapper">

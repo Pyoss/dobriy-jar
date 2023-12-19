@@ -35,10 +35,8 @@ $APPLICATION->SetTitle("Интернет-магазин \"Добрый Жар\" 
 			4 => "29",
 			5 => "45",
 			6 => "81",
-			7 => "96",
-			8 => "101",
-			9 => "102",
-			10 => "134",
+			7 => "101",
+			8 => "102",
 		),
 		"BACKGROUND" => "/upload/medialibrary/2df/orcynmyfet9ey0byuma7j451uv612ep4.png"
 	),

@@ -141,13 +141,7 @@ if ($hasOffers) {
                         <span class="base-price rub desktop"><?= $arResult['VIEW']['DISCOUNT'] ? $arResult['VIEW']['BASE_PRICE'] : "" ?>
                     </span>
                     </div>
-                <?php
-                    $APPLICATION->IncludeComponent(
-                        "dj_components:dj.one-click-purchase",
-                        ".default",
-                        array(),
-                        $component
-                    ); ?>
+
                 <? else: ?>
                     <div class="price-block--unavailable">
                         <? /* if ($arResult['VIEW']['PERCENT']):?>
@@ -179,6 +173,13 @@ if ($hasOffers) {
                         <div class="cart-action basket-add goal_basket_add"
                              data-product-id="<?= $arResult['VIEW']['ID'] ?>">В корзину
                         </div>
+                        <?php
+                        $APPLICATION->IncludeComponent(
+                            "dj_components:dj.one-click-purchase",
+                            ".default",
+                            array(),
+                            $component
+                        ); ?>
                     <? else: ?>
                         <div class="cart-action--unavailable">В корзину</div>
                     <? endif; ?>
